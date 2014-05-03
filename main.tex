@@ -1,0 +1,39 @@
+\documentclass[a4paper,openright,12pt]{report}
+\usepackage[utf8]{inputenc} % acentos sin codigo
+\usepackage[spanish]{babel} % espanol
+
+\usepackage{graphicx} % graficos
+%\usepackage{natbib}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+%\title{Sistema web para el aprendizaje colaborativo usando la técnica de Jigsaw}
+%\author{Leibnitz Pavel Rojas Bustamante}
+%\date{April 2014}
+
+\begin{document}
+
+\pagenumbering{roman}
+%\addcontentsline{toc}{chapter}{caratula}
+%\maketitle
+\input{chapters/cover}
+\input{chapters/chapter00}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Índice general}
+
+\cleardoublepage %\cleardoublepage %for openright
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename}
+
+\cleardoublepage %\cleardoublepage %for openright
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename}
+\cleardoublepage %\cleardoublepage %for openright
+
+\pagenumbering{arabic}
+\input{chapters/chapter01}
+\input{chapters/chapter02}
+
+\bibliography{referencias}
+\bibliographystyle{apalike}
+\addcontentsline{toc}{chapter}{Referencias}
+
+\end{document}

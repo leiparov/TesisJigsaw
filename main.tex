@@ -1,15 +1,19 @@
 \documentclass[a4paper,openright,12pt]{report}
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \usepackage[spanish]{babel} % espanol
-
 \usepackage{graphicx} % graficos
-%\usepackage{natbib}
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
-%\title{Sistema web para el aprendizaje colaborativo usando la técnica de Jigsaw}
-%\author{Leibnitz Pavel Rojas Bustamante}
-%\date{April 2014}
+\usepackage[nodoi]{apacite}
+%\usepackage[round]{natbib}
 
 \begin{document}
+
+%\renewcommand{\BBAA}{\&}
+%\renewcommand{\BOthers}{et al\hbox{}}
+\renewcommand{\refname}{Referencias}% Name of ref. list if it's a section.
+\renewcommand{\bibname}{Referencias}% Name of ref. list if it's a chapter.
+\renewcommand{\BBAA}{\&}%  between authors in parenthetical cites and ref. list
+\renewcommand{\BBAB}{y}% 
 
 \pagenumbering{roman}
 %\addcontentsline{toc}{chapter}{caratula}
@@ -32,8 +36,10 @@
 \input{chapters/chapter01}
 \input{chapters/chapter02}
 
+
+%\bibliographystyle{apalike}
+\bibliographystyle{apacite}
 \bibliography{referencias}
-\bibliographystyle{apalike}
-\addcontentsline{toc}{chapter}{Referencias}
+%\addcontentsline{toc}{chapter}{Referencias}
 
 \end{document}

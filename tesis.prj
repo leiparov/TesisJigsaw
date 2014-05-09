@@ -4,25 +4,43 @@
 0
 1
 main.tex
-19
-5
+24
+7
 0
 
 main.tex
 TeX:ES:UTF-8:UNIX
-286371835 0 -1 472 -1 288 0 0 681 411 1 425 136 -1 -1 0 0 48 0 0 48 1 0 288 -1   0
+286371835 0 -1 1201 -1 1175 0 0 681 411 1 281 459 -1 -1 0 0 48 0 0 48 1 0 1175 -1   0
+chapters\chapter03.tex
+TeX
+1060859 0 -1 317 -1 334 26 26 930 307 0 289 136 -1 -1 0 0 -1 -1 -1 -1 1 0 334 -1   0
 chapters\chapter01.tex
 TeX
-1060859 0 -1 0 -1 12134 52 52 956 333 0 129 748 -1 -1 0 0 0 -1 -1 0 1 0 12134 -1   0
+1060859 2 -1 12178 -1 12144 52 52 956 333 0 25 476 -1 -1 0 0 0 -1 -1 0 1 0 12144 -1   0
 chapters\chapter02.tex
 TeX:UNIX
-17936379 0 -1 9552 -1 9551 78 78 982 359 0 689 17 -1 -1 0 0 23 -1 -1 23 1 0 9551 -1   0
+17936379 0 -1 9795 -1 9796 78 78 982 359 0 625 272 -1 -1 0 0 23 -1 -1 23 1 0 9796 -1   0
+chapters\chapter00.tex
+TeX
+1060859 0 -1 77 -1 111 0 0 904 281 0 137 68 -1 -1 0 0 -1 -1 -1 -1 1 0 111 -1   0
 referencias.bib
 BibTeX
-1049586 0 567 24 567 18 681 0 1362 411 0 185 272 -1 -1 0 0 37 0 0 37 1 0 18 567   0
+1049586 0 574 1018 572 2 681 0 1362 411 0 33 153 -1 -1 0 0 37 0 0 37 1 0 2 572   0
 Exported Items.bib
 BibTeX:UNIX
-1147890 1 0 1 16 1 104 104 1008 385 0 25 272 -1 -1 0 0 1 0 0 1 1 0 1 16   0
+1147890 0 0 1 11 2 104 104 1008 385 0 33 187 -1 -1 0 0 1 0 0 1 1 0 2 11   0
+:\Program Files\MiKTeX 2.9\tex\latex\apacite\spanish.apc
+TeX:STY
+269496306 0 126 28 126 55 130 130 1034 411 0 457 221 -1 -1 0 0 3 0 0 3 1 0 55 126   0
+:\Program Files\MiKTeX 2.9\tex\latex\apacite\apacdoc.sty
+TeX:STY
+269496306 0 0 1 10 73 104 104 1008 385 0 601 -2125 -1 -1 0 0 -1 -1 -1 -1 1 0 73 10   0
+:\Program Files\MiKTeX 2.9\tex\latex\apacite\apacite.sty
+TeX:STY
+269496306 0 0 1 0 1 0 0 904 281 0 25 -3774 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
+:\Program Files\MiKTeX 2.9\tex\latex\apacite\english.apc
+TeX:STY
+269496306 1 44 27 44 1 52 52 956 333 0 25 34 -1 -1 0 0 -1 -1 -1 -1 1 0 1 44   0
 :\Users\LeibnitzPavel\AppData\Roaming\WinEdt Team\WinEdt 7\Config\Adobe.edt
 ASCII:EDT
 269494138 0 0 1 96 30 52 52 956 333 1 305 170 -1 -1 0 0 -1 -1 -1 -1 1 0 30 96   0
@@ -32,9 +50,6 @@ ASCII:EDT
 chapters\cover.tex
 TeX
 269496315 0 -1 0 -1 520 0 0 904 281 0 329 306 -1 -1 0 0 17 -1 -1 17 1 0 520 -1   0
-styles.tex
-TeX
-269496315 0 -1 0 -1 763 104 104 1336 385 0 25 391 -1 -1 0 0 18 -1 -1 18 1 0 763 -1   0
 :\Program Files\MiKTeX 2.9\bibtex\bst\apalike\apalike.bst
 BST:UNIX
 269583346 0 0 1 0 1 26 26 1258 307 0 25 -6120 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
@@ -72,5 +87,6 @@ TeX:UTF-8:UNIX
 *chapters/chapter00
 *chapters/chapter01
 *chapters/chapter02
+*chapters/chapter03
 *referencias.bib
 <

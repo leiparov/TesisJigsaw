@@ -3,32 +3,35 @@
 0
 0
 1
-main.tex
+chapters\chapter02.tex
 24
-5
-0
+7
+4
 
 main.tex
 TeX:ES:UTF-8:UNIX
-286371835 0 -1 730 -1 1136 0 0 681 411 1 185 204 -1 -1 0 0 48 0 0 48 1 0 1136 -1   0
+17936379 0 -1 730 -1 936 0 0 681 411 1 73 391 -1 -1 0 0 48 0 0 48 1 0 936 -1   0
 chapters\chapter03.tex
 TeX
 1060859 0 -1 317 -1 229 26 26 930 307 0 225 85 -1 -1 0 0 25 -1 -1 25 1 0 229 -1   0
+chapters\chapter01.tex
+TeX
+1060859 1 -1 2726 -1 2733 52 52 956 333 0 569 204 -1 -1 0 0 0 -1 -1 0 1 0 2733 -1   0
 chapters\chapter02.tex
 TeX:UNIX
-17936379 0 -1 4647 -1 4645 78 78 982 359 0 145 255 -1 -1 0 0 23 -1 -1 23 1 0 4645 -1   0
+17936379 0 -1 8810 -1 8821 78 78 982 359 0 361 238 -1 -1 0 0 23 -1 -1 23 1 0 8821 -1   0
+:\Users\LeibnitzPavel\Documents\CurriculumVitae\LeibnitzRojas.tex
+TeX:UTF-8:UNIX
+286371835 0 -1 6114 -1 4000 0 0 852 390 0 241 102 -1 -1 0 0 32 -1 -1 32 1 0 4000 -1   0
 referencias.bib
 BibTeX
-1049586 0 597 26 583 2 681 0 1362 411 0 33 136 -1 -1 0 0 37 0 0 37 1 0 2 583   0
+1049586 0 409 20 409 29 681 0 1362 411 0 273 306 -1 -1 0 0 37 0 0 37 1 0 29 409   0
 Exported Items.bib
 BibTeX:UNIX
 1147890 0 0 1 11 2 104 104 1008 385 0 33 187 -1 -1 0 0 1 0 0 1 1 0 2 11   0
 chapters\chapter00.tex
 TeX
 269496315 0 -1 77 -1 111 0 0 904 281 0 137 68 -1 -1 0 0 47 -1 -1 47 1 0 111 -1   0
-chapters\chapter01.tex
-TeX
-269496315 0 -1 12178 -1 11323 52 52 956 333 0 129 459 -1 -1 0 0 0 -1 -1 0 1 0 11323 -1   0
 :\Program Files\MiKTeX 2.9\tex\latex\apacite\spanish.apc
 TeX:STY
 269496306 0 126 28 126 55 130 130 1034 411 0 457 221 -1 -1 0 0 3 0 0 3 1 0 55 126   0
@@ -77,16 +80,5 @@ TeX:UNIX
 :\Users\LeibnitzPavel\Documents\CurriculumVitae\fancy-cv\cv.tex
 TeX:UNIX
 269594619 0 -1 311 -1 322 26 26 956 310 0 201 272 -1 -1 0 0 26 -1 -1 26 1 0 322 -1   0
-:\Users\LeibnitzPavel\Documents\CurriculumVitae\LeibnitzRojas.tex
-TeX:UTF-8:UNIX
-286371835 0 -1 1239 -1 2201 0 0 852 390 0 393 272 -1 -1 0 0 32 -1 -1 32 1 0 2201 -1   0
 
-*main.tex
->
-*chapters/cover
-*chapters/chapter00
-*chapters/chapter01
-*chapters/chapter02
-*chapters/chapter03
-*referencias.bib
-<
+*chapters\chapter02.tex

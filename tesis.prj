@@ -3,35 +3,38 @@
 0
 0
 1
-chapters\chapter02.tex
+main.tex
 24
-7
-4
+8
+2
 
 main.tex
 TeX:ES:UTF-8:UNIX
-17936379 0 -1 730 -1 936 0 0 681 411 1 73 391 -1 -1 0 0 48 0 0 48 1 0 936 -1   0
-chapters\chapter03.tex
+17936379 0 -1 1122 -1 1203 0 0 681 411 1 73 255 -1 -1 0 0 48 0 0 48 1 0 1203 -1   0
+chapters\cover.tex
 TeX
-1060859 0 -1 317 -1 229 26 26 930 307 0 225 85 -1 -1 0 0 25 -1 -1 25 1 0 229 -1   0
+1060859 0 -1 1124 -1 1524 0 0 904 281 0 121 714 -1 -1 0 0 17 -1 -1 17 1 0 1524 -1   0
 chapters\chapter01.tex
 TeX
-1060859 1 -1 2726 -1 2733 52 52 956 333 0 569 204 -1 -1 0 0 0 -1 -1 0 1 0 2733 -1   0
-chapters\chapter02.tex
-TeX:UNIX
-17936379 0 -1 8810 -1 8821 78 78 982 359 0 361 238 -1 -1 0 0 23 -1 -1 23 1 0 8821 -1   0
-:\Users\LeibnitzPavel\Documents\CurriculumVitae\LeibnitzRojas.tex
-TeX:UTF-8:UNIX
-286371835 0 -1 6114 -1 4000 0 0 852 390 0 241 102 -1 -1 0 0 32 -1 -1 32 1 0 4000 -1   0
-referencias.bib
-BibTeX
-1049586 0 409 20 409 29 681 0 1362 411 0 273 306 -1 -1 0 0 37 0 0 37 1 0 29 409   0
-Exported Items.bib
-BibTeX:UNIX
-1147890 0 0 1 11 2 104 104 1008 385 0 33 187 -1 -1 0 0 1 0 0 1 1 0 2 11   0
+269496315 0 -1 10642 -1 10930 52 52 956 333 0 297 221 -1 -1 0 0 0 -1 -1 0 1 0 10930 -1   0
 chapters\chapter00.tex
 TeX
-269496315 0 -1 77 -1 111 0 0 904 281 0 137 68 -1 -1 0 0 47 -1 -1 47 1 0 111 -1   0
+1060859 0 -1 77 -1 113 0 0 904 281 0 25 85 -1 -1 0 0 47 -1 -1 47 1 0 113 -1   0
+chapters\chapter02.tex
+TeX:UNIX
+17936379 0 -1 6829 -1 6839 78 78 982 359 0 273 289 -1 -1 0 0 23 -1 -1 23 1 0 6839 -1   0
+chapters\chapter03.tex
+TeX
+1060859 0 -1 11659 -1 10696 26 26 930 307 0 161 37 -1 -1 0 0 25 -1 -1 25 1 0 10696 -1   0
+referencias.bib
+BibTeX
+1049586 0 632 3 626 33 681 0 1362 411 0 281 289 -1 -1 0 0 37 0 0 37 1 0 33 626   0
+Exported Items.bib
+BibTeX:UNIX
+1147890 1 7 1 1 1 104 104 1008 385 0 25 17 -1 -1 0 0 1 0 0 1 1 0 1 1   0
+:\Users\LeibnitzPavel\Documents\CurriculumVitae\LeibnitzRojas.tex
+TeX:UTF-8:UNIX
+286371835 0 81 44 -1 1099 0 0 852 390 0 321 -408 -1 -1 0 0 32 -1 -1 32 1 0 1099 -1   0
 :\Program Files\MiKTeX 2.9\tex\latex\apacite\spanish.apc
 TeX:STY
 269496306 0 126 28 126 55 130 130 1034 411 0 457 221 -1 -1 0 0 3 0 0 3 1 0 55 126   0
@@ -50,9 +53,6 @@ ASCII:EDT
 :\Program Files (x86)\WinEdt Team\WinEdt 7\Exec\PDF\PDFCloseDoc.edt
 ASCII:EDT
 269494138 7 58 1018 58 1 52 52 982 336 1 73 187 -1 -1 0 0 21 0 0 21 1 0 1 58   0
-chapters\cover.tex
-TeX
-269496315 0 -1 0 -1 520 0 0 904 281 0 329 306 -1 -1 0 0 17 -1 -1 17 1 0 520 -1   0
 :\Program Files\MiKTeX 2.9\bibtex\bst\apalike\apalike.bst
 BST:UNIX
 269583346 0 0 1 0 1 26 26 1258 307 0 25 -6120 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
@@ -81,4 +81,12 @@ TeX:UNIX
 TeX:UNIX
 269594619 0 -1 311 -1 322 26 26 956 310 0 201 272 -1 -1 0 0 26 -1 -1 26 1 0 322 -1   0
 
-*chapters\chapter02.tex
+*main.tex
+>
+*chapters/cover
+*chapters/chapter00
+*chapters/chapter01
+*chapters/chapter02
+*chapters/chapter03
+*referencias.bib
+<

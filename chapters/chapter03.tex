@@ -60,48 +60,89 @@ La programación en pares fue originalmente popularizada como parte de la metodo
 Es una técnica de aprendizaje cooperativo, la cual está basada en un enfoque de estudio de problemas. \cite{JCAL:JCAL119}. Durante un Estudio de Casos, los estudiantes reciben materiales que describen una situación en concreto y se les pide analizarla tratando de identificar los puntos fuertes y débiles del caso, así como también se les pide reflexionar sobre posibles soluciones que pudiesen añadir a las ya presentadas en el problema. El factor más importante del Estudio de Casos es que éstos están basados en problemas y/o situaciones reales \cite{JCAL:JCAL119}.
 
 
-\subsection{Técnicas para el diálogo}
-\subsection{Técnicas para la enseñanza recíproca}
-\subsubsection{Celdas de aprendizaje}
-\subsubsection{La pecera}
-\subsubsection{Juego de rol}
-\subsubsection{Jigsaw - Rompecabezas}
-\subsubsection{Equipo de exámenes}
-\subsection{Técnicas para la resolución de problemas}
+\section{Tecnologías web}
 
-\section{Aplicaciones web de tiempo real}
-\subsection{Qué es tiempo real}
-El término tiempo real se refiere a la naturaleza oportuna entre la ocurrencia de un evento y el ser advertidos de ello. La medición en el tiempo entre un evento ocurrido y la entrega de ese evento depende en realidad del evento. Si el evento es la aplicación del pie al frenar un auto, entonces el tiempo entre el pie bajando y los frenos que se aplica tiene que ser absolutamente mínimo. Sin embargo, si el evento es el envío de un mensaje de chat en un foro de fútbol y se muestra a los demás usuarios, es poco probable hacer una gran diferencia de unos segundos. En último caso, el evento tiene que ser entregado en un tiempo suficientemente corto. Si te cortas un dedo, no hay retraso entre el corte y el registro de dolor. Esto es tiempo real. Sin embargo, la posibilidad de desarrollar tiempo real no era inicialmente algo fácil. Pero los desarrolladores han llegado a soluciones inteligentes y ``hacks'' para resolver el problema de comunicación entre el servidor y el cliente.
 
-\subsubsection{AJAX}
-Cuando el JavaScript empezó a ser más relevante, los desarrolladores empezaron a mejorar el nivel de los objetos XMLHttpRequest para enviar peticiones HTTP de forma asíncrona, o sin necesidad de refrescar la página web actual. Esto fue llamado AJAX(Asynchronous JavaScript and XML).\\
+\subsection{AJAX}
 
-Ajax, es una tecnología usada en aplicaciones Web 2.0 que está basada en JavaScript y con la cual se puede obtener data del lado del servidor para actualizar parcialmente el contenido de una página\cite{wang_design_2014}.
+El término AJAX es un acrónimo de Asynchronous JavaScript $+$ XML que puede traducirse como ``JavaScript asíncrono más XML''. El término AJAX se presentó por primera vez en el artículo ``Ajax, A new Approach to Web Applications" publicado por Jesse James Garret en el año 2005. En realidad, en dicho artículo se dice que AJAX no es una tecnología en sí mismo sino un conjunto de varias tecnologías que se unen de formas nuevas y sorprendentes.\\
 
-\subsubsection{Polling}
-Después del posicionamiento de AJAX, no pasó mucho tiempo para tratar de lograr que los eventos en el navegador salieran fuera de la ecuación y automatizar el proceso de obtener nueva información. Fue entonces que los desarrolladores establecieron un intervalo de actualización para revisar actualizaciones cada $n$ segundos. Ver figura \ref{fig:polling}
+AJAX está compuesto por los siguiente:
+
+\begin{itemize}
+  \item La presentación en el navegador está basada en HTML y CSS.
+  \item Document Object Model (DOM), para la interacción y manipulación dinámica de la presentación.
+  \item XML, XSLT y JSON, para el intercambio y la manipulación de información
+  \item XMLHttpRequest, para el intercambio asíncrono de información.
+  \item JavaScript, para unir todas las tecnologías antes mencionadas.
+\end{itemize}
+%Ver figura \ref{fig:ajax}
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.8]{figuras/polling.png}\\
+  \includegraphics[scale=0.8]{figuras/ajax_01.png}\\
+  \caption{Tecnologías agrupadas bajo el concepto de AJAX}\label{fig:ajax}
+\end{figure}
+
+JavaScript es un lenguaje que la mayoría de navegadores soporta y que permite manipular datos entre la vista y el servidor. A continuación se indica cómo es que AJAX funciona:\cite{ajax_dummies_2006}
+
+\begin{enumerate}
+  \item En el navegador se escribe código en JavaScript con el cual se puede obtener información del servidor las veces que sean necesarias.
+  \item Cuando más data es requerida, el JavaScript usa el objeto XMLHttpRequest para enviar la petición al servidor sin necesidad de refrescar toda la página web.
+  \item La data que retorna desde el servidor puede estar en formato XML o puede ser sólo texto plano. Lo importante es que el JavaScript en el navegador puede leer la información recibida y mostrarla en la vista.
+\end{enumerate}
+
+\subsubsection{¿Qué se puede hacer con AJAX?}
+
+AJAX ha estado presente desde 1998 y muchas aplicaciones como Microsoft's Outlook Web Access la han usado. Sin embargo, recien a partir del año 2005 cuando AJAX tomó sitio en el campo del desarrollo web después de que fuese utilizado en aplicaciones como Google Suggest y Google Maps.\cite{ajax_dummies_2006}\\
+
+Desde entonces, AJAX ha permitido realizar diferentes tipos de aplicaciones web como por ejemplo:
+
+\begin{itemize}
+  \item \emph{Búsqueda en tiempo real}. Una de las mejores cosas que se puede realizar usando AJAX son las búsquedas en vivo, donde el usuario obtiene lo que busca mientras va escribiendo lo que necesita buscar.
+  \item \emph{Obtener la respuesta con autocompletado}. Muy parecido a las búsquedas en vivo son las aplicaciones que tratan de adivinar la palabra que estamos escribiendo obteniendo una lista de palabras similares del servidor que son puestas a nuetra vista.
+  \item \emph{Chatear con amigos}. Puesto que AJAX no necesita refrescar toda la página web, es una buena herramienta para realizar programas de chat donde muchos usuarios conversan al mismo tiempo.
+  \item \emph{Dragging and Dropping}.
+  \item \emph{Juegos con AJAX}.
+  \item \emph{Menús pop up}. Se puede obtener data desde el servidor tan pronto como sea necesario usando Ajax.
+\end{itemize}
+
+\subsection{Polling}
+Después del posicionamiento de AJAX, no pasó mucho tiempo para tratar de lograr que los eventos en el navegador salieran fuera de la ecuación y se pudiera automatizar el proceso de obtener nueva información desde el servidor. Fue entonces que los desarrolladores establecieron un intervalo de actualización para revisar actualizaciones cada $n$ segundos \cite{lengstorf_realtime_2013}. Ver figura \ref{fig:polling}
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.8]{figuras/ajax_polling.png}\\
   \caption{Polling envía peticiones HTTP para comprobar si existe nueva información}\label{fig:polling}
 \end{figure}
 
-\subsubsection{HTTP Long-Polling}
-El siguiente paso en la evolución del tiempo real es el HTTP \emph{long-polling}, el cual consiste en abrir una petición HTTP por un periodo de tiempo para escuchar respuestas del servidor. Si hubiese nueva data, el servidor la enviaría y se cerraría la petición; de otro modo, la petición es cerrada después de un intervalo de tiempo límite y se abre una nueva petición. Ver figura \ref{fig:http_long_polling}
+\subsection{HTTP Long-Polling}
+El siguiente paso en la evolución del tiempo real es el HTTP \emph{long-polling}, el cual consiste en abrir una petición HTTP por un periodo de tiempo para escuchar respuestas del servidor. Si hubiese nueva data, el servidor la enviaría y se cerraría la petición; de otro modo, la petición es cerrada después de un intervalo de tiempo límite y se abre una nueva petición \cite{lengstorf_realtime_2013}.  Ver figura \ref{fig:http_long_polling}
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.8]{figuras/http_long_polling.png}\\
+  \includegraphics[scale=0.8]{figuras/ajax_long_polling.png}\\
   \caption{HTTP Long-polling mantiene abierta una peticion HTTP por un periodo de tiempo para comprobar si existe nueva información}\label{fig:http_long_polling}
 \end{figure}
 %%\cite{lengstorf2013realtime}
 
-\subsubsection{HTTP Streaming}
-HTTP Streaming es muy similar a HTTP long-polling, excepto que la conexión no es cerrada cuando hay nueva información o se vence el intervalo de tiempo. En lugar de ello, la nueva data se envía sobre la conexión que permanece abierta.
+\subsection{WebSockets}
+Web sockets (Ver figura \ref{fig:websockets}) es una tecnología que proporciona un canal de comunicación bidireccional y full-duplex sobre una única conexión TCP en los navegadores y servidores web. A comparación de HTTP, WebSocket puede reducir efectivamente el tráfico de red innecesario, a través de una forma estandarizada para que el servidor envíe contenido al navegador sin que éste sea solicitado.\cite{cheng_new_2013}\\
 
-\subsubsection{Comet}
-Es un modelo de aplicación web en el que una petición HTTP mantenida abierta permite al servidor web enviar datos al cliente sin que éste los solicite explícitamente.
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.8]{figuras/websockets.png}\\
+  \caption{Websockets}\label{fig:websockets}
+\end{figure}
 
-\subsubsection{WebSockets}
-Web sockets es una tecnología que proporciona un canal de comunicación bidireccional y full-duplex sobre una única conexión TCP en los navegadores y servidores web. A comparación de HTTP, WebSocket puede reducir efectivamente el tráfico de red innecesario, a través de una forma estandarizada para que el servidor envíe contenido al navegador sin que éste sea solicitado.\cite{cheng_new_2013}
+\subsubsection{¿Por qué usar Websockets?}
+
+Existen muchas razones que no conllevan a utilizar websockets cuando desarrollemos una aplicación web. Algunas de ellas se mencionan a continuación:
+
+\begin{itemize}
+  \item Websockets permite que la comunicación en tiempo real sea mucho más eficiente. Desde luego, siempre será posible usar polling sobre HTTP para recibir las notificaciones desde el servidor. Sin embargo, con el uso de Websockets se ahorra ancho de banda, cpu, y latencia.
+  \item La comunicación entre el cliente y el servidor se vuelve más sencilla.
+\end{itemize}
+
+Los websockets tiene una gran acogida de parte de la comunidad de desarrolladores, lo cual se ve reflejado en la variedad de implementaciones de websockets como Apache mod\_pywebsocket, Jetty, Socket.IO, entre otros.

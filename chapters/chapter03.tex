@@ -1,10 +1,58 @@
 \chapter{Estado del Arte}
 
-\section{Herramientas colaborativas}
+\section{Técnicas para el aprendizaje colaborativo}
+
+\subsection{Jigsaw}
+El estudio que \citeA{evcim_effects_2013} realizaron fue para determinar los efectos de la técnica de Jigsaw en una clase de Inglés en alumnos de preparatoria en la Universidad Abant Izzet Baysal en Turkía. El total de alumnos fue de 48 los cuales fueron separados de tal forma que se obtuvo un grupo experimental y uno de control para poder aplicar la técnica y comparar los resultados. Tanto el grupo experimental como el de control fueron organizados según los resultados de sy examen parcial y prácticas calificadas dadas hasta el momento.\\
+
+El grupo experimental fue dividido en 2 grupos de 6 alumnos para empezar el trabajo. Con el fin de ver los resultados de la técnica de Jigsaw, a este grupo se le asignó desarrollar el tema de Presente Perfecto siguiendo las pautas de la técnica de Jigsaw. Por otro lado, el grupo de control también recibió la clase de Presente Perfecto pero fue en condiciones normales. Al final, ambos grupos fueron evaluados con el mismo examen y luego de analizar los resultados se concluyó que habían diferencias significativas entre los resultados obtenidos entre ambos grupos y que la técnica de Jigsaw tiene un efecto importante en el rendimiento académico de los alumnos.
+
+\subsection{Pair Research}
+Es una nueva forma de interacción para incrementar la productividad, el aprendizaje y la colaboración entre los diferentes grupos de investigación \cite{miller_pair_2014}. Los resultados del estudio mostraron que los miembros de los equipos usaron la investigación en pares en diferentes maneras incluyendo programación en pares, lluvia de ideas, recolección de data y análisis.\\
+
+Pair Research es una generalización de la programación en pares. Cada semana, los miembros de los grupos son emparejados guidados por algoritmo de emparejamiento. Cada pareja se reune por una a dos horas de las cuales la mitad del tiempo es dedicado a trabajar en el proyecto de la otra persona. El trabajo puede ser cualquier actividad relacionada a programación, pruebas, diseño, recolección de datos y análisis, lluvia de ideas y asesoría. La siguiente semana, se forman nuevas parejas y el proceso se repite.\\
+
+El objetivo de la técnica de Pair Research es incrementar la colaboración, el aprendizaje y la productividad en los grupos de investigación. Esta técnica ofrece a los miembros la oportunidad de interactuar con muchos compañeros de diversas perspectivas y con diferentes experiencias.
+
+
+\section{Herramientas para el aprendizaje colaborativo}
+
+\subsection{LearnCS}
+\emph{LearnCS!} es un entorno de programación creado específicamente para el uso de estudiantes de primer año de la carrera de ciencas de la computación. Este programa elimina la necesidad de los alumnos de tener que preocuparse por un editor de texto, comandos linux y proceso de compilación. LearnCS! proveee un entorno web en el cual los alumno pueden escribir, ejecutar y depurar programas usando un interfaz familiar y amigable. El compilador de C embebido que posee el sistema permite al alumno ejecutar sus programas con simplemente hacer click en un botón y obtener los resultados de ejecución de su código fuente \cite{lipman_learncs_2014}.\\
+
+En muchos cursos de programación de primer ciclo, el concepto de depurar un programa es enseñado a finales del curso. En cambio, a través de \emph{LearnCS!}, los alumnos pueden establecer puntos de corte en el programa y empezar a depurar paso a paso su código fuente. Además, el sistema brinda la opción de ver la representación de la memoria y así visualizar en detalle el estado de su programa. Cuando se llaman a funciones, los alumnos aprenden cómo los argumentos y variables locales son colocados en la pila de la memoria y cómo las variables son reservadas en memoria \cite{lipman_learncs_2014}.
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.5]{figuras/learncs.png}\\
+  \caption{LearnCS!}\label{fig:learncs}
+\end{figure}
+
+\subsubsection{Diseño e implementación}
+LearnCS! fue creado para proporcionar un ambiente de aprendizaje para estudiantes de informática de primer año. Sus principales objetivos son proporcionar asistencia útil al alumno en la construcción de un modelo mental de la máquina nocional de C a través de la visualización detallada de la memoria de \emph{LearnCS!} y sus mensajes de error integrados en las instalaciones de depuración, y para proporcionar que producen consejos que son útiles para el principiante para localizar y corregir errores de sintaxis\cite{lipman_learncs_2014}.\\
+
+LearnCS! se ejecuta en un navegador web y tal como se muesta en la Figura \ref{fig:learncs}, ofrece lo siguiente:
+
+\begin{enumerate}
+  \item (Panel superior-izquierdo) Un área de la pantalla dedicada a la edición del programa que se está desarrollando.
+  \item (Panel derecho) Una representación de la vista de la memoria.
+  \item (Panel inferior) Una zona de ``salida'' que contiene una ``terminal'' para la entrada y salida de texto.
+  \item (Panel inferior-derecho) Opcionalmente, como se muestra en la figura \ref{fig:learncs2}, se muestra un área gráfica que permite desarrollar programas más interactivos y más interesantes para los alumnos.
+\end{enumerate}
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.5]{figuras/learncs2.png}\\
+  \caption{LearnCS!}\label{fig:learncs2}
+\end{figure}
+
 
 \subsection{GoogleDocs}
 
-GoogleDocs es un conjunto de herramientas online que permiten elaborar documentos, hojas de cálculo, dibujos y diapositivas de manera colaborativa usando solamente un navegador web. Esta herramienta es un gestor de documentos pues a través de ella se pueden subir a la nube todo tipo de archivos y ordenarlos en carpetas así como compartirlos con otros usuarios.
+GoogleDocs es un conjunto de herramientas online que permiten elaborar documentos, hojas de cálculo, dibujos y diapositivas de manera colaborativa usando solamente un navegador web. Esta herramienta es un gestor de documentos pues a través de ella se pueden subir a la nube todo tipo de archivos y ordenarlos en carpetas así como compartirlos con otros usuarios. 
+
 
 \subsubsection{Funcionalidades}
 
@@ -22,11 +70,6 @@ GoogleDocs es un conjunto de herramientas online que permiten elaborar documento
 \end{figure}
 
 
-
-
-
-\section{Técnicas y herramientas para el aprendizaje colaborativo}
-
 \subsection{Sistema Web para la enseñanza de Casos
 de Uso empleando la Técnica de Aprendizaje Cooperativo
 de Rompecabezas.}
@@ -39,7 +82,8 @@ El módulo de Ejecución se encarga de llevar a cabo la ejecución de una sesió
 
 Por último se tiene el módulo de Evaluación, en el cual se elaboran preguntas y examenes que luego el profesor aplica a sus alumnos. Estos exámenes son calificados manualmente o de forma automática por el propio sistema.
 
-\subsubsection{Arquitectura del sistema}
+\subsubsection{ARQUITECTURA DEL SISTEMA}
+
 El sistema fue desarrollado usando una arquitectura Modelo-Vista-Controlador. Se usó Java como plataforma de desarrollo y MySQL como motor de base de datos. Acontinuación se indican los frameworks utilizados en el sistema:
 
 \begin{itemize}
@@ -48,6 +92,52 @@ El sistema fue desarrollado usando una arquitectura Modelo-Vista-Controlador. Se
   \item MyBatis
   \item Librerías AJAX: JQuery, DojoToolKit
 \end{itemize}
+
+\subsubsection{MÓDULOS DEL SISTEMA}
+
+El sistema desarrollado consta de 3 módulos que se detallan a continuación:\\
+
+\textbf{Planificación}\\
+
+Este módulo posee las siguientes funcionalidades:
+\begin{enumerate}
+  \item Crear dinámica de Curso
+  \item Consultar información del curso
+  \item Consultar configuración de dinámica
+  \item Consultar información de dinámica
+  \item Actualizar mensaje interno
+\end{enumerate}
+
+\textbf{Ejecución}\\
+
+Este módulo se encarga de llevar a cabo el desarrollo de una sesión basada en la técnica de aprendizaje colaborativo de rompecabezas. Permite la lectura de materiales y documentes, hasta la elaboración colaborativa de la solución a los diferentes problemas propuestos en los diferentes grupos Jigsaw y Expertos.\\
+
+El módulo cuenta con herramientas de chat para la comunicación online, así como también de un foro para la discusión de los temas.\\
+
+Este módulo posee las siguientes funcionalidades:
+
+\begin{enumerate}
+  \item Actualizar publicación en foro
+  \item Ingresar sesión cooperativa
+  \item Controlar estado de la dinámica
+  \item Elaborar casos de uso,.
+\end{enumerate}
+
+\textbf{Evaluación}\\
+
+En esta parte del sistema es donde se elaboran las preguntas y exámenes por parte del docente y posteriormente se aplican a los alumnos. El sistema permite que estos exámenes sean evaluados manualmente o de forma automática.
+
+Este módulo posee las siguientes funcionalidades:
+\begin{enumerate}
+  \item Consultar configuración de evaluación.
+  \item Consultar corrección de evaluación.
+  \item Consultar calificación de evaluación.
+  \item Crear evaluación.
+  \item Rendir evaluación.
+  \item Realizar calificación.
+\end{enumerate}
+
+
 \emph{Fuente} \cite{pinzas_desarrollo_2013}
 
 \subsection{CodeBunks}
@@ -87,8 +177,6 @@ La API en tiempo real se encarga de todos los aspectos de la transmisión de dat
 La API en tiempo real de GoogleDrive proporciona todas las herramientas que se necesitan para crear una aplicación colaborativa que no necesita correr en nuestro propio servidor.
 
 
-
-\subsection{NodeJS}
 \subsection{Socket.IO}
 
 Socket.IO permite la comunicación basada en eventos bidireccional en tiempo real.
@@ -99,6 +187,23 @@ Funciona en todas las plataformas, el navegador o dispositivo, centrándose tamb
   \item Mensajería instantánea y chat
   \item Colaboración de documentos. Permitir a los usuarios editar simultáneamente un documento y ver los cambios del otro.
 \end{itemize}
+
+\subsection{Ideone API - Sphere Engine}
+Sphere Engine, antes conocida como Ideone API, permite a los usuarios ejecutar código en múltiples lenguajes de manera online. Ideone es un compilador y una herramienta de depuración que soporta más de 60 lenguajes de programación. Através de la API, los desarrolladores pueden crear sus propias aplicaciones con fines educativos, personales o de negocios. Sphere Engine es un servicio web el cual puede ser accedido a través de protocolo SOAP.\\
+
+Esta API posee las siguientes funcionalidades:
+
+\begin{enumerate}
+  \item Permite subir código fuente y compartirlo con otros usuarios.
+  \item Permite ejecutar el código fuente con una data inicial en el lado servidor y en más de 60 lenguajes de programación diferentes.
+  \item Permite descargar los resultados obtenidos en la ejecución del código fuente(salida, errores, información de compilación, tiempo de ejecución, uso de memoria, etc).
+\end{enumerate}
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.5]{figuras/ideone.jpg}\\
+  \caption{Ideone}\label{fig:ideone}
+\end{figure}
 
 
 

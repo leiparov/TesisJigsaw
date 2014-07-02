@@ -5,8 +5,12 @@
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage[apaciteclassic,nodoi]{apacite}
 \usepackage{lscape}
+\usepackage{tabularx}
 %\usepackage{pdflscape}
-
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{longtable}
 %\usepackage[round]{natbib}
 
 \begin{document}
@@ -17,7 +21,13 @@
 \renewcommand{\bibname}{Referencias}% Name of ref. list if it's a chapter.
 \renewcommand{\BBAA}{\&}%  between authors in parenthetical cites and ref. list
 \renewcommand{\BBAB}{y}%
-
+%CHECKS PIFONT%
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+%TABLES%
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 %\pagenumbering{roman}
 %\addcontentsline{toc}{chapter}{caratula}
 %\maketitle

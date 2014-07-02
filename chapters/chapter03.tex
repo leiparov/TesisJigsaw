@@ -44,30 +44,28 @@ Pair Research es una generalización de la programación en pares. Cada semana, 
 La matriz de preferencias sirve para influir en la asignación de parejas de tal forma que aquellos con preferencia mutua positiva sean siempre emparejados mientras que aquellos con preferencia mutua negativa nunca sean emparejados y además se empareje de forma aleatoria a los miembros con preferencia mutua neutral. Para generar las vinculaciones, el sistema utiliza las preferencias ingresadas para formar un grafo ponderado cuyos nodos representan a los miembros del grupo y el grafo contiene un arco entre dos nodos si y solamente si ambos miembros tienen preferencias no negativas. El peso de una arista entre dos miembros es el promedio de sus preferencias mutuas más un plus siempre que ambos miembros no hayan sido emparejados recientemente. Por otro lado, para el caso de aquellos miembros con preferencias neutrales, el sistema agrega una perturbación aleatoria para hacer la asignación entre dichos miembros del grupo \cite{miller_pair_2014}.\\
 
 La finalidad de la investigación en parejas o investigación en pares fue mejorar la productividad, el aprendizaje informal y la colaboración. En cuanto a la productividad, los resultados del estudio mostraron que los miembros se sintieron más motivados al trabajar usando esta técnica y realizaron satisfactoriamente sus trabajos asignados. Respecto al aprendizaje, se observó mejoras sobre herramientas específicas, habilidades, trabajos prácticos, aprendizaje sobre los demás miembros de grupo. Finalmente, en cuanto a colaboración, los integrantes de los grupos lograron interactuar con más personas de lo que usualmente lo harían lo cual incrementó sus oportunidades para colaboraciones futuras \cite{miller_pair_2014}.\\
-\begin{table}[!ht]
-\centering
-\begin{tabular}{|L{8cm}|C{2.5cm}|C{2.5cm}|}
+\newpage
+\begin{longtable}{|L{8cm}|C{2.5cm}|C{2.5cm}|}
+\caption{Técnicas de aprendizaje colaborativo}
+\label{tab:tecnicasAC}\\
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   CARACTERÍSTICAS & JIGSAW & PAIR RESEARCH \\
   \hline
-  Se aprende del compañero & \cmark & \cmark\\
-  Permite las revisiones de trabajo constantes & \xmark & \cmark\\
-  Desarrolla la creatividad & \cmark & \cmark\\
-  Mejora las comunicación del estudiante & \cmark & \cmark\\
-  Favorece la integración del grupo	& \cmark & \xmark\\
-  Favorece el aprendizaje del tema a tratar & \cmark & \cmark\\
-  Existe un método para generar los emparejamientos & \xmark & \cmark\\
-  Se requiere la dirección de un profesor &	\cmark & \xmark	\\
-  Permite evitar conflictos interpersonales & \xmark &	\cmark\\
-  Favorece al trabajo con personas conocidas & \cmark & \cmark\\
-  Favorece la integración con nuevas personas &	\cmark & \xmark \\	
-  El alumno elige con quién trabajar & \xmark & \cmark\\		
+  $\diamond$ Se aprende del compañero & \cmark & \cmark\\
+  $\diamond$ Permite las revisiones de trabajo constantes & \xmark & \cmark\\
+  $\diamond$ Desarrolla la creatividad & \cmark & \cmark\\
+  $\diamond$ Mejora las comunicación del estudiante & \cmark & \cmark\\
+  $\diamond$ Favorece la integración del grupo	& \cmark & \xmark\\
+  $\diamond$ Favorece el aprendizaje del tema a tratar & \cmark & \cmark\\
+  $\diamond$ Existe un método para generar los emparejamientos & \xmark & \cmark\\
+  $\diamond$ Se requiere la dirección de un profesor &	\cmark & \xmark	\\
+  $\diamond$ Permite evitar conflictos interpersonales & \xmark &	\cmark\\
+  $\diamond$ Favorece al trabajo con personas conocidas & \cmark & \cmark\\
+  $\diamond$ Favorece la integración con nuevas personas &	\cmark & \xmark \\	
+  $\diamond$ El alumno elige con quién trabajar & \xmark & \cmark\\		
   \hline
-\end{tabular}
-\caption{Jigsaw - Pair Research}
-\label{tab:jigsaw-pairResearch}
-\end{table}
+\end{longtable}
 
 \newpage
 \section{Herramientas para el aprendizaje colaborativo}
@@ -220,6 +218,12 @@ Este módulo posee las siguientes funcionalidades:
 \emph{Fuente} \cite{pinzas_desarrollo_2013}
 
 \subsection{CodeBunks}
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.3]{figuras/codebunk.png}\\
+  \caption{Codebunk}\label{fig:codebunk}
+\end{figure}
 Es una plataforma que permite codificar y compilar en diferentes lenguajes de programación de forma colaborativa y en tiempo real. Algunas de sus funcionalidades son las siguientes:\\
 
 \begin{enumerate}
@@ -229,53 +233,47 @@ Es una plataforma que permite codificar y compilar en diferentes lenguajes de pr
   \item Code playback. Permite repetir la historia de los cambios realizados en el código.
   \item Equipos. Permite crear equipos de trabajo e invitar a otros usuarios a colaborar en el desarrollo de un programa.
 \end{enumerate}
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.3]{figuras/codebunk.png}\\
-  \caption{Codebunk}\label{fig:codebunk}
-\end{figure}
-
-\begin{landscape}
-\begin{longtable}{|L{10cm}|C{2.5cm}|C{2.5cm}|C{2.5cm}|C{2.5cm}|}
+\newpage
+%\begin{landscape}
+\begin{longtable}{|L{7cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 \caption{Herramientas para el aprendizaje colaborativo}
-\label{tab:herramientas}\\
+\label{tab:herramientasAC}\\
     \hline
     CARACTERÍSTICAS	& LearnCS &	Google Docs & Sistema PUCP & Code Bunks\\	
     \hline
-    Permite escribir código fuente C	&\cmark	&\cmark	&\xmark	&\cmark	\\
-    Compila código fuente C	&\cmark	&\xmark	&\xmark	&\cmark	\\
-    Permite depurar el código fuente C	&\cmark	&\xmark	&\xmark	&\xmark	\\
-    Posee un representación de la memoria del computador	&\cmark	&\xmark	&\xmark	&\xmark	\\
-    Muestra mensajes de error	&\cmark	&\xmark	&\xmark	&\cmark	\\
-    Brinda coloreado de sintaxis de lenguaje C	&\cmark	&\xmark	&\xmark	&\cmark	\\
-    Es un aplicativo web	&\cmark	&\cmark	&\cmark	&\cmark	\\
-    Soporta sólamente lenguage C	&\cmark	&\xmark	&\xmark	&\xmark	\\
-    Crear documentos básicos desde cero	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    Subir archivos ya creados	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    Edición de documentos de texto	&\xmark	&\cmark	&\cmark	&\cmark	\\
-    Edición de hojas de cálculo	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    Edición de diapositivas	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    Compartir documentos	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    Chatear en tiempo real con otros usuarios	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    Exportar documentos 	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    Diseñar sesión de clase jigsaw	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    Tomar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    Calificar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    Foro de discusión	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    Elaborar casos de uso	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    Permite escribir código fuente de forma colaborativa	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    Soporta varios lenguajes de programación (14)	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    Coloración de sintaxis por cada lenguaje de programación	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    Indentado inteligente	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    Compilador de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    Ejecución de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    Visualización de resultados de ejecución	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    Historial de revisiones de código	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    Creación de equipos colaborativos	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Permite escribir código fuente C	&\cmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Compila código fuente C	&\cmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Permite depurar el código fuente C	&\cmark	&\xmark	&\xmark	&\xmark	\\
+    $\diamond$ Posee un representación de la memoria del computador	&\cmark	&\xmark	&\xmark	&\xmark	\\
+    $\diamond$ Muestra mensajes de error	&\cmark	&\xmark	&\xmark	&\cmark	\\
+    %$\diamond$ Brinda coloreado de sintaxis de lenguaje C	&\cmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Es un aplicativo web	&\cmark	&\cmark	&\cmark	&\cmark	\\
+    $\diamond$ Soporta sólamente lenguage C	&\cmark	&\xmark	&\xmark	&\xmark	\\
+    $\diamond$ Crear documentos básicos desde cero	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Subir archivos ya creados	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Edición de documentos de texto	&\xmark	&\cmark	&\cmark	&\cmark	\\
+    $\diamond$ Edición de hojas de cálculo	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Edición de diapositivas	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Compartir documentos	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Chatear en tiempo real con otros usuarios	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Exportar documentos 	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Diseñar sesión de clase jigsaw	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Tomar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Calificar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Foro de discusión	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Elaborar casos de uso	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Permite escribir código fuente de forma colaborativa	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Soporta varios lenguajes de programación (14)	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Coloración de sintaxis	&\cmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Indentado inteligente	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Compilador de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Ejecución de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Visualización de resultados de ejecución	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Historial de revisiones de código	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Creación de equipos colaborativos	&\xmark	&\cmark	&\xmark	&\cmark	\\
     \hline
 \end{longtable}
-\end{landscape}
+%\end{landscape}
 
 \newpage
 \section{Frameworks para aplicaciones web de tiempo real}
@@ -327,5 +325,22 @@ Esta API posee las siguientes funcionalidades:
   \caption{Ideone}\label{fig:ideone}
 \end{figure}
 
-
+\begin{longtable}{|L{10cm}|C{2cm}|C{2cm}|}
+\caption{Frameworks para aplicaciones web de tiempo real}
+\label{tab:frameworks}\\
+\hline
+CARACTERÍSTICAS & Google Drive Realtime API	& Ideone API - Sphere Engine\\	
+\hline
+$\diamond$ Se implementa a través de Javascript	&\cmark	&\xmark	\\
+$\diamond$ Creación y edición de listas, arrays, matrices, maps, objetos javascript personalizados		&\cmark	&\xmark	\\
+$\diamond$ Detección de cambios	&\cmark	&\xmark	\\
+$\diamond$ Detección de ingreso o salida de colaboradores	&\cmark	&\xmark	\\
+$\diamond$ Ejecutar código en múltiples lenguajes de manera online	&\xmark	&\cmark	\\
+$\diamond$ Servicio web vía protocolo SOAP	&\xmark	&\cmark	\\
+$\diamond$ Permite cargar código fuente	&\xmark	&\cmark	\\
+$\diamond$ Permite ejecutar código fuente	&\xmark	&\cmark	\\
+$\diamond$ Permite subir data de prueba inicial	&\xmark	&\cmark	\\
+$\diamond$ Permite descargar los resultados obtenidos en la ejecución	&\xmark	&\cmark	\\
+\hline
+\end{longtable}
 

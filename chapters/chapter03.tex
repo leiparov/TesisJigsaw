@@ -13,14 +13,16 @@ Los objetivos del ejercicio jigsaw realizado fueron para definir LTPAC, identifi
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_1.png}\\
-  \caption{Jigsaw - Paso 1}\label{fig:jigsaw_ltpac_1}
+  \caption[Jigsaw Paso 1]{Jigsaw Primera Fase\protect\cite{Buhr2014429} }
+  \label{fig:jigsaw_ltpac_1}
 \end{figure}
 
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_2.png}\\
-  \caption{Jigsaw - Paso 2}\label{fig:jigsaw_ltpac_2}
+  \caption[Jigsaw Paso 2]{Jigsaw Segunda Fase\protect\cite{Buhr2014429} }
+  \label{fig:jigsaw_ltpac_2}
 \end{figure}
 
 La efectividad de esta experiencia de aprendizaje fue medida a través de los comentarios por escrito de los estudiantes y el personal LTPAC así como también a través de una encuesta con una escala de 5 puntos donde 1 reflejaba malo y 5 significaba bueno. Los estudiantes también fueron evaluados con un examen de conocimientos sobre el tema tratado en la actividad desarrollada en el asilo. Los resultados de este examen indicaron que los estudiantes aprendieron los roles del personal LTPAC de forma satisfactoria. En general, el ejercicio jigsaw fue bien recibido por todos los participantes y mostró ser un medio eficaz para introducir a los estudiantes de medicina en el mundo del cuidado de ancianos \cite{Buhr2014429}.\\
@@ -32,19 +34,23 @@ Pair Research es una generalización de la programación en pares. Cada semana, 
 
 \citeA{miller_pair_2014} elaboraron un prototipo de hoja de cálculo para gestionar la investigación en pares de tal forma que cada semana, el sistema automáticamente hacía recordar a los miembros del grupo que envíen en qué necesitaban ayuda y en qué aspecto cada uno podía ayudar al resto para luego realizar el respectivo emparejamiento y notificar a cada miembro quien sería su siguiente pareja. Lo principal del prototipo elaborado (Ver figura \ref{fig:pair_research}) es la matriz de preferencias para el emparejamiento de personas. Cada semana, los miembros de cada grupo especificaban la ayuda que necesitaban en esa semana como por ejemplo: ``depurar programa en Django'' o ``revisar un informe''. Otros miembros luego completaban la matriz de preferencias de acuerdo a si podían o estaban interesados en ayudar en algún tema en específico; Para esto, ellos tenía que colocar un número según si preferencia siendo 1 el número que refleja mayor interés, -1 el mayor desinterés y 0 indicaba neutro \cite{miller_pair_2014} \\
 
-\begin{landscape}
-\begin{figure}[!ht]
+%\begin{landscape}
+\begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.7]{figuras/pair_research.png}\\
-  \caption{Pair research}\label{fig:pair_research}
+  \includegraphics[scale=0.4]{figuras/pair_research.png}\\
+  \caption[Pair Research]{Pair research \protect\cite{miller_pair_2014}}
+  \label{fig:pair_research}
 \end{figure}
-\end{landscape}
+%\end{landscape}
 
 La matriz de preferencias sirve para influir en la asignación de parejas de tal forma que aquellos con preferencia mutua positiva sean siempre emparejados mientras que aquellos con preferencia mutua negativa nunca sean emparejados y además se empareje de forma aleatoria a los miembros con preferencia mutua neutral. Para generar las vinculaciones, el sistema utiliza las preferencias ingresadas para formar un grafo ponderado cuyos nodos representan a los miembros del grupo y el grafo contiene un arco entre dos nodos si y solamente si ambos miembros tienen preferencias no negativas. El peso de una arista entre dos miembros es el promedio de sus preferencias mutuas más un plus siempre que ambos miembros no hayan sido emparejados recientemente. Por otro lado, para el caso de aquellos miembros con preferencias neutrales, el sistema agrega una perturbación aleatoria para hacer la asignación entre dichos miembros del grupo \cite{miller_pair_2014}.\\
 
 La finalidad de la investigación en parejas o investigación en pares fue mejorar la productividad, el aprendizaje informal y la colaboración. En cuanto a la productividad, los resultados del estudio mostraron que los miembros se sintieron más motivados al trabajar usando esta técnica y realizaron satisfactoriamente sus trabajos asignados. Respecto al aprendizaje, se observó mejoras sobre herramientas específicas, habilidades, trabajos prácticos, aprendizaje sobre los demás miembros de grupo. Finalmente, en cuanto a colaboración, los integrantes de los grupos lograron interactuar con más personas de lo que usualmente lo harían lo cual incrementó sus oportunidades para colaboraciones futuras \cite{miller_pair_2014}.\\
+
 \newpage
+\subsection{Análisis comparativo}
+En el siguiente cuadro ser resumen las características principales que nos ofrece cada una de las dos técnicas de aprendizaje colaborativo que han sido presentadas en los apartados anteriores.\\
 \begin{longtable}{|L{8cm}|C{2.5cm}|C{2.5cm}|}
 \caption{Técnicas de aprendizaje colaborativo}
 \label{tab:tecnicasAC}\\
@@ -73,13 +79,14 @@ La finalidad de la investigación en parejas o investigación en pares fue mejor
 \subsection{LearnCS}
 \emph{LearnCS!} es un entorno de programación creado específicamente para el uso de estudiantes de primer año de la carrera de ciencias de la computación. Este programa elimina la necesidad de los alumnos de tener que preocuparse por un editor de texto, comandos linux y proceso de compilación. LearnCS! proveee un entorno web en el cual los alumno pueden escribir, ejecutar y depurar programas usando un interfaz familiar y amigable. El compilador de C embebido que posee el sistema permite al alumno ejecutar sus programas con simplemente hacer click en un botón y obtener los resultados de ejecución de su código fuente \cite{lipman_learncs_2014}.\\
 
-En muchos cursos de programación de primer ciclo, el concepto de depurar un programa es enseñado a finales del curso. En cambio, a través de \emph{LearnCS!}, los alumnos pueden establecer puntos de corte en el programa y empezar a depurar paso a paso su código fuente. Además, el sistema brinda la opción de ver la representación de la memoria y así visualizar en detalle el estado de su programa. Cuando se llaman a funciones, los alumnos aprenden cómo los argumentos y variables locales son colocados en la pila de la memoria y cómo las variables son reservadas en memoria \cite{lipman_learncs_2014}.
+En muchos cursos de programación de primer ciclo, el concepto de depurar un programa es enseñado a finales del curso. En cambio, a través de \emph{LearnCS!}, los alumnos pueden establecer puntos de corte en el programa y empezar a depurar paso a paso su código fuente. Además, el sistema brinda la opción de ver la representación de la memoria y así visualizar en detalle el estado de su programa. Cuando se llaman a funciones, los alumnos aprenden cómo los argumentos y variables locales son colocados en la pila de la memoria y cómo las variables son reservadas en memoria \cite{lipman_learncs_2014}.\\
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/learncs.png}\\
-  \caption{LearnCS!}\label{fig:learncs}
+  \includegraphics[scale=0.4]{figuras/learncs.png}\\
+  \caption[LearnCS]{LearnCS! \protect\cite{lipman_learncs_2014}}
+  \label{fig:learncs}
 \end{figure}
 
 LearnCS! fue creado para proporcionar un ambiente de aprendizaje para estudiantes de informática de primer año. Sus principales objetivos son proporcionar asistencia útil al alumno en la construcción de un modelo mental de la máquina nocional de C a través de la visualización detallada de la memoria de \emph{LearnCS!} y sus mensajes de error integrados en las instalaciones de depuración, y para proporcionar que producen consejos que son útiles para el principiante para localizar y corregir errores de sintaxis\cite{lipman_learncs_2014}.\\
@@ -93,14 +100,14 @@ LearnCS! se ejecuta en un navegador web y tal como se muesta en la Figura \ref{f
   \item (Panel inferior-derecho) Opcionalmente, como se muestra en la figura \ref{fig:learncs2}, se muestra un área gráfica que permite desarrollar programas más interactivos y más interesantes para los alumnos.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.5]{figuras/learncs2.png}\\
-  \caption{LearnCS!}\label{fig:learncs2}
+  \caption[LearnCS]{LearnCS!}\label{fig:learncs2}
 \end{figure}
 
-
+\newpage
 \subsection{Google Docs}
 
 Google Docs es un conjunto de herramientas online que permiten elaborar documentos, hojas de cálculo, dibujos y diapositivas de manera colaborativa usando solamente un navegador web. Esta herramienta es un gestor de documentos pues a través de ella se pueden subir a la nube todo tipo de archivos y ordenarlos en carpetas así como compartirlos con otros usuarios.\\
@@ -141,14 +148,14 @@ Para acceder a esta herramienta de colaboración, en primer lugar se debe tener 
 %
 %\end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.8]{figuras/googledocs.jpg}\\
-  \caption{GoogleDocs}\label{fig:googledocs}
+  \caption[Google Docs]{GoogleDocs \protect\cite{googledocs}}\label{fig:googledocs}
 \end{figure}
 
-
+\newpage
 \subsection{Sistema Web para la enseñanza de Casos
 de Uso empleando la Técnica de Aprendizaje Cooperativo
 de Rompecabezas.}
@@ -222,7 +229,7 @@ Este módulo posee las siguientes funcionalidades:
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.3]{figuras/codebunk.png}\\
-  \caption{Codebunk}\label{fig:codebunk}
+  \caption[CodeBunk]{Codebunk \protect\cite{codebunk}}\label{fig:codebunk}
 \end{figure}
 Es una plataforma que permite codificar y compilar en diferentes lenguajes de programación de forma colaborativa y en tiempo real. Algunas de sus funcionalidades son las siguientes:\\
 
@@ -233,7 +240,11 @@ Es una plataforma que permite codificar y compilar en diferentes lenguajes de pr
   \item Code playback. Permite repetir la historia de los cambios realizados en el código.
   \item Equipos. Permite crear equipos de trabajo e invitar a otros usuarios a colaborar en el desarrollo de un programa.
 \end{enumerate}
+
+
 \newpage
+\subsection{Análisis comparativo}
+Las cuatro herramientas para el aprendizaje colaborativo que se han estudiado hasta el momento son resumidas y comparadas en el siguiente cuadro, en el cual se podrá apreciar las características que nos ofrece cada una de las cuatro aplicaciones presentadas anteriormente.\\
 %\begin{landscape}
 \begin{longtable}{|L{7cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 \caption{Herramientas para el aprendizaje colaborativo}
@@ -322,9 +333,13 @@ Esta API posee las siguientes funcionalidades:
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.5]{figuras/ideone.jpg}\\
-  \caption{Ideone}\label{fig:ideone}
+  \caption[Ideone]{Ideone \protect\cite{ideone}}\label{fig:ideone}
 \end{figure}
 
+
+\newpage
+\subsection{Análisis comparativo}
+Tanto la API de GoogleDrive como la API de Ideone ofrecen características importantes para la elaboración de aplicaciones web de tiempo real, las mismas que se detallan en el siguiente cuadro comparativo.\\
 \begin{longtable}{|L{10cm}|C{2cm}|C{2cm}|}
 \caption{Frameworks para aplicaciones web de tiempo real}
 \label{tab:frameworks}\\

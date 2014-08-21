@@ -1,6 +1,6 @@
 \documentclass[a4paper,openright,12pt]{report}
 \usepackage[utf8]{inputenc} % acentos sin codigo
-\usepackage[spanish, es-tabla]{babel} % espanol
+\usepackage[spanish]{babel} % espanol
 \usepackage{graphicx} % graficos
 \usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 \usepackage[apaciteclassic,nodoi]{apacite}

@@ -1,79 +1,6 @@
 \chapter{Estado del Arte}
+En este capítulo se desarrollo el estado del arte de las herramientas para el aprendizaje colaborativo como son LearnCS, GoogleDocs, entre otros, las mismas que son analizadas en un cuadro comparativo. Además, también se describe el estado del arte de 2 técnicas de aprendizaje colaborativo que serán usadas para la presente tesis. Finalmente, se desarrolla el estado del arte de algunos frameworks y APIs que serán utilizadas para la implementación del sistema web para el aprendizaje colaborativo.
 
-\section{Técnicas para el aprendizaje colaborativo}
-
-\subsection{Jigsaw}
-Jigsaw es una técnica de aprendizaje colaborativo y recientemente ha sido aplicada por \citeA{Buhr2014429} a un grupo de estudiantes de medicina  de la Universidad de Duke tal y como se describe en el artículo \emph{``Using the Jigsaw Cooperative Learning Method to Teach Medical Students About Long Term and Postacute Care''}. En este estudio se desarrolló una experiencia colaborativa usando la técnica de Jigsaw para exponer a los estudiantes sobre el cuidado intensivo a largo plazo  (LTPAC - Long Term and Post Acute Care) y así lograr que ellos conozcan las herramientas y roles del personal involucrado en este tipo de cuidados de pacientes en un asilo de ancianos. Para alcanzar este objetivo, pequeños grupos de estudiantes de medicina realizaron entrevistas al personal de LTPAC sobre sus respectivos roles. Estos grupos posteriormente fueron reorganizados en nuevos grupos conteniendo un estudiante de cada grupo original más un moderador y cada estudiante en los nuevos grupos tuvo que explicar sobre el rol del profesional LTPAC al cual había entrevistado \cite{Buhr2014429}.\\
-
-Los objetivos del ejercicio jigsaw realizado fueron para definir LTPAC, identificar cuáles son los alcances de este tipo de servicios que se brindan a los pacientes y describir los roles de los miembros del equipo que laboraba en el asilo de ancianos. Para esto, 10 miembros claves del equipo LTPAC fueron identificados y un total de 50 estudiantes fueron divididos en 10 grupos expertos. A cada grupo experto le fue asignado de 30 a 45 minutos para encontrar y entrevistar a 1 miembro del equipo LTPAC(Ver figura \ref{fig:jigsaw_ltpac_1}). Cada estudiante en el grupo tenía que convertirse en un experto sobre el rol del miembro que le fue asignado. Después de las entrevistas, los estudiantes tuvieron un tiempo de 15 minutos para debatir en sus grupos de expertos sobre los aspectos más resaltantes del rol del profesional al que entrevistaron. Finalmente, los grupos fueron reorganizados conteniendo un estudiante experto de cada grupo original así como un moderador(Ver figura \ref{fig:jigsaw_ltpac_2}). Lo nuevos grupos Jigsaw se reunieron por 1 hora durante la cual cada estudiante expuso los resultados de la entrevista que había realizado al profesional LTPAC del asilo \cite{Buhr2014429}.\\
-
-
-
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_1.png}\\
-  \caption[Jigsaw Paso 1]{Jigsaw Primera Fase\protect\cite{Buhr2014429} }
-  \label{fig:jigsaw_ltpac_1}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_2.png}\\
-  \caption[Jigsaw Paso 2]{Jigsaw Segunda Fase\protect\cite{Buhr2014429} }
-  \label{fig:jigsaw_ltpac_2}
-\end{figure}
-
-La efectividad de esta experiencia de aprendizaje fue medida a través de los comentarios por escrito de los estudiantes y el personal LTPAC así como también a través de una encuesta con una escala de 5 puntos donde 1 reflejaba malo y 5 significaba bueno. Los estudiantes también fueron evaluados con un examen de conocimientos sobre el tema tratado en la actividad desarrollada en el asilo. Los resultados de este examen indicaron que los estudiantes aprendieron los roles del personal LTPAC de forma satisfactoria. En general, el ejercicio jigsaw fue bien recibido por todos los participantes y mostró ser un medio eficaz para introducir a los estudiantes de medicina en el mundo del cuidado de ancianos \cite{Buhr2014429}.\\
-
-\subsection{Pair Research}
-En el estudio \emph{``Pair Research: Matching People for Colaboration, Learning, and Productivity''} elaborado por \citeA{miller_pair_2014} se describe una nueva forma de interacción denominada \emph{``Pair Research (Investigación en pares)''} que permite incrementar la productividad, el aprendizaje y la colaboración entre los diferentes grupos de investigación. A lo largo del artículo, los autores detallan un forma de cómo elaborar los grupos y además presentan los resultados obtenidos, los cuales mostraron que los miembros de los equipos usaban la investigación en pares en diferentes maneras incluyendo programación en pares, lluvia de ideas, recolección de data y análisis.\\
-
-Pair Research es una generalización de la programación en pares. Cada semana, los miembros de los grupos son emparejados guidados por algoritmo de emparejamiento. Cada pareja se reune por una a dos horas de las cuales la mitad del tiempo es dedicado a trabajar en el proyecto de la otra persona. El trabajo puede ser cualquier actividad relacionada a programación, pruebas, diseño, recolección de datos y análisis, lluvia de ideas y asesoría. La siguiente semana, se forman nuevas parejas y el proceso se repite.\\
-
-\citeA{miller_pair_2014} elaboraron un prototipo de hoja de cálculo para gestionar la investigación en pares de tal forma que cada semana, el sistema automáticamente hacía recordar a los miembros del grupo que envíen en qué necesitaban ayuda y en qué aspecto cada uno podía ayudar al resto para luego realizar el respectivo emparejamiento y notificar a cada miembro quien sería su siguiente pareja. Lo principal del prototipo elaborado (Ver figura \ref{fig:pair_research}) es la matriz de preferencias para el emparejamiento de personas. Cada semana, los miembros de cada grupo especificaban la ayuda que necesitaban en esa semana como por ejemplo: ``depurar programa en Django'' o ``revisar un informe''. Otros miembros luego completaban la matriz de preferencias de acuerdo a si podían o estaban interesados en ayudar en algún tema en específico; Para esto, ellos tenía que colocar un número según si preferencia siendo 1 el número que refleja mayor interés, -1 el mayor desinterés y 0 indicaba neutro \cite{miller_pair_2014} \\
-
-%\begin{landscape}
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.4]{figuras/pair_research.png}\\
-  \caption[Pair Research]{Pair research \protect\cite{miller_pair_2014}}
-  \label{fig:pair_research}
-\end{figure}
-%\end{landscape}
-
-La matriz de preferencias sirve para influir en la asignación de parejas de tal forma que aquellos con preferencia mutua positiva sean siempre emparejados mientras que aquellos con preferencia mutua negativa nunca sean emparejados y además se empareje de forma aleatoria a los miembros con preferencia mutua neutral. Para generar las vinculaciones, el sistema utiliza las preferencias ingresadas para formar un grafo ponderado cuyos nodos representan a los miembros del grupo y el grafo contiene un arco entre dos nodos si y solamente si ambos miembros tienen preferencias no negativas. El peso de una arista entre dos miembros es el promedio de sus preferencias mutuas más un plus siempre que ambos miembros no hayan sido emparejados recientemente. Por otro lado, para el caso de aquellos miembros con preferencias neutrales, el sistema agrega una perturbación aleatoria para hacer la asignación entre dichos miembros del grupo \cite{miller_pair_2014}.\\
-
-La finalidad de la investigación en parejas o investigación en pares fue mejorar la productividad, el aprendizaje informal y la colaboración. En cuanto a la productividad, los resultados del estudio mostraron que los miembros se sintieron más motivados al trabajar usando esta técnica y realizaron satisfactoriamente sus trabajos asignados. Respecto al aprendizaje, se observó mejoras sobre herramientas específicas, habilidades, trabajos prácticos, aprendizaje sobre los demás miembros de grupo. Finalmente, en cuanto a colaboración, los integrantes de los grupos lograron interactuar con más personas de lo que usualmente lo harían lo cual incrementó sus oportunidades para colaboraciones futuras \cite{miller_pair_2014}.\\
-
-\newpage
-\subsection{Análisis comparativo}
-En el siguiente cuadro ser resumen las características principales que nos ofrece cada una de las dos técnicas de aprendizaje colaborativo que han sido presentadas en los apartados anteriores.\\
-\begin{longtable}{|L{8cm}|C{2.5cm}|C{2.5cm}|}
-\caption{Técnicas de aprendizaje colaborativo}
-\label{tab:tecnicasAC}\\
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  CARACTERÍSTICAS & JIGSAW & PAIR RESEARCH \\
-  \hline
-  $\diamond$ Se aprende del compañero & \cmark & \cmark\\
-  $\diamond$ Permite las revisiones de trabajo constantes & \xmark & \cmark\\
-  $\diamond$ Desarrolla la creatividad & \cmark & \cmark\\
-  $\diamond$ Mejora las comunicación del estudiante & \cmark & \cmark\\
-  $\diamond$ Favorece la integración del grupo	& \cmark & \xmark\\
-  $\diamond$ Favorece el aprendizaje del tema a tratar & \cmark & \cmark\\
-  $\diamond$ Existe un método para generar los emparejamientos & \xmark & \cmark\\
-  $\diamond$ Se requiere la dirección de un profesor &	\cmark & \xmark	\\
-  $\diamond$ Permite evitar conflictos interpersonales & \xmark &	\cmark\\
-  $\diamond$ Favorece al trabajo con personas conocidas & \cmark & \cmark\\
-  $\diamond$ Favorece la integración con nuevas personas &	\cmark & \xmark \\	
-  $\diamond$ El alumno elige con quién trabajar & \xmark & \cmark\\		
-  \hline
-\end{longtable}
-
-\newpage
 \section{Herramientas para el aprendizaje colaborativo}
 
 \subsection{LearnCS}
@@ -85,7 +12,7 @@ En muchos cursos de programación de primer ciclo, el concepto de depurar un pro
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.4]{figuras/learncs.png}\\
-  \caption[LearnCS]{LearnCS! \protect\cite{lipman_learncs_2014}}
+  \caption[LearnCS]{Interfaz del sistema LearnCS! \protect\cite{lipman_learncs_2014}}
   \label{fig:learncs}
 \end{figure}
 
@@ -104,15 +31,14 @@ LearnCS! se ejecuta en un navegador web y tal como se muesta en la Figura \ref{f
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.5]{figuras/learncs2.png}\\
-  \caption[LearnCS]{LearnCS!}\label{fig:learncs2}
+  \caption[LearnCS]{Área gráfica para programas más interactivos en LearnCS! \protect\cite{lipman_learncs_2014}}\label{fig:learncs2}
 \end{figure}
 
-\newpage
 \subsection{Google Docs}
 
-Google Docs es un conjunto de herramientas online que permiten elaborar documentos, hojas de cálculo, dibujos y diapositivas de manera colaborativa usando solamente un navegador web. Esta herramienta es un gestor de documentos pues a través de ella se pueden subir a la nube todo tipo de archivos y ordenarlos en carpetas así como compartirlos con otros usuarios.\\
+Google Docs es un conjunto de herramientas online que permiten elaborar documentos, hojas de cálculo, dibujos y diapositivas de manera colaborativa usando solamente un navegador web. Esta herramienta es un gestor de documentos pues a través de ella se pueden subir a la nube todo tipo de archivos y ordenarlos en carpetas así como compartirlos con otros usuarios \cite{googledocs}.\\
 
-Para acceder a esta herramienta de colaboración, en primer lugar se debe tener una cuenta de gmail y con ello se obtiene el acceso a Google Docs a través del siguiente link \url{http://docs.google.com/}. Las funcionalidades más resaltantes que posee GoogleDocs son las siguientes:\\
+Para acceder a esta herramienta de colaboración, en primer lugar se debe tener una cuenta de gmail y con ello se obtiene el acceso a Google Docs a través del siguiente link \url{http://docs.google.com/}. Las funcionalidades más resaltantes que posee GoogleDocs son las siguientes: \cite{googledocs}\\
 
 \begin{enumerate}
   \item \emph{Crear documentos básicos desde cero}. Con GoogleDocs es posible realizar tareas que corresponden al manejo de documentos de oficina, como crear documentos de texto, hojas de cálculo, presentaciones de diapositivas, y añadirles a todos ellos imágenes, comentarios o fórmulas, entre otras muchas cosas más.
@@ -224,12 +150,12 @@ Este módulo posee las siguientes funcionalidades:
 
 \emph{Fuente} \cite{pinzas_desarrollo_2013}
 
-\subsection{CodeBunks}
+\subsection{CodeBunk}
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.3]{figuras/codebunk.png}\\
-  \caption[CodeBunk]{Codebunk \protect\cite{codebunk}}\label{fig:codebunk}
+  \caption[CodeBunk]{Interfaz gráfica de Codebunk \protect\cite{codebunk}}\label{fig:codebunk}
 \end{figure}
 Es una plataforma que permite codificar y compilar en diferentes lenguajes de programación de forma colaborativa y en tiempo real. Algunas de sus funcionalidades son las siguientes:\\
 
@@ -250,39 +176,113 @@ Las cuatro herramientas para el aprendizaje colaborativo que se han estudiado ha
 \caption{Herramientas para el aprendizaje colaborativo}
 \label{tab:herramientasAC}\\
     \hline
-    CARACTERÍSTICAS	& LearnCS &	Google Docs & Sistema PUCP & Code Bunks\\	
+    CARACTERÍSTICAS	& LearnCS &	Google Docs & Sistema PUCP & Code Bunk\\	
     \hline
-    $\diamond$ Permite escribir código fuente C	&\cmark	&\cmark	&\xmark	&\cmark	\\
-    $\diamond$ Compilar y depurar código fuente C	&\cmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Permite escribir y compilar código fuente &\cmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Posee un representación de la memoria del computador	&\cmark	&\xmark	&\xmark	&\xmark	\\
     $\diamond$ Muestra mensajes de error	&\cmark	&\xmark	&\xmark	&\cmark	\\
     %$\diamond$ Brinda coloreado de sintaxis de lenguaje C	&\cmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Es un aplicativo web	&\cmark	&\cmark	&\cmark	&\cmark	\\
     %$\diamond$ Soporta sólamente lenguage C	&\cmark	&\xmark	&\xmark	&\xmark	\\
-    $\diamond$ Crear documentos básicos desde cero	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Subir archivos ya creados	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Edición de documentos de texto	&\xmark	&\cmark	&\cmark	&\cmark	\\
-    $\diamond$ Edición de hojas de cálculo	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Edición de diapositivas	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Compartir documentos	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Permite crear y editar documentos de texto &\xmark	&\cmark	&\xmark	&\xmark	\\
+    %$\diamond$ Subir archivos ya creados	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    %$\diamond$ Edición de documentos de texto	&\xmark	&\cmark	&\cmark	&\cmark	\\
+    $\diamond$ Permite crear y editar hojas de cálculo	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Permite crear y editar diapositivas	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Compartir documentos con otros usuarios	&\xmark	&\cmark	&\xmark	&\cmark	\\
     $\diamond$ Chat de tiempo real	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    $\diamond$ Exportar documentos 	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Diseñar sesión de clase jigsaw	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    $\diamond$ Tomar y calificar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    $\diamond$ Foro de discusión	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    $\diamond$ Elaborar casos de uso	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    $\diamond$ Permite escribir código fuente de forma colaborativa	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    $\diamond$ Java, Python, C, C++, etc	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    $\diamond$ Coloración de sintaxis	&\cmark	&\xmark	&\xmark	&\cmark	\\
+    %$\diamond$ Exportar documentos 	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Permite diseñar una sesión de clase jigsaw	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Permite tomar y calificar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Brinda un foro de discusión	&\xmark	&\cmark	&\cmark	&\xmark	\\
+    $\diamond$ Permite elaborar casos de uso	&\xmark	&\xmark	&\cmark	&\xmark	\\
+    $\diamond$ Permite desarrollar código fuente entre varios usuarios conectados al mismo tiempo	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    %$\diamond$ Java, Python, C, C++, etc	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Coloración de sintaxis de código fuente	&\cmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Indentado inteligente	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    $\diamond$ Compilar y ejecutar de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    %$\diamond$ Compilar y ejecutar de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
     %$\diamond$ Ejecución de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Visualización de resultados de ejecución	&\xmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Historial de revisiones de código	&\xmark	&\cmark	&\xmark	&\cmark	\\
     $\diamond$ Creación de equipos colaborativos	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Juez virtual de programación	&\xmark	&\xmark	&\xmark	&\xmark	\\
+    $\diamond$ Banco de preguntas de programación	&\xmark	&\xmark	&\xmark	&\xmark	\\
     \hline
 \end{longtable}
 %\end{landscape}
+\newpage
+\section{Técnicas para el aprendizaje colaborativo}
+
+\subsection{Jigsaw}
+Jigsaw es una técnica de aprendizaje colaborativo y recientemente ha sido aplicada por \citeA{Buhr2014429} a un grupo de estudiantes de medicina  de la Universidad de Duke tal y como se describe en el artículo \emph{``Using the Jigsaw Cooperative Learning Method to Teach Medical Students About Long Term and Postacute Care''}. En este estudio se desarrolló una experiencia colaborativa usando la técnica de Jigsaw para exponer a los estudiantes sobre el cuidado intensivo a largo plazo  (LTPAC - Long Term and Post Acute Care) y así lograr que ellos conozcan las herramientas y roles del personal involucrado en este tipo de cuidados de pacientes en un asilo de ancianos. Para alcanzar este objetivo, pequeños grupos de estudiantes de medicina realizaron entrevistas al personal de LTPAC sobre sus respectivos roles. Estos grupos posteriormente fueron reorganizados en nuevos grupos conteniendo un estudiante de cada grupo original más un moderador y cada estudiante en los nuevos grupos tuvo que explicar sobre el rol del profesional LTPAC al cual había entrevistado \cite{Buhr2014429}.\\
+
+Los objetivos del ejercicio jigsaw realizado fueron para definir LTPAC, identificar cuáles son los alcances de este tipo de servicios que se brindan a los pacientes y describir los roles de los miembros del equipo que laboraba en el asilo de ancianos. Para esto, 10 miembros claves del equipo LTPAC fueron identificados y un total de 50 estudiantes fueron divididos en 10 grupos expertos. A cada grupo experto le fue asignado de 30 a 45 minutos para encontrar y entrevistar a 1 miembro del equipo LTPAC(Ver figura \ref{fig:jigsaw_ltpac_1}). Cada estudiante en el grupo tenía que convertirse en un experto sobre el rol del miembro que le fue asignado. Después de las entrevistas, los estudiantes tuvieron un tiempo de 15 minutos para debatir en sus grupos de expertos sobre los aspectos más resaltantes del rol del profesional al que entrevistaron. Finalmente, los grupos fueron reorganizados conteniendo un estudiante experto de cada grupo original así como un moderador(Ver figura \ref{fig:jigsaw_ltpac_2}). Lo nuevos grupos Jigsaw se reunieron por 1 hora durante la cual cada estudiante expuso los resultados de la entrevista que había realizado al profesional LTPAC del asilo \cite{Buhr2014429}.\\
+
+
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_1.png}\\
+  \caption[Jigsaw Paso 1]{Jigsaw Primera Fase\protect\cite{Buhr2014429} }
+  \label{fig:jigsaw_ltpac_1}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_2.png}\\
+  \caption[Jigsaw Paso 2]{Jigsaw Segunda Fase\protect\cite{Buhr2014429} }
+  \label{fig:jigsaw_ltpac_2}
+\end{figure}
+
+La efectividad de esta experiencia de aprendizaje fue medida a través de los comentarios por escrito de los estudiantes y el personal LTPAC así como también a través de una encuesta con una escala de 5 puntos donde 1 reflejaba malo y 5 significaba bueno. Los estudiantes también fueron evaluados con un examen de conocimientos sobre el tema tratado en la actividad desarrollada en el asilo. Los resultados de este examen indicaron que los estudiantes aprendieron los roles del personal LTPAC de forma satisfactoria. En general, el ejercicio jigsaw fue bien recibido por todos los participantes y mostró ser un medio eficaz para introducir a los estudiantes de medicina en el mundo del cuidado de ancianos \cite{Buhr2014429}.\\
+
+\subsection{Pair Research}
+En el estudio \emph{``Pair Research: Matching People for Colaboration, Learning, and Productivity''} elaborado por \citeA{miller_pair_2014} se describe una nueva forma de interacción denominada \emph{``Pair Research (Investigación en pares)''} que permite incrementar la productividad, el aprendizaje y la colaboración entre los diferentes grupos de investigación. A lo largo del artículo, los autores detallan un forma de cómo elaborar los grupos y además presentan los resultados obtenidos, los cuales mostraron que los miembros de los equipos usaban la investigación en pares en diferentes maneras incluyendo programación en pares, lluvia de ideas, recolección de data y análisis.\\
+
+Pair Research es una generalización de la programación en pares. Cada semana, los miembros de los grupos son emparejados guidados por algoritmo de emparejamiento. Cada pareja se reune por una a dos horas de las cuales la mitad del tiempo es dedicado a trabajar en el proyecto de la otra persona. El trabajo puede ser cualquier actividad relacionada a programación, pruebas, diseño, recolección de datos y análisis, lluvia de ideas y asesoría. La siguiente semana, se forman nuevas parejas y el proceso se repite.\\
+
+\citeA{miller_pair_2014} elaboraron un prototipo de hoja de cálculo para gestionar la investigación en pares de tal forma que cada semana, el sistema automáticamente hacía recordar a los miembros del grupo que envíen en qué necesitaban ayuda y en qué aspecto cada uno podía ayudar al resto para luego realizar el respectivo emparejamiento y notificar a cada miembro quien sería su siguiente pareja. Lo principal del prototipo elaborado (Ver figura \ref{fig:pair_research}) es la matriz de preferencias para el emparejamiento de personas. Cada semana, los miembros de cada grupo especificaban la ayuda que necesitaban en esa semana como por ejemplo: ``depurar programa en Django'' o ``revisar un informe''. Otros miembros luego completaban la matriz de preferencias de acuerdo a si podían o estaban interesados en ayudar en algún tema en específico; Para esto, ellos tenía que colocar un número según si preferencia siendo 1 el número que refleja mayor interés, -1 el mayor desinterés y 0 indicaba neutro \cite{miller_pair_2014} \\
+
+%\begin{landscape}
+\begin{figure}[h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.4]{figuras/pair_research.png}\\
+  \caption[Pair Research]{Pair research \protect\cite{miller_pair_2014}}
+  \label{fig:pair_research}
+\end{figure}
+%\end{landscape}
+
+La matriz de preferencias sirve para influir en la asignación de parejas de tal forma que aquellos con preferencia mutua positiva sean siempre emparejados mientras que aquellos con preferencia mutua negativa nunca sean emparejados y además se empareje de forma aleatoria a los miembros con preferencia mutua neutral. Para generar las vinculaciones, el sistema utiliza las preferencias ingresadas para formar un grafo ponderado cuyos nodos representan a los miembros del grupo y el grafo contiene un arco entre dos nodos si y solamente si ambos miembros tienen preferencias no negativas. El peso de una arista entre dos miembros es el promedio de sus preferencias mutuas más un plus siempre que ambos miembros no hayan sido emparejados recientemente. Por otro lado, para el caso de aquellos miembros con preferencias neutrales, el sistema agrega una perturbación aleatoria para hacer la asignación entre dichos miembros del grupo \cite{miller_pair_2014}.\\
+
+La finalidad de la investigación en parejas o investigación en pares fue mejorar la productividad, el aprendizaje informal y la colaboración. En cuanto a la productividad, los resultados del estudio mostraron que los miembros se sintieron más motivados al trabajar usando esta técnica y realizaron satisfactoriamente sus trabajos asignados. Respecto al aprendizaje, se observó mejoras sobre herramientas específicas, habilidades, trabajos prácticos, aprendizaje sobre los demás miembros de grupo. Finalmente, en cuanto a colaboración, los integrantes de los grupos lograron interactuar con más personas de lo que usualmente lo harían lo cual incrementó sus oportunidades para colaboraciones futuras \cite{miller_pair_2014}.\\
+
+\newpage
+\subsection{Análisis comparativo}
+En el siguiente cuadro ser resumen las características principales que nos ofrece cada una de las dos técnicas de aprendizaje colaborativo que han sido presentadas en los apartados anteriores.\\
+\begin{longtable}{|L{8cm}|C{2.5cm}|C{2.5cm}|}
+\caption{Técnicas de aprendizaje colaborativo}
+\label{tab:tecnicasAC}\\
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  CARACTERÍSTICAS & JIGSAW & PAIR RESEARCH \\
+  \hline
+  $\diamond$ Se aprende del compañero & \cmark & \cmark\\
+  $\diamond$ Permite las revisiones de trabajo constantes & \xmark & \cmark\\
+  $\diamond$ Desarrolla la creatividad & \cmark & \cmark\\
+  $\diamond$ Mejora las comunicación del estudiante & \cmark & \cmark\\
+  $\diamond$ Favorece la integración del grupo	& \cmark & \xmark\\
+  $\diamond$ Favorece el aprendizaje del tema a tratar & \cmark & \cmark\\
+  $\diamond$ Existe un método para generar los emparejamientos & \xmark & \cmark\\
+  $\diamond$ Se requiere la dirección de un profesor &	\cmark & \xmark	\\
+  $\diamond$ Permite evitar conflictos interpersonales & \xmark &	\cmark\\
+  $\diamond$ Favorece al trabajo con personas conocidas & \cmark & \cmark\\
+  $\diamond$ Favorece la integración con nuevas personas &	\cmark & \xmark \\	
+  $\diamond$ El alumno elige con quién trabajar & \xmark & \cmark\\		
+  \hline
+\end{longtable}
 
 \newpage
 \section{Frameworks para aplicaciones web de tiempo real}
@@ -333,7 +333,6 @@ Esta API posee las siguientes funcionalidades:
   \includegraphics[scale=0.5]{figuras/ideone.jpg}\\
   \caption[Ideone]{Ideone \protect\cite{ideone}}\label{fig:ideone}
 \end{figure}
-
 
 \newpage
 \subsection{Análisis comparativo}

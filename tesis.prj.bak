@@ -4,82 +4,34 @@
 0
 1
 main.tex
-24
+8
 6
 0
 
 main.tex
 TeX:ES:UTF-8:UNIX
-286371835 0 -1 951 -1 1192 0 0 681 411 1 241 221 -1 -1 0 0 48 0 0 48 1 0 1192 -1   0
+286273531 0 30 25 -1 770 0 0 681 411 1 417 -269 -1 -1 0 0 48 0 0 48 1 0 770 -1   0
 chapters\cover.tex
 TeX
-1060859 0 -1 17 -1 634 0 0 904 281 0 161 357 -1 -1 0 0 800 -1 -1 800 1 0 634 -1   0
+1060859 0 -1 756 -1 762 0 0 904 281 0 153 289 -1 -1 0 0 786 -1 -1 786 1 0 762 -1   0
 referencias.bib
 BibTeX
-1049586 0 695 101 695 94 681 0 1362 411 0 793 357 -1 -1 0 0 37 0 0 37 1 0 94 695   0
+1049586 0 695 101 695 94 681 0 1362 411 0 665 357 -1 -1 0 0 37 0 0 37 1 0 94 695   0
 chapters\chapter00.tex
 TeX
-1060859 0 -1 3782 -1 646 0 0 904 281 0 89 255 -1 -1 0 0 1096 -1 -1 1096 1 0 646 -1   0
+1060859 0 -1 638 -1 636 0 0 904 281 0 169 -731 -1 -1 0 0 1090 -1 -1 1090 1 0 636 -1   0
 chapters\chapter01.tex
 TeX
-1060859 0 -1 11542 -1 11469 52 52 956 333 0 25 170 -1 -1 0 0 0 -1 -1 0 1 0 11469 -1   0
+1060859 0 202 38 -1 11469 52 52 956 333 0 25 136 -1 -1 0 0 0 -1 -1 0 1 0 11469 -1   0
 chapters\chapter03.tex
 TeX
-17838075 0 -1 22413 -1 22438 26 26 930 307 0 345 357 -1 -1 0 0 25 -1 -1 25 1 0 22438 -1   0
-Exported Items.bib
-BibTeX:UNIX
-269583346 1 0 1 19 1 104 104 1008 385 0 25 323 -1 -1 0 0 1 0 0 1 1 0 1 19   0
-chapters\chapter02.tex
-TeX:UNIX
-286371835 0 -1 17062 -1 16289 78 78 982 359 0 233 357 -1 -1 0 0 23 -1 -1 23 1 0 16289 -1   0
-:\Users\LeibnitzPavel\Documents\CurriculumVitae\LeibnitzRojas.tex
-TeX:UTF-8:UNIX
-286371835 0 81 44 -1 1099 0 0 852 390 0 321 -408 -1 -1 0 0 32 -1 -1 32 1 0 1099 -1   0
-:\Program Files\MiKTeX 2.9\tex\latex\apacite\spanish.apc
-TeX:STY
-269496306 0 126 28 126 55 130 130 1034 411 0 457 221 -1 -1 0 0 3 0 0 3 1 0 55 126   0
-:\Program Files\MiKTeX 2.9\tex\latex\apacite\apacdoc.sty
-TeX:STY
-269496306 0 0 1 10 73 104 104 1008 385 0 601 -2125 -1 -1 0 0 -1 -1 -1 -1 1 0 73 10   0
-:\Program Files\MiKTeX 2.9\tex\latex\apacite\apacite.sty
-TeX:STY
-269496306 0 0 1 0 1 0 0 904 281 0 25 -3774 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
-:\Program Files\MiKTeX 2.9\tex\latex\apacite\english.apc
-TeX:STY
-269496306 1 44 27 44 1 52 52 956 333 0 25 34 -1 -1 0 0 -1 -1 -1 -1 1 0 1 44   0
-:\Users\LeibnitzPavel\AppData\Roaming\WinEdt Team\WinEdt 7\Config\Adobe.edt
-ASCII:EDT
-269494138 0 0 1 96 30 52 52 956 333 1 305 170 -1 -1 0 0 -1 -1 -1 -1 1 0 30 96   0
+17838075 0 -1 27884 -1 22438 26 26 930 307 0 345 0 -1 -1 0 0 25 -1 -1 25 1 0 22438 -1   0
 :\Program Files (x86)\WinEdt Team\WinEdt 7\Exec\PDF\PDFCloseDoc.edt
 ASCII:EDT
 269494138 7 58 1018 58 1 52 52 982 336 1 73 187 -1 -1 0 0 21 0 0 21 1 0 1 58   0
-:\Program Files\MiKTeX 2.9\bibtex\bst\apalike\apalike.bst
-BST:UNIX
-269583346 0 0 1 0 1 26 26 1258 307 0 25 -6120 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
-:\Program Files\MiKTeX 2.9\tex\latex\apalike\apalike.sty
-TeX:STY:UNIX
-269594610 0 0 1 0 1 130 130 1362 411 0 25 -65 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
-:\Program Files\MiKTeX 2.9\tex\plain\apalike\apalike.tex
+chapters\chapter02.tex
 TeX:UNIX
-269594619 0 -1 0 -1 0 0 0 1232 281 0 25 -1357 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-:\Program Files\MiKTeX 2.9\tex\latex\base\report.sty
-TeX:STY:UNIX
-303149042 0 0 1 0 1 104 104 1001 369 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
-:\Users\LeibnitzPavel\Documents\ProyectoDeTesis\thesis.tex
-TeX:UNIX
-269594619 0 -1 801 -1 801 52 52 982 336 0 193 14 -1 -1 0 0 65 -1 -1 65 1 0 801 -1   0
-:\Users\LeibnitzPavel\Documents\ProyectoDeTesis\ref.tex
-TeX:UNIX
-269594619 0 -1 0 -1 0 52 52 982 336 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-:\Users\LeibnitzPavel\Documents\ProyectoDeTesis\append.tex
-TeX:UNIX
-269594619 0 -1 0 -1 0 78 78 1008 362 0 25 0 -1 -1 0 0 -1 -1 -1 -1 1 0 0 -1   0
-:\Users\LeibnitzPavel\Documents\ProyectoDeTesis\chapter1.tex
-TeX:UNIX
-269594619 0 -1 0 -1 0 78 78 1008 362 0 25 0 -1 -1 0 0 24 -1 -1 24 1 0 0 -1   0
-:\Users\LeibnitzPavel\Documents\CurriculumVitae\fancy-cv\cv.tex
-TeX:UNIX
-269594619 0 -1 311 -1 322 26 26 956 310 0 201 272 -1 -1 0 0 26 -1 -1 26 1 0 322 -1   0
+286371835 0 -1 17062 -1 16289 78 78 982 359 0 233 357 -1 -1 0 0 23 -1 -1 23 1 0 16289 -1   0
 
 *main.tex
 >

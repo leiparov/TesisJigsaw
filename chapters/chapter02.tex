@@ -1,4 +1,5 @@
 \chapter{Marco Teórico}
+En el presente capítulo se define con mayor detalle los conceptos revelantes que abarca esta tesis. El marco teórico incluye una breve descripción de lo que significa Aprendizaje colaborativo presentando además algunos de sus elementos y beneficios. Así mismo, también se describe algunas de las técnicas más conocidas para el aprendizaje colaborativo. Finalmente, se describe algunos conceptos sobre tecnologías para aplicaciones web, conceptos que serán de ayuda para la implementación de la presente tesis.
 \section{Aprendizaje Colaborativo}
 \subsection{Definición}
 Existen diversas formas de definir lo que es Aprendizaje Colaborativo; \citeA{macgregor_collaborative_1990} dice que la enseñanza y el aprendizaje colaborativo son un enfoque educacional que involucra grupos de estudiantes trabajando juntos para resolver un problema, completar una tarea o crear un producto y \citeA{gerlach_1994} sostiene que el aprendizaje cooperativo está basado en la idea de que el aprendizaje es un acto social natural en el cual los participantes conversan entre sí mismos y que es a través de la comunicación y la charla donde realmente ocurre el aprendizaje.\\
@@ -109,7 +110,7 @@ Es una técnica de aprendizaje cooperativo, la cual está basada en un enfoque d
 
 \subsection{AJAX}
 
-El término AJAX es un acrónimo de Asynchronous JavaScript $+$ XML que puede traducirse como ``JavaScript asíncrono más XML''. El término AJAX se presentó por primera vez en el artículo ``Ajax, A new Approach to Web Applications" publicado por Jesse James Garret en el año 2005. En realidad, en dicho artículo se dice que AJAX no es una tecnología en sí mismo sino un conjunto de varias tecnologías que se unen de formas nuevas y sorprendentes.\\
+El término AJAX es un acrónimo de Asynchronous JavaScript $+$ XML que puede traducirse como ``JavaScript asíncrono más XML''. El término AJAX se presentó por primera vez en el artículo ``Ajax, A new Approach to Web Applications" publicado por Jesse James Garret en el año 2005. En realidad, en dicho artículo se dice que AJAX no es una tecnología en sí mismo sino un conjunto de varias tecnologías que se unen de formas nuevas y sorprendentes \cite{ajax_dummies_2006}.\\
 
 AJAX está compuesto por los siguiente:
 
@@ -153,11 +154,12 @@ Desde entonces, AJAX ha permitido realizar diferentes tipos de aplicaciones web 
 
 \subsection{Polling}
 Después del posicionamiento de AJAX, no pasó mucho tiempo para tratar de lograr que los eventos en el navegador salieran fuera de la ecuación y se pudiera automatizar el proceso de obtener nueva información desde el servidor. Fue entonces que los desarrolladores establecieron un intervalo de actualización para revisar actualizaciones cada $n$ segundos \cite{lengstorf_realtime_2013}. Ver figura \ref{fig:polling}
-\begin{figure}[h]
+
+\begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.8]{figuras/ajax_polling.png}\\
-  \caption{Polling envía peticiones HTTP para comprobar si existe nueva información}\label{fig:polling}
+  \includegraphics[scale=0.6]{figuras/ajax_polling.png}\\
+  \caption{Polling}{A través del Polling se envía peticiones HTTP para comprobar si existe nueva información.}\label{fig:polling}
 \end{figure}
 
 \subsection{HTTP Long-Polling}
@@ -165,8 +167,8 @@ El siguiente paso en la evolución del tiempo real es el HTTP \emph{long-polling
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.8]{figuras/ajax_long_polling.png}\\
-  \caption{HTTP Long-polling mantiene abierta una peticion HTTP por un periodo de tiempo para comprobar si existe nueva información}\label{fig:http_long_polling}
+  \includegraphics[scale=0.6]{figuras/ajax_long_polling.png}\\
+  \caption{Long Polling}{Gracias al HTTP Long-polling, se mantiene abierta una peticion HTTP por un periodo de tiempo para comprobar si existe nueva información.}\label{fig:http_long_polling}
 \end{figure}
 %%\cite{lengstorf2013realtime}
 
@@ -176,8 +178,8 @@ Web sockets (Ver figura \ref{fig:websockets}) es una tecnología que proporciona
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.8]{figuras/websockets.png}\\
-  \caption{Websockets}\label{fig:websockets}
+  \includegraphics[scale=0.6]{figuras/websockets.png}\\
+  \caption{Websockets}{Una nueva tecnología para la comunicación bidireccional.}\label{fig:websockets}
 \end{figure}
 
 \subsubsection{¿Por qué usar Websockets?}

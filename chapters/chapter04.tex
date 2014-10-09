@@ -1,10 +1,13 @@
 \chapter{Aporte práctico}
 
 En el capítulo 3 se presentaron algunas técnicas y herramientas que sirven para el aprendizaje colaborativo; No obstante, para objetivos de esta tesis, se requiere una herramienta que integre ciertas características de las que ya poseen las mencionadas en el capítulo anterior. Ver Tabla \ref{tab:herramientasAC}.\\
- 
+
 El sistema que se pretende desarrollar estará basado en el proceso para la elaboración de sesiones de clase usando la técnica de Jigsaw con la particularidad de que en esta ocación la generación de grupos expertos no será siempre de forma aleatoria sino que también se podrá realizar basándose en información del estudiante respecto a su estilo de aprendizaje y preferencias sobre el tema a desarrollar y los miembros posibles para su grupo. Esta última característica no forma parte de la estructura tradicional de la técnica de Jigsaw y la técnica de Pair Research como se puede ver en la tabla \ref{tab:tecnicasAC}.\\
 
-El sistema a desarrollar también tendrá la particularidad de que permitirá a los estudiantes trabajar de forma colaborativa en la elaboración de archivos de código fuente, los cuales serán producto de las respuestas que dichos alumnos darán a los problemas que les plantee el profesor durante la sesión de clase jigsaw. Por ende, para lograr este objetivo y tener dicha funcionalidad en el sistema se usará los frameworks y APIs descritas en el capítulo anterior. Ver tabla \ref{tab:frameworks}.
+El sistema a desarrollar también tendrá la particularidad de que permitirá a los estudiantes trabajar de forma colaborativa en la elaboración de archivos de código fuente, los cuales serán producto de las respuestas que dichos alumnos darán a los problemas que les plantee el profesor durante la sesión de clase jigsaw. Por ende, para lograr este objetivo y tener dicha funcionalidad en el sistema se usará los frameworks y APIs descritas en el capítulo anterior. Ver tabla \ref{tab:frameworks}.\\
+
+Finalmente, par el desarrollo del sistema web que se plantea en esta tesis se va a considerar como proceso de desarrollo a las mejores prácticas de RUP para garantizar un producto software de calidad.
+
 
 \section{Las mejores prácticas de RUP}
 EL Proceso Unificado Rational(RUP) es un proceso de ingeniería de software que provee un enfoque para la asignación de tareas y responsabilidades durante el desarrollo de un software. Tiene como objetivo asegurar la producción de un producto software de alta calidad que satisfaga los requerimientos de los usuarios finales dentro de un tiempo y presupuesto establecido \cite{rup_ibm_2014}. Ver figura \ref{fig:rup}\\
@@ -20,20 +23,20 @@ Así mismo, RUP también es una guía para usar de manera efectiva el Lenguaje U
 
 Es por ello que el desarrollo del sistema propuesto por esta tesis estará guiado por la buenas prácticas de RUP, estableciéndose iteraciones semanales en las cuales se irá desarrollando cada una de las fases en las que RUP divide el ciclo de desarrollo de software: Inicio, Elaboración, Construcción y Transición. Los artefactos que serán entregados durante el proceso de desarrollo del sistema web de tiempo real para el aprendizaje colaborativo propuesto en esta tesis se mencionan en la Tabla \ref{tab:artefactos_rup}. Dichos artefactos se encuentran agrupados según la disciplina a la que pertenecen.
 
-\begin{longtable}{|L{6cm}|L{9cm}|}
+\begin{longtable}{|L{6cm}|L{7cm}|}
 \caption{Artefactos del proceso de desarrollo}
 \label{tab:artefactos_rup}\\
     \hline
     DISCIPLINA RUP & ARTEFACTO \\
     \hline
     \multirow{2}{*}{Requisitos} & $\bullet$ Modelo de caso de uso\\
+    \hhline{~~} & $\bullet$ Especificaciones de casos de uso\\
     \hhline{~~} & $\bullet$ Especificaciones suplementarias\\
     \hline
-    \multirow{5}{*}{Análisis y diseño} & $\bullet$ Modelo de análisis\\
+    \multirow{5}{*}{Análisis y diseño} & $\bullet$ Diagrama de clases\\
     \hhline{~~} & $\bullet$ Modelo de datos\\
     \hhline{~~} & $\bullet$ Prototipo de interfaz de usuario\\
     \hhline{~~} & $\bullet$ Documento de arquitectura de software\\
-    \hhline{~~} & $\bullet$ Mapa de navegación\\
     \hline
     \multirow{2}{*}{Implementación} & $\bullet$ Código fuente\\
     \hhline{~~} & $\bullet$ Sistema web desplegado\\

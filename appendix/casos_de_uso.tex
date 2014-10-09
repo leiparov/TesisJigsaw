@@ -54,6 +54,29 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
 \end{figure}
 \clearpage
 \section{Especificaciones de Casos de Uso}
+\subsection{Registrar Alumno}
+\begin{longtable}{|c|L{10cm}|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Código &  CUS-\casodeuso\\  \hline
+  Nombre &  REGISTRAR ALUMNO\\  \hline
+  Descripción & El caso de uso inicia cuando el docente selecciona la opción registrar nuevo alumno. Luego completa la información del alumno y el caso de uso termina cuando se presiona la opción Guardar \\  \hline
+  Actores & Docente \\  \hline
+  Precondiciones &  El docente debe estar logueado en el sistema.\\  \hline
+  Postcondiciones &  Ninguna\\  \hline
+  Flujo básico &  \begin{enumerate}
+                    \item El docente selecciona la opción para registrar un nuevo alumno.
+                    \item El sistema muestra el formulario para completar los datos del alumno.
+                    \item El docente completa los campos DNI, Apellido Paterno, Apellido Materno, Nombres, Email, Sexo, Email, Contraseña, Repetir Contraseña.
+                    \item El sistema valida el formato del DNI, apellidos, nombres, email.
+                    \item El sistema valida que el email no esté registrado en el sistema.
+                    \item El sistema verificar que los campos contraseña y repetir contraseña sean idénticos.
+                    \item El sistema registra al nuevo alumno en el sistema.
+                  \end{enumerate}
+  \\  \hline
+  Flujo alternativo &  Ninguno\\  \hline
+\end{longtable}
+\clearpage
 \subsection{Crear Problema}
 
 %\begin{tabular}{|c|L{9cm}|}

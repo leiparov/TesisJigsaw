@@ -34,25 +34,27 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
     \hline
 \end{longtable}
 \clearpage
+\begin{landscape}
 \section{Diagramas de casos de uso}
-\subsection{Casos de uso - Docente}
+\subsection{Casos de uso}
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.6]{figuras/casosdeuso/DCU_Docente.jpg}\\
-  \caption[Casos de uso - Docente]{Casos de uso - Docente}
-  \label{fig:cus-docente}
+  \includegraphics[scale=0.45]{figuras/casosdeuso/casos_de_uso.jpg}\\
+  \caption[Casos de uso]{Diagrama de casos de uso para el sistema JigsawCoding}
+  \label{fig:casos_de_uso}
 \end{figure}
+\end{landscape}
 \clearpage
-\subsection{Casos de uso - Alumno}
-\begin{figure}[!h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.6]{figuras/casosdeuso/DCU_Alumno.jpg}\\
-  \caption[Casos de uso - Alumno]{Casos de uso - Alumno}
-  \label{fig:cus-alumno}
-\end{figure}
-\clearpage
+%\subsection{Casos de uso - Alumno}
+%\begin{figure}[!h]
+%  \centering
+%  % Requires \usepackage{graphicx}
+%  \includegraphics[scale=0.6]{figuras/casosdeuso/DCU_Alumno.jpg}\\
+%  \caption[Casos de uso - Alumno]{Casos de uso - Alumno}
+%  \label{fig:cus-alumno}
+%\end{figure}
+%\clearpage
 \section{Especificaciones de Casos de Uso}
 \subsection{Registrar Alumno}
 \begin{longtable}{|c|L{10cm}|}
@@ -199,23 +201,48 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
   Flujo alternativo &  Ninguno\\  \hline
 \end{longtable}
 \clearpage
-\subsection{Crear evaluación} 
+\subsection{Crear examen}
 \begin{longtable}{|c|L{10cm}|}
   \hline
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \hline
-  Nombre &  CREAR EVALUACIÓN\\  \hline
-  Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Crear Evaluación. Luego el usuario formula las preguntas o problemas y agrega el puntaje de cada una de ellas. El caso de uso termina cuando el usuario selecciona guardar la nueva evaluación \\  \hline
+  Nombre &  CREAR EXAMEN\\  \hline
+  Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Nuevo Examen. Luego el usuario selecciona las preguntas o problemas e indica el puntaje de cada una de ellas. El caso de uso termina cuando el usuario selecciona guardar el nuevo examen. \\  \hline
   Actores &  Docente\\  \hline
   Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir problemas creados \\  \hline
-  Postcondiciones & El docente podrá ver una nueva evaluación en su listado de evaluaciones \\  \hline
+  Postcondiciones & El docente podrá ver una nueva evaluación en su listado de examenes. \\  \hline
   Flujo básico & \begin{enumerate}
-                    \item El docente selecciona la opción CREAR EVALUACIÓN.
-                    \item El sistema muestra el formulario con los campos requeridos para crear una evaluación: fecha de inicio, hora de inicio, duración en minutos, número de problemas, puntaje por problema.
-                    \item El sistema solicita definir los problemas que serán incluidos en la evaluación.
-                    \item El docente selecciona los problemas que serán usados para la evaluación.
+                    \item El docente selecciona la opción NUEVO EXAMEN.
+                    \item El docente busca los problemas disponibles y arrastra el problema seleccionado hacia el panel de examen.
+                    \item El docente presiona la opción Agregar Pregunta.
+                    \item El docente establece el puntaje a favor y en contra para el problema seleccionado.
                     \item El docente selecciona la opción FINALIZAR.
+                    \item El sistema valida que el examen tenga un total de 20 puntos entre todas las preguntas.
                     \item El sistema guarda la nueva evaluación
+                 \end{enumerate}
+   \\  \hline
+  Flujo alternativo & Ninguno \\  \hline
+  Excepciones & [6.1] Si el examen no suma 20 puntos, el sistema indicará al docente que debe seguir ingresando problemas o modificar los puntajes de los problemas ya seleccionados.   \\  \hline
+\end{longtable}
+\clearpage
+\subsection{Definir horario de examen}
+\begin{longtable}{|c|L{10cm}|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Código &  CUS-\casodeuso\\  \hline
+  Nombre &  DEFINIR HORARIO DE EXAMEN\\  \hline
+  Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Definir Horario en la lista de examenes creados. Luego el usuario indica el intervalo de tiempo para ingresar al examen así como también la duración del examen. El caso de uso termina cuando el usuario selecciona la opción guardar. \\  \hline
+  Actores &  Docente\\  \hline
+  Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir examenes creados \\  \hline
+  Postcondiciones & El docente podrá ver la fecha, hora de inicio del examen y la duración del mismo en su listado de examenes. \\  \hline
+  Flujo básico & \begin{enumerate}
+                    \item El docente selecciona la opción Definir Horario en un examen.
+                    \item El docente ingresa la fecha de inicio del examen.
+                    \item El docente ingresa la hora de inicio del examen.
+                    \item El docente ingresa la fecha límite para acceder al examen.
+                    \item El docente ingresa la hora límite para acceder al examen.
+                    \item El docente selecciona la opción FINALIZAR.
+                    \item El sistema guarda el horario establecido para el examen.
                  \end{enumerate}
    \\  \hline
   Flujo alternativo & Ninguno \\  \hline
@@ -363,4 +390,4 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
                  \end{enumerate}
    \\  \hline
   Flujo alternativo & Ninguno \\  \hline
-\end{longtable}
+\end{longtable} 

@@ -1,22 +1,42 @@
 \chapter{Documento de Arquitectura de Software}
 \section{Introducción}
 \subsection{Propósito}
-El presente documento de arquitectura de software tiene como finalidad describir el sistema web Jigsaw Coding desde diferentes perspectivas, las cuales serán de gran utilidad para el desarrollo de dicho sistema. La presentación de la arquitectura del sistema será presentada haciendo uso del modelo 4+1.
-\subsection{Alcance} Este documento arquitectónico aplica para describir todas las funcionalidades del sistema web a implementar. Así mismo, en este artefacto se encontrará de forma clara las 5 vistas que se describen en el modelo 4+1: Vista lógica, Vista de procesos, Vista de despliegue, Vista física y Vista de escenarios.
-\begin{figure}[!h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.7]{figuras/sad/vista_4_mas_1.png}\\
-  \caption{Modelo de arquitectura 4+1}
-  \label{fig:vista_4_mas_1}
-\end{figure} 
+El presente documento de arquitectura de software tiene como finalidad describir el sistema web Jigsaw Coding desde diferentes perspectivas, las cuales serán de gran utilidad para el desarrollo de dicho sistema. 
+\subsection{Alcance} Este documento arquitectónico aplica para describir las características arquitectónicas del sistema web JigsawCoding, las tecnologías que serán usadas en su desarrollo y las principales funcionalidades del sistema.
+%\begin{figure}[!h]
+%  \centering
+%  % Requires \usepackage{graphicx}
+%  \includegraphics[scale=0.7]{figuras/sad/vista_4_mas_1.png}\\
+%  \caption{Modelo de arquitectura 4+1}
+%  \label{fig:vista_4_mas_1}
+%\end{figure}
+\clearpage
+\section{Representación arquitectónica}
+El sistema web JigsawCoding, será implementado usando una arquitectura Modelo - Vista - Controlador, la misma que está definida en el framework Play de Java.
+\subsection{PlayFramework 2.2.4}
+Play es framework open source de Java y Scala que integra componentes y APIs necesarios para el desarrollo moderno de aplicaciones web. Play sigue el patrón de arquitectura Modelo - Vista - Controlador y uno de sus objetivos es optimizar la productividad del desarrollador a través del uso de configuraciones estandarizadas, recompilación automática del código fuente y la visualización de errores directamente en el navegador.\\
+
+A pesar que las aplicaciones de Play están diseñadas para correr en servidores web basados en Jboos Netty, también pueden ser deployadas como archivos WAR para ser distribuidos en la mayoría de servidores de aplicaciones Java EE como Apache Tomcat o GlassFish.
+
+\subsubsection{Componentes y Características de Play}
+\begin{itemize}
+  \item JBoss Netty para el servidor web.
+  \item Ebean como ORM para Java.
+  \item Scala para el motor de plantillas.
+  \item Recompilación de código automática.
+  \item \emph{sbt} para la administración de dependencias.
+  \item CRUD: un módulo para simplificar la edición de objetos.
+  \item Secure: un módulo para establecer simples autenticaciones de usuarios.
+  \item Parsers de JSON y XML.
+  \item Una capa de persistencia basada en JPA
+\end{itemize}
 \clearpage
 \section{Vista lógica}
-\clearpage 
+\clearpage
 \section{Vista de procesos}
 \clearpage
 \section{Vista de desarrollo}
-La vista de despliegue muestra el sistema desde la perspectiva del programador y se ocupa de la gestión del software a implementar. Esto es, en esta vista se describe cómo estará dividido el sistema en paquetes y las dependencias que habrá entre ellos.
+La vista de despliegue muestra el sistema desde la perspectiva del programador y se ocupa de la gestión del software a implementar. Esto es, en esta vista se describe cómo estará dividido el sistema JigsaCoding en paquetes y las dependencias que habrá entre ellos.
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
@@ -32,3 +52,13 @@ La vista de despliegue muestra el sistema desde la perspectiva del programador y
   \caption{Diagrama de Despliegue}\label{fig:diagrama_de_despliegue}
 \end{figure}
 \section{Vista de escenarios}
+\clearpage
+\section{Vista de Datos}
+\begin{figure}[!h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.6]{figuras/sad/modelo_de_datos.png}\\
+  \caption[Modelo de datos]{Modelo de base de datos del sistema JigsawCoding}\label{fig:modelo_de_datos}
+\end{figure} 
+\subsection{MySQL 5.6}
+El desarrollo del sistema JigsawCoding se hará usando como motor de base de datos a MySQL en su versión 5.6. Este, es un sistema de gestion de base de datos libre actualmente soportado por Oracle. 

@@ -1,16 +1,20 @@
 \chapter{Documento de Arquitectura de Software}
 \section{Introducción}
+Este documento brinda una vista general de alto nivel sobre cómo será el desarrollo del sistema JigsawCoding. Se resumirá las tecnologías con las cuales se implementará el sistema así como también se proporcionará una descripción de alto nivel de la arquitectura del sistema.
 \subsection{Propósito}
-El presente documento de arquitectura de software tiene como finalidad describir el sistema web Jigsaw Coding desde diferentes perspectivas, las cuales serán de gran utilidad para el desarrollo de dicho sistema. 
+El presente documento de arquitectura de software tiene como finalidad describir el sistema web Jigsaw Coding desde diferentes vistas arquitectónicas, las cuales serán de gran utilidad para el desarrollo de dicho sistema.
 \subsection{Alcance} Este documento arquitectónico aplica para describir las características arquitectónicas del sistema web JigsawCoding, las tecnologías que serán usadas en su desarrollo y las principales funcionalidades del sistema.
-%\begin{figure}[!h]
-%  \centering
-%  % Requires \usepackage{graphicx}
-%  \includegraphics[scale=0.7]{figuras/sad/vista_4_mas_1.png}\\
-%  \caption{Modelo de arquitectura 4+1}
-%  \label{fig:vista_4_mas_1}
-%\end{figure}
+\subsection{Definiciones, acrónimos y abreviaturas}
+En esta sección se provee las definiciones, acrónimos y abreviaturas de términos utilizados en el presente documento a fin de brindar al lector una mejor comprensión del contenido. 
 \clearpage
+\begin{longtable}{|c|L{8cm}|}
+    \hline
+  UML & Unified Modeling Language: Lenguaje Unificado de Modelamiento \\ \hline
+  CRUD & Create - Read - Update - Delete \\ \hline
+  JSON & JavaScript Object Notation: Es un formato ligero para el intercambio de datos \\ \hline
+  XML & eXtensible Markup Language: Es un lenguaje de marcas utilizado para almacenar datos en forma legible. \\ \hline
+  \emph{sbt} & Herramienta de construcción interactiva \url{http://www.scala-sbt.org} \\ \hline
+\end{longtable}
 \section{Representación arquitectónica}
 El sistema web JigsawCoding, será implementado usando una arquitectura Modelo - Vista - Controlador, la misma que está definida en el framework Play de Java.
 \subsection{PlayFramework 2.2.4}
@@ -59,6 +63,6 @@ La vista de despliegue muestra el sistema desde la perspectiva del programador y
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.6]{figuras/sad/modelo_de_datos.png}\\
   \caption[Modelo de datos]{Modelo de base de datos del sistema JigsawCoding}\label{fig:modelo_de_datos}
-\end{figure} 
+\end{figure}
 \subsection{MySQL 5.6}
 El desarrollo del sistema JigsawCoding se hará usando como motor de base de datos a MySQL en su versión 5.6. Este, es un sistema de gestion de base de datos libre actualmente soportado por Oracle. 

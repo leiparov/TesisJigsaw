@@ -3,26 +3,26 @@
 0
 0
 1
-main.tex
+appendix\documento_de_arquitectura.tex
 15
 5
-4
+1
 
 settings.tex
 TeX
 1060859 0 -1 722 -1 733 26 26 931 286 0 1 432 408 -1 -1 0 0 10 -1 -1 10 1 0 733 -1  0 0 0
 main.tex
 TeX:ES:UTF-8:UNIX
-17838075 0 -1 1229 -1 1032 0 0 681 411 1 1 296 391 -1 -1 0 0 48 0 0 48 1 0 1032 -1  0 -1 0
+286273531 0 -1 1229 -1 510 0 0 681 411 1 1 240 255 -1 -1 0 0 48 0 0 48 1 0 510 -1  0 -1 0
 appendix\casos_de_uso.tex
 TeX
-1060859 0 -1 1955 -1 5434 104 104 1459 572 0 1 160 391 -1 -1 0 0 40 -1 -1 40 1 0 5434 -1  0 -1 0
+1060859 1 -1 2068 -1 1706 104 104 1459 572 0 1 40 153 -1 -1 0 0 40 -1 -1 40 1 0 1706 -1  0 -1 0
 appendix\especificaciones_suplementarias.tex
 TeX
 1060859 0 -1 1957 -1 1962 78 78 1433 546 0 1 40 629 -1 -1 0 0 59 -1 -1 59 1 0 1962 -1  0 -1 0
 appendix\documento_de_arquitectura.tex
 TeX
-269496315 0 -1 2257 -1 1162 130 130 1485 598 0 1 120 204 -1 -1 0 0 47 -1 -1 47 1 0 1162 -1  0 -1 0
+1060859 0 -1 4018 -1 5305 130 130 1485 598 0 1 248 527 -1 -1 0 0 47 -1 -1 47 1 0 5305 -1  0 -1 0
 chapters\chapter03.tex
 TeX
 286273531 0 -1 2121 -1 1893 26 26 930 307 0 1 184 -2856 -1 -1 0 0 25 -1 -1 25 1 0 1893 -1  0 -1 0
@@ -54,17 +54,4 @@ chapters\cover.tex
 TeX
 1060859 0 -1 756 -1 762 0 0 904 281 0 1 168 357 -1 -1 0 0 786 -1 -1 786 1 0 762 -1  0 -1 0
 
-*main.tex
->
-*settings
-*chapters/cover
-*chapters/chapter00
-*chapters/chapter01
-*chapters/chapter02
-*chapters/chapter03
-*chapters/chapter04
-*appendix/casos_de_uso
-*appendix/especificaciones_suplementarias
-*appendix/documento_de_arquitectura
-*referencias
-<
+*appendix\documento_de_arquitectura.tex

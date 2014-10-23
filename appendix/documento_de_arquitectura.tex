@@ -35,11 +35,9 @@ A pesar que las aplicaciones de Play están diseñadas para correr en servidores
   \item Una capa de persistencia basada en JPA
 \end{itemize}
 \clearpage
-\section{Vista lógica}
+\section{Vista Lógica}
 \clearpage
-\section{Vista de procesos}
-\clearpage
-\section{Vista de desarrollo}
+\section{Vista de Desarrollo}
 La vista de despliegue muestra el sistema desde la perspectiva del programador y se ocupa de la gestión del software a implementar. Esto es, en esta vista se describe cómo estará dividido el sistema JigsaCoding en paquetes y las dependencias que habrá entre ellos.
 \begin{figure}[!h]
   \centering
@@ -47,15 +45,37 @@ La vista de despliegue muestra el sistema desde la perspectiva del programador y
   \includegraphics[scale=0.6]{figuras/sad/diagrama_de_paquetes.jpg}\\
   \caption{Diagrama de Paquetes}\label{fig:diagrama_de_paquetes}
 \end{figure}
+\begin{itemize}
+  \item \textbf{controllers}\\Este paquete contiene todas las clases Controladores que sirven para gestionar el ruteo de páginas del sistema.
+  \item \textbf{models}\\En este paquete se encuentran las clases de Servicios, Entidades y Acceso a Datos que son requeridas para el sistema.
+  \item \textbf{views}\\Este paquete contiene todas las plantillas (\emph{*.scala.html}) que permitirán renderizar las páginas web del sistema.
+\end{itemize}
 \clearpage
-\section{Vista física}
+\section{Vista Física}
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
   \includegraphics[scale=0.5]{figuras/sad/diagrama_de_despliegue.jpg}\\
   \caption{Diagrama de Despliegue}\label{fig:diagrama_de_despliegue}
 \end{figure}
-\section{Vista de escenarios}
+\begin{itemize}
+  \item \texttt{Navegador}\\Es la interfaz que permitirá visualizar el contenido de las páginas web del sistema JigsawCoding.
+  \item \texttt{Servidor Web}\\Es el responsable de gestionar todas las peticiones HTTP provenientes de los navegadores web y de enviar las respuestas con los datos solicitados por los mismos.
+  \item \texttt{Servidor de Base de Datos}\\Es el lugar donde estará almacenada la información del Sistema Web JigsawCoding
+  \item \texttt{Web Service Sphere Engine}\\Es un servicio web que servirá para compilar y ejecutar el código fuente desarrollado por los usuarios del sistema.
+\end{itemize}
+\clearpage
+
+\begin{landscape}
+\section{Vista de Escenarios}
+\begin{figure}[!h]
+  \centering
+  % Requires \usepackage{graphicx}
+  \includegraphics[scale=0.45]{figuras/casosdeuso/casos_de_uso.jpg}\\
+  \caption[Casos de uso]{Diagrama de casos de uso para el sistema JigsawCoding}
+  \label{fig:casos_de_uso}
+\end{figure}
+\end{landscape}
 \clearpage
 \section{Vista de Datos}
 \begin{figure}[!h]
@@ -66,3 +86,4 @@ La vista de despliegue muestra el sistema desde la perspectiva del programador y
 \end{figure}
 \subsection{MySQL 5.6}
 El desarrollo del sistema JigsawCoding se hará usando como motor de base de datos a MySQL en su versión 5.6. Este, es un sistema de gestion de base de datos libre actualmente soportado por Oracle. 
+\subsection{Diccionario de datos}

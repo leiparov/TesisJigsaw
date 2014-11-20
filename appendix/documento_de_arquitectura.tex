@@ -1,4 +1,4 @@
-\chapter{Documento de Arquitectura de Software}
+\chapter{Documento de Arquitectura de Software}\label{apendice.C}
 \section{Introducción}
 Este documento brinda una vista general de alto nivel sobre cómo será el desarrollo del sistema JigsawCoding. Se resumirá las tecnologías con las cuales se implementará el sistema así como también se proporcionará una descripción de alto nivel de la arquitectura del sistema.
 \subsection{Propósito}
@@ -15,6 +15,18 @@ En esta sección se provee las definiciones, acrónimos y abreviaturas de térmi
   XML & eXtensible Markup Language: Es un lenguaje de marcas utilizado para almacenar datos en forma legible. \\ \hline
   \emph{sbt} & Herramienta de construcción interactiva \url{http://www.scala-sbt.org} \\ \hline
 \end{longtable}
+\subsection{Metas arquitectónicas y restricciones}
+\subsubsection{Persistencia}
+La persistencia se logrará utilizando una base de datos relacional y el mapeo de entidades a tablas estará a cargo del ORM Ebean que por defecto viene incluído en el framework Play.
+
+\subsubsection{Seguridad}
+La seguridad del sistema está basada en perfiles. La aplicación contendrá los siguientes puntos:
+
+\begin{itemize}
+	\item Autenticación: Cada usuario deberá identificarse con su email y password para poder acceder al sistema.
+	\item Autorización: El sistema cuenta con dos perfiles(Docente y Alumno) y dependiendo de ello, el usuario podrá ingresar a diferentes partes del sistema.
+\end{itemize}
+
 \section{Representación arquitectónica}
 El sistema web JigsawCoding, será implementado usando una arquitectura Modelo - Vista - Controlador, la misma que está definida en el framework Play de Java.
 \subsection{PlayFramework 2.2.4}
@@ -68,6 +80,7 @@ La vista de despliegue muestra el sistema desde la perspectiva del programador y
 
 \begin{landscape}
 \section{Vista de Escenarios}
+La vista de escenarios o vista de casos de uso es la encargada de presentar la percepción que tiene el usuario sobre las distintas funcionalidades del sistema.
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}

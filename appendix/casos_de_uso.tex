@@ -11,7 +11,7 @@ Los casos de uso presentados en este documento representan los requerimientos qu
 \end{enumerate}
 \clearpage
 \section{Catálogo de actores}
-En el la figura \ref{fig:actores} se puede ver los actores que participan en el SAC y en la Tabla \ref{tab:actores} se encuentra una breve descripción de cada uno de los actores.
+En el la figura \ref{fig:actores} se puede ver los actores que participan en el Sistema Jigsaw Coding y en la Tabla \ref{tab:actores} se encuentra una breve descripción de cada uno de ellos.
 \begin{figure}
   \centering
   % Requires \usepackage{graphicx}
@@ -113,47 +113,6 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
   Flujo alternativo & Ninguno \\  \hline
 \end{longtable}
 \clearpage
-\subsection{Crear grupo experto}
-\begin{longtable}{|c|L{9cm}|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Código &  CUS-\casodeuso\\  \hline
-  Nombre &  CREAR GRUPO EXPERTO\\  \hline
-  Descripción &  El caso de uso inicia cuando el usuario accede al sistema y elige la opción crear grupo experto. Luego completa la información sobre el grupo experto a crear y finalmente el caso de uso termina cuando el sistema crea experto.\\  \hline
-  Actores &  Docente\\  \hline
-  Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema.\\  \hline
-  Postcondiciones &  El docente verá en el listado de grupos expertos el nuevo grupo creado\\  \hline
-  Flujo básico &    \begin{enumerate}
-                        \item El docente elige la opción NUEVO GRUPO EXPERTO.
-                        \item El docente digita el nombre para el grupo experto
-                        \item El docente indica el máximo de integrantes que se pueden incluir.
-                        \item El docente agrega al grupo experto a los alumnos que se encuentren disponibles.
-                        \item El docente selecciona la opción FINALIZAR.
-                        \item El sistema guarda la información de los grupos expertos.
-                      \end{enumerate}  \\ \hline
-  Flujo alternativo & Ninguno \\  \hline
-\end{longtable}
-\clearpage
-\subsection{Asignar alumnos a grupo experto}
-\begin{longtable}{|c|L{10cm}|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Código &  CUS-\casodeuso\\  \hline
-  Nombre &  ASIGNAR ALUMNOS A GRUPO EXPERTO\\  \hline
-  Descripción &  El caso de uso inicia cuando el docente selecciona la opción editar integrantes para un determinado grupo experto, luego agrega a los alumnos y cuando presiona la opción guardar, el caso de uso termina.\\  \hline
-  Actores &  Docente\\  \hline
-  Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Deben existir alumnos registrados.\\  \hline
-  Postcondiciones &  Ninguna\\  \hline
-  Flujo básico &    \begin{enumerate}
-                        \item El docente selecciona la opción Editar integrantes en la lista de grupos expertos creados.
-                        \item El docente arrastra a los alumnos desde la lista de disponibles hacia la lista de alumnos para el grupo experto.
-                        \item El sistema valida que el número de alumnos seleccionados no exceda el máximo de integrantes permitidos para el grupo experto.
-                        \item El docente presiona la opción Guardar.
-                        \item El sistema guarda la lista de integrantes del grupo experto.
-                      \end{enumerate}  \\ \hline
-  Flujo alternativo & Ninguno \\  \hline
-\end{longtable}
-\clearpage
 \subsection{Crear sesión jigsaw}
 \begin{longtable}{|c|L{10cm}|}
   \hline
@@ -201,6 +160,62 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
   Flujo alternativo &  Ninguno\\  \hline
 \end{longtable}
 \clearpage
+\subsection{Asignar alumnos a sesión jigsaw}
+\begin{longtable}{|c|L{10cm}|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Código &  CUS-\casodeuso\\  \hline
+	Nombre &  ASIGNAR ALUMNOS A SESIÓN JIGSAW\\  \hline
+	Descripción &  El caso de uso inicia cuando el docente selecciona la opción Asignar Alumnos para un determinada sesión jigsaw, luego agrega a los alumnos y cuando presiona la opción guardar, el caso de uso termina.\\  \hline
+	Actores &  Docente\\  \hline
+	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Deben existir alumnos registrados.\\  \hline
+	Postcondiciones &  Ninguna\\  \hline
+	Flujo básico &    \begin{enumerate}
+		\item El docente selecciona la opción Asignar Alumnos en la lista de sesiones jigsaw.
+		\item El docente arrastra a los alumnos desde la lista de disponibles hacia la lista de alumnos para la sesión jigsaw.
+		\item El docente presiona la opción Guardar.
+		\item El sistema guarda la lista de participantes de la sesión jigsaw.
+	\end{enumerate}  \\ \hline
+	Flujo alternativo & Ninguno \\  \hline
+\end{longtable}
+\clearpage
+\subsection{Generar grupos}
+\begin{longtable}{|c|L{10cm}|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Código &  CUS-\casodeuso\\  \hline
+	Nombre &  GENERAR GRUPOS\\  \hline
+	Descripción &  El caso de uso inicia cuando el docente selecciona la opción Generar Grupos y luego el sistema forma los grupos expertos y grupos jigsaw de forma aleatoria.\\  \hline
+	Actores &  Docente\\  \hline
+	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Deben existir alumnos asignados a una sesión jigsaw.\\  \hline
+	Postcondiciones &  Ninguna\\  \hline
+	Flujo básico &    \begin{enumerate}
+		\item El docente selecciona la opción Generar Grupos.
+		\item El sistema genera aleatoriamente los grupos expertos.
+		\item El sistema genera aleatoriamente los grupos jigsaw.
+		\item El sistema muestra al usuario los grupos creados.
+	\end{enumerate}  \\ \hline
+	Flujo alternativo & Ninguno \\  \hline
+\end{longtable}
+\clearpage
+\subsection{Asignar problemas a grupos expertos}
+\begin{longtable}{|c|L{10cm}|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Código &  CUS-\casodeuso\\  \hline
+	Nombre &  ASIGNAR PROBLEMAS A GRUPOS EXPERTOS\\  \hline
+	Descripción &  El caso de uso empieza cuando el docente selecciona la opción asignar problemas. Luego indica qué problema debe resolver cada grupo experto y cuando presiona la opción guardar, el caso de uso finaliza.\\  \hline
+	Actores &  Docente\\  \hline
+	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Los grupos expertos deben haber sido generados por el sistema.\\  \hline
+	Postcondiciones &  Ninguna\\  \hline
+	Flujo básico &    \begin{enumerate}
+		\item El docente selecciona la opción Asignar Problemas.
+		\item El docente selecciona un grupo experto y selecciona su respectivo problema.
+		\item El docente presiona la opción Guardar.
+	\end{enumerate}  \\ \hline
+	Flujo alternativo & Ninguno \\  \hline
+\end{longtable}
+\clearpage
 \subsection{Crear examen}
 \begin{longtable}{|c|L{10cm}|}
   \hline
@@ -218,11 +233,75 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
                     \item El docente establece el puntaje a favor y en contra para el problema seleccionado.
                     \item El docente selecciona la opción FINALIZAR.
                     \item El sistema valida que el examen tenga un total de 20 puntos entre todas las preguntas.
-                    \item El sistema guarda la nueva evaluación
+                    \item El sistema guarda la nueva evaluación.
                  \end{enumerate}
    \\  \hline
   Flujo alternativo & Ninguno \\  \hline
   Excepciones & [6.1] Si el examen no suma 20 puntos, el sistema indicará al docente que debe seguir ingresando problemas o modificar los puntajes de los problemas ya seleccionados.   \\  \hline
+\end{longtable}
+
+\clearpage
+\subsection{Asignar examen}
+\begin{longtable}{|c|L{10cm}|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Código &  CUS-\casodeuso\\  \hline
+	Nombre &  ASIGNAR EXAMEN\\  \hline
+	Descripción &  El caso de uso empieza cuando el docente selecciona la opción asignar examen. Luego indica qué examen deberán resolver los alumnos.\\  \hline
+	Actores &  Docente\\  \hline
+	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema y deben existir examenes creados.\\  \hline
+	Postcondiciones &  Ninguna\\  \hline
+	Flujo básico &    \begin{enumerate}
+		\item El docente selecciona la opción Asignar Examen.
+		\item El docente selecciona un examen.
+		\item El docente presiona la opción Guardar.
+	\end{enumerate}  \\ \hline
+	Flujo alternativo & Ninguno \\  \hline
+\end{longtable}
+
+\clearpage
+\subsection{Definir horario de reunión de expertos}
+\begin{longtable}{|c|L{10cm}|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Código &  CUS-\casodeuso\\  \hline
+	Nombre &  DEFINIR HORARIO DE REUNIÓN DE EXPERTOS\\  \hline
+	Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Definir Horario en la lista de sesiones jigsaw dentro del cuadro Reunión de Expertos. Luego el usuario indica la fecha y hora de inicio acceder a la reunión de expertos así como también la duración de la misma. El caso de uso termina cuando el usuario selecciona la opción guardar. \\  \hline
+	Actores &  Docente\\  \hline
+	Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir sesiones jigsaw. \\  \hline
+	Postcondiciones & El docente podrá ver la fecha, hora de inicio de la reunión de expertos y la duración de la misma. \\  \hline
+	Flujo básico & \begin{enumerate}
+		\item El docente selecciona la opción Definir Horario para una reunión de expertos.
+		\item El docente ingresa la fecha de inicio.
+		\item El docente ingresa la hora de inicio.
+		\item El docente ingresa la duración de la reunión de expertos.
+		\item El docente selecciona la opción FINALIZAR.
+		\item El sistema guarda el horario establecido para la reunión de expertos.
+	\end{enumerate}
+	\\  \hline
+	Flujo alternativo & Ninguno \\  \hline
+\end{longtable}
+\clearpage
+\subsection{Definir horario de reunión jigsaw}
+\begin{longtable}{|c|L{10cm}|}
+	\hline
+	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Código &  CUS-\casodeuso\\  \hline
+	Nombre &  DEFINIR HORARIO DE REUNIÓN JIGSAW\\  \hline
+	Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Definir Horario en la lista de sesiones jigsaw dentro del cuadro Reunión Jigsaw. Luego el usuario indica la fecha y hora de inicio acceder a la reunión jigsaw así como también la duración de la misma. El caso de uso termina cuando el usuario selecciona la opción guardar. \\  \hline
+	Actores &  Docente\\  \hline
+	Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir sesiones jigsaw. \\  \hline
+	Postcondiciones & El docente podrá ver la fecha, hora de inicio de la reunión jigsaw y la duración de la misma. \\  \hline
+	Flujo básico & \begin{enumerate}
+		\item El docente selecciona la opción Definir Horario para una reunión jigsaw.
+		\item El docente ingresa la fecha de inicio.
+		\item El docente ingresa la hora de inicio.
+		\item El docente ingresa la duración de la reunión jigsaw.
+		\item El docente selecciona la opción FINALIZAR.
+		\item El sistema guarda el horario establecido para la reunión jigsaw.
+	\end{enumerate}
+	\\  \hline
+	Flujo alternativo & Ninguno \\  \hline
 \end{longtable}
 \clearpage
 \subsection{Definir horario de examen}
@@ -245,26 +324,6 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
                     \item El sistema guarda el horario establecido para el examen.
                  \end{enumerate}
    \\  \hline
-  Flujo alternativo & Ninguno \\  \hline
-\end{longtable}
-\clearpage
-\subsection{Atender consulta de alumno}
-\begin{longtable}{|c|L{10cm}|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Código &  CUS-\casodeuso\\  \hline
-  Nombre &  ATENDER CONSULTA DE ALUMNO\\  \hline
-  Descripción &  El caso de uso inicia cuando se notifica al docente que uno o más alumnos le quieren consultar algo. El docente activa la ventana de conversación y responde a la consulta del alumno. El caso de uso finaliza cuando se cierra la ventana de conversación entre docente y alumno.\\  \hline
-  Actores & Docente \\  \hline
-  Precondiciones &  El docente debe estar logueado en el sistema y algún alumno debe haber realizado una consulta al docente\\  \hline
-  Postcondiciones & Ninguna \\  \hline
-  Flujo básico &  \begin{enumerate}
-                    \item El sistema notifica al docente que un alumno requiere consultarle sobre algún tema o asunto de la sesión jigsaw.
-                    \item El docente abre la ventana de conversación con el alumno.
-                    \item El docente responde a la consulta del alumno.
-                    \item El docente cierra la ventana de conversación.
-                  \end{enumerate}
-  \\  \hline
   Flujo alternativo & Ninguno \\  \hline
 \end{longtable}
 \clearpage
@@ -346,26 +405,6 @@ En el la figura \ref{fig:actores} se puede ver los actores que participan en el 
                     \item El alumno usa el chat grupal para consultar y responder a las interrogantes de los demás miembros de su grupo.
                     \item El sistema informará el término de la reunión con 3 minutos de anticipación.
                     \item El sistema finalizará la reunión jigsaw.
-                  \end{enumerate}
-  \\  \hline
-  Flujo alternativo & Ninguno \\  \hline
-\end{longtable}
-\clearpage
-\subsection{Consultar al docente}
-\begin{longtable}{|c|L{10cm}|}
-  \hline
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  Código &  CUS-\casodeuso\\  \hline
-  Nombre &  CONSULTAR AL DOCENTE\\  \hline
-  Descripción & El caso de uso inicia cuando el alumno abre la ventana de consulta al docente \\  \hline
-  Actores &  Alumno\\  \hline
-  Precondiciones & El alumno debe haber ingresado a una reunión de expertos o reunión jigsaw \\  \hline
-  Postcondiciones & Ninguna \\  \hline
-  Flujo básico &  \begin{enumerate}
-                    \item El alumno abre la ventana de conversación.
-                    \item El alumno escribe y envía su consulta.
-                    \item El sistema envía la consulta al docente.
-                    \item El alumno cierra la ventana de conversación.
                   \end{enumerate}
   \\  \hline
   Flujo alternativo & Ninguno \\  \hline

@@ -1,1 +1,75 @@
 \chapter{Caso de estudio}
+En el presente capítulo se analizará el caso de estudio para el cual se aplicará el Sistema Jigsaw Coding. En primer lugar se describirá la temática sobre la que estará basada la sesión jigsaw que será desarrollada usando el sistema web desarrollado. Se describirá el tema y los problemas que serán incluidos en la sesión jigsaw. Posteriormente se describirá cómo están formados los grupos expertos y grupos jigsaw y finalmente se explicará brevemente la fase de evaluación para la sesión jigsaw.
+
+\section{Definición del caso de estudio}
+\subsection{Estructuras selectivas y repetitivas}
+El tema ha desarrollarse en este caso de estudio es el de las estructuras selectivas \texttt{if - else} y las estructuras repetitivas \texttt{for, vhile}.\\
+
+La sentencia \texttt{if} es referida comunmente para sentencias de decisión. Cada vez que se usan este tipo de sentencias en un programa, se le pide al programa evaluar una expresión para determinar que acción debe tomar.\\
+
+La sintaxis de la sentencia \texttt{if} en java y/o c++ es la siguiente:\\
+
+\begin{lstlisting}
+if (booleanExpression) {
+	...
+}else{
+	...
+}
+\end{lstlisting}
+
+
+Las iteraciones permiten repetir bloques de código tantas veces como se establezca en la condición de la estructura repetitiva \texttt{for} o \texttt{while}. El \texttt{while} es bueno cuando se tienen escenarios en los cuales no se conoce de antemano la cantidad de veces que un bloque o una sentencia debe repetirse, pero se requiere repetirlas mientras la condición del \texttt{while} sea verdadera.\\
+
+\begin{lstlisting}
+while (expression){
+	//bloque de codigo
+}
+\end{lstlisting}
+
+La estructura \texttt{for} es especialmente usada cuando se conoce de antemano cuántas veces se necesita ejecutar las instrucciones que van dentro del bloque \texttt{for}. El \texttt{for} tiene 3 partes :
+
+\begin{itemize}
+	\item Declaración e inicialización de variables.
+	\item La expresión a ser evaluada como verdadero o falso.
+	\item La expresión de iteración.
+\end{itemize}
+
+Estas 3 partes son separadas por un punto y coma. La sintaxis de un \texttt{for} tanto para Java y C++ es la siguiente:
+
+\begin{lstlisting}
+for (/*Inicializacion*/ ; /*Condicion*/ ; /* Iteracion */) {
+	/* body */
+}
+
+for (int i = 0; i < 10; i++) {
+	/* body */
+}
+\end{lstlisting}
+\section{Aplicar el aporte al caso de estudio}
+\subsection{Sesión Jigsaw}
+Dado que en este caso de estudio se tratarán 2 temas, entonces se requiere contar con 2 grupos expertos: uno para que trabajen el tema de estructuras selectivas y el segundo para las estructuras repetitivas. De esa forma, cuando se llegue a la reunión jigsaw, los grupos jigsaw contarán con expertos en ambos temas.
+
+\subsubsection{Problemas}
+Para este caso de estudio se plante la resolución de los siguientes problemas de estructuras selectivas y estructuras repetitivas los cuales podrán ser desarrollados usando cualquiera de los 3 lenguajes que el Sistema Jigsaw Coding permite usar (Java, C++ o Python)\\
+
+Para la fase de reunión de expertos y reunión jigsaw se usarán los siguientes problemas
+\begin{enumerate}
+	\item Elaborar un programa que lea un entero y determine si es un número par o impar.
+	\item Elaborar un programa que imprima los primeros 10 números múltiplos de 7 usando la estructura repetitiva \texttt{for}.
+	\item Elaborar un programa que imprima de forma descendente los primeros 20 numeros pares usando una estructura repetitiva \texttt{while}.
+\end{enumerate}
+
+Finalmente, para la fase de evaluación se combinará problemas de estructuras selectivas y repetitivas:
+
+\begin{enumerate}
+ 	\item Elaborar un programa que lea dos números enteros y muestre el número mayor.
+ 	\item Elaborar un programa que muestre los n primeros múltiplos de a, donde n y a son ingresados por teclado.
+ 	\item Elaborar un programa que lea un número del 1 al 5 y lo muestre de forma escrita. Ejemplo 1 $\longrightarrow$ uno. Si es un número distinto a 1,2,3,4 o 5 que muestre el mensaje: Número equivocado.
+ 	\item Elaborar un programa que imprima la siguiente serie de asteriscos de forma vertical: * ** *** **** *****
+\end{enumerate}
+
+
+\section{Resultados}
+\section{Validaciones}
+
+

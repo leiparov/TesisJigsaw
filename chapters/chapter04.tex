@@ -27,24 +27,24 @@ Para el desarrollo del Sistema Jigsaw Coding, se establecerán iteraciones seman
 \begin{longtable}{|L{6cm}|L{7cm}|}
 \caption{Artefactos del proceso de desarrollo del Sistema Jigsaw Coding}
 \label{tab:artefactos_rup}\\
-    \hline
+	\toprule[0.8mm]
     DISCIPLINA RUP & ARTEFACTO \\
-    \hline
+    \midrule
     \multirow{2}{*}{Requisitos} & $\bullet$ Modelo de caso de uso\\
     \hhline{~~} & $\bullet$ Especificaciones de casos de uso\\
     \hhline{~~} & $\bullet$ Especificaciones suplementarias\\
-    \hline
+    \midrule
     \multirow{5}{*}{Análisis y diseño} & $\bullet$ Diagrama de clases\\
     \hhline{~~} & $\bullet$ Modelo de datos\\
     \hhline{~~} & $\bullet$ Prototipo de interfaz de usuario\\
     \hhline{~~} & $\bullet$ Documento de arquitectura de software\\
-    \hline
+    \midrule
     \multirow{2}{*}{Implementación} & $\bullet$ Código fuente\\
     \hhline{~~} & $\bullet$ Sistema web desplegado\\
-    \hline
+    \midrule
     \multirow{2}{*}{Prueba} & $\bullet$ Casos de prueba\\
     \hhline{~~} & $\bullet$ Resultados de prueba\\
-    \hline
+    \bottomrule[0.8mm]
 \end{longtable}
 
 \clearpage
@@ -85,59 +85,59 @@ En el la \autoref{fig:cap4_actores} se puede ver los actores que participan en e
 	\caption[Diagrama de actores]{Diagrama de actores}
 	\label{fig:cap4_actores}
 \end{figure}
-
-\begin{longtable}{|L{3cm}|L{7cm}|}
+\clearpage
+\begin{longtable}{L{3cm}L{7cm}}
 	\caption{Actores}
 	\label{tab:cap4_actores}\\
-	\hline
+	\toprule[0.8mm]
 	ACTOR & DESCRIPCIÓN \\
-	\hline
+	\midrule[0.6mm]
 	Usuario & Persona que usará el sistema web de tiempo real para el aprendizaje colaborativo.\\
-	\hline
+	\midrule
 	Docente & Es la persona responsable de crear y dirigir las sesiones de clase que serán aplicadas a los alumnos. Además, el docente es el responsable de las evaluaciones que rendirán los alumnos una vez terminada cada sesión de clase.\\
-	\hline
+	\midrule
 	Alumno & Es la persona que será instruida en temas de algoritmos y programación a través de cada sesión diseñada por el docente.\\
-	\hline
+	\bottomrule[0.8mm]
 \end{longtable}
 
 \subsubsection{Casos de uso}
 En la tabla siguiente se presenta la descripción breve de los casos de uso obtenidos para el Sistema Jigsaw Coding, estos son especificados de una manera más detallada en el \autoref{apendice.A}
-\begin{longtable}{|L{4cm}|L{9cm}|}
+\begin{longtable}{L{4cm}L{9cm}}
 	\caption{Casos de uso}
 	\label{tab:cap4_casosdeuso}\\
-	\hline
+	\toprule[0.8mm]
 	CASO DE USO & DESCRIPCIÓN \\
-	\hline
+	\midrule[0.6mm]
 	Registrar alumno & Este caso de uso define los pasos que el usuario con perfil docente debe seguir para poder registrar un alumno en el sistema.\\
-	\hline
+	\midrule
 	Crear Problema & El caso de uso crear problema detalla la interacción entre el sistema y el usuario docente cada vez que éste necesite crear un problema o ejercicio en el sistema.\\
-	\hline
+	\midrule
 	Crear sesión jigsaw & Este caso de uso describe la secuencia de pasos que se debe seguir para poder crear una sesión de clase basada en la técnica de aprendizaje colaborativo jigsaw.\\
-	\hline
+	\midrule
 	Asignar alumno sesión jigsaw & Las sesiones jigsaw necesitan tener alumnos y ese es el objetivo que tine este caso de uso.\\
-	\hline
+	\midrule
 	Generar grupos & Mediante este caso de uso, el Sistema Jigsaw Coding realiza la creación de grupos expertos y grupos jigsaw y a cada uno de ellos les asigna alumnos de forma aleatoria.\\
-	\hline
+	\midrule
 	Asignar problemas a grupos expertos & En este caso de uso se describe cómo el usuario docente puede asignar un problema a cada grupo experto generado por el sistema para una determinada sesión jigsaw.\\
-	\hline
+	\midrule
 	Crear examen & El caso de uso detalla la manera en la que el usuario docente puede crear un examen, el mismo que será usado para la fase de evaluación de la sesión jigsaw.\\
-	\hline
+	\midrule
 	Definir horario de reunión de expertos & Este caso de uso sirve para establecer la fecha y hora de inicio de la reunión de expertos así como su respectiva duración.\\
-	\hline
+	\midrule
 	Definir horario de reunión jigsaw & Este caso de uso sirve para establecer la fecha y hora de inicio de la reunión jigsaw así como su respectiva duración.\\
-	\hline
+	\midrule
 	Definir horario de examen & Este caso de uso sirve para establecer el intervalo de tiempo en el cual se puede acceder a examen así como también su respectiva duración.\\
-	\hline
+	\midrule
 	Unirse a reunión de expertos & Este caso de uso le sirve al usuario alumno para poder ingresar a la reunión de expertos y desarrollar el problema asignado junto con los demás integrantes del grupo.\\
-	\hline
+	\midrule
 	Unirse a reunión jigsaw & Este caso de uso le sirve al usuario alumno para poder ingresar a la reunión jigsaw y desarrollar los respectivos problemas junto con los demás integrantes del grupo. \\
-	\hline
+	\midrule
 	Resolver problema & El caso de uso describe la interacción entre el usuario alumno y el sistema cada vez que se requiere resolver un problema asignado por el usuario docente.\\
-	\hline
+	\midrule
 	Rendir examen & El caso de uso le permite al usuario alumno acceder al examen y visualizar cada una de las preguntas que debe resolver.\\
-	\hline
+	\midrule
 	Consultar al grupo & Este caso de uso describe la manera en la que un usuario alumno puede consultar con los demás integrantes de su grupo experto o grupo jigsaw.\\
-	\hline
+	\bottomrule[0.8mm]
 \end{longtable}
 
 \subsection{Arquitectura del Sistema}
@@ -219,7 +219,7 @@ Si el acceso al sistema se dió exitosamente, entonces el usuario podrá visuali
 \label{fig:inicio}
 \includegraphics[scale=0.5]{figuras/usodelsistema/docente/inicio}
 \end{figure}
-\clearpage
+%\clearpage
 
 \subsection{Problemas}
 Al acceder al módulo problemas, el usuario visualizará el listado de problemas que ha creado hasta el momento y en dicho listado, se mostrará el título y enunciado de cada problema. Además se podrá filtrar los problemas según el título o enunciado. \autoref{fig:problemas_inicio}.
@@ -313,7 +313,7 @@ Al acceder al módulo sesiones jigsaw, el usuario podrá ver el listado de sesio
 \label{fig:sesionesjigsaw_inicio}
 \includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_inicio}
 \end{figure}
-\clearpage
+%\clearpage
 \subsubsection{Crear sesión jigsaw}
 A continuación se describen los pasos para crear una sesión jigsaw.
 \begin{enumerate}
@@ -408,7 +408,15 @@ A continuación se describen los pasos para crear una sesión jigsaw.
 Para que un usuario con perfil Alumno pueda unirse a una reunión de expertos, debe seguir los siguientes pasos:
 
 \begin{enumerate}
-	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.
+	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.\autoref{fig:c4_alumno_principal}
+	
+	\begin{figure}[h!]
+		\centering
+		\caption{Sistema Jigsaw Coding - Perfil alumno}
+		\label{fig:c4_alumno_principal}
+		\includegraphics[scale=0.5]{figuras/usodelsistema/alumno/principal}
+	\end{figure}
+	
 	\item Presione el botón \textbf{Unirse a reunión de Expertos}. A continuación el sistema le mostrará el panel de la reunión de expertos. 
 	
 	\begin{figure}[h!]
@@ -436,7 +444,7 @@ Para que un usuario con perfil Alumno pueda unirse a una reunión de expertos, d
 Para que un usuario con perfil Alumno pueda unirse a una reunión jigsaw, debe seguir los siguientes pasos:
 
 \begin{enumerate}
-	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.
+	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.\autoref{fig:c4_alumno_principal}
 	\item Presione el botón \textbf{Unirse a reunión Jigsaw}. A continuación el sistema le mostrará el panel de la reunión jigsaw. 
 	
 	\begin{figure}[h!]
@@ -465,7 +473,7 @@ Para que un usuario con perfil Alumno pueda unirse a una reunión jigsaw, debe s
 Para que un usuario con perfil Alumno pueda rendir un examen, debe seguir los siguientes pasos:
 
 \begin{enumerate}
-	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.
+	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.\autoref{fig:c4_alumno_principal}
 	\item Presione el botón \textbf{Rendir Examen}. A continuación el sistema le mostrará el panel del examen.
 	
 	\begin{figure}[h!]
@@ -494,24 +502,129 @@ Para que un usuario con perfil Alumno pueda rendir un examen, debe seguir los si
 		\centering
 		\caption{Sistema Jigsaw Coding - Ver nota de examen}
 		\label{fig:c4_nota_de_examen}
-		\includegraphics[scale=0.4]{figuras/usodelsistema/alumno/nota_de_examen}
+		\includegraphics[scale=0.2]{figuras/usodelsistema/alumno/nota_de_examen}
 	\end{figure}
 	
 \end{enumerate}
 \clearpage
 \section{Definición de métricas de calidad para el Sistema Jigsaw Coding}
+A continuación se presentan las métricas de calidad que se van a aplicar al Sistema Jigsaw Coding.
 
+\subsection{Entendibilidad del Sistema Jigsaw Coding}
 
+\begin{longtable}{L{4cm}L{8cm}}
+	\toprule[0.8mm]
+	\textbf{Nombre de la métrica} & \textbf{Entendibilidad del Sistema Jigsaw Coding}\\
+	\midrule
+	Código & MC-\metrica\\
+	\midrule
+	Característica & Usabilidad \\
+	\midrule
+	Sub-característica & Entendibilidad\\
+	\midrule
+	Propósito & ¿Qué porcentaje de los usuarios consideran que las funcionalidades del sistema son muy fáciles de entender? \\
+	\midrule
+	Método de aplicación & Realizar una encuesta:
+	¿Qué tan fácil o difícil le resultó entender las funcionalidades del sistema?
+	\begin{itemize}
+		\item Muy fácil
+		\item Fácil
+		\item Ni fácil ni difícil
+		\item Difícil
+		\item Muy difícil
+	\end{itemize}\\
+	\midrule
+	\multirow{3}{*}{ \parbox{4cm}{ Medición, fórmula y elementos medibles}   } & $$x = \frac{A}{B} $$\\
+	& A : Cantidad de usuarios que selecionaron la alternativa Muy fácil.\\
+	& B : Cantidad de usuarios encuestados.	\\
+	\midrule
+	Tipo de medida & A,B: contador \\
+	\midrule
+	Interpretación del valor & Lo más cercano a 1 es mejor \\
+	\midrule
+	Tipo de escala & Absoluta \\
+	\bottomrule[0.8mm]
+\end{longtable}
 
+\subsection{Adecuación del Sistema Jigsaw Coding}
 
+\begin{longtable}{L{4cm}L{8cm}}
+	\toprule[0.8mm]
+	\textbf{Nombre de la métrica} & \textbf{Adecuación del Sistema Jigsaw Coding}\\
+	\midrule
+	Código & MC-\metrica\\
+	\midrule
+	Característica &  Funcionalidad\\
+	\midrule
+	Sub-característica & Adecuación\\
+	\midrule
+	Propósito &  ¿Qué cantidad de casos de uso no se encuentran dentro de las funcionalidades del sistema jigsaw coding?\\
+	\midrule
+	Método de aplicación & Contar el total de casos de uso que no se pueden realizar a través del sistema jigsaw coding\\
+	\midrule
+	\multirow{3}{*}{ \parbox{4cm}{ Medición, fórmula y elementos medibles}   } & $$x = \frac{A}{B} $$\\
+	& A : Cantidad de casos de uso implementados en el sistema.\\
+	& B : Cantidad de casos de uso especificados en el \autoref{apendice.A}	\\
+	\midrule
+	Tipo de medida & A,B: Contador \\
+	\midrule
+	Interpretación del valor &  Lo más cercano a 1 es mejor\\
+	\midrule
+	Tipo de escala & Absoluta \\
+	\bottomrule[0.8mm]
+\end{longtable}
 
+\subsection{Portabilidad del Sistema Jigsaw Coding}
 
+\begin{longtable}{L{4cm}L{8cm}}
+	\toprule[0.8mm]
+	\textbf{Nombre de la métrica} & \textbf{Portabilidad del Sistema Jigsaw Coding}\\
+	\midrule
+	Código & MC-\metrica\\
+	\midrule
+	Característica & Portabilidad \\
+	\midrule
+	Sub-característica & Adaptabilidad\\
+	\midrule
+	Propósito &  ¿En cuántos navegadores web puede usarse el sistema sin tener problemas?\\
+	\midrule
+	Método de aplicación & Utilizar el sistema en diversos navegarores y contar en cuántos de ellos el sistema funciona correctamente.\\
+	\midrule
+	\multirow{2}{*}{ \parbox{4cm}{ Medición, fórmula y elementos medibles}   } & $$x = n $$\\
+	& n : Número de navegadores web en los que el sistema funciona correctamente.\\
+	\midrule
+	Tipo de medida &  n: Contador\\
+	\midrule
+	Interpretación del valor &  A mayor valor de $x$ mejor.\\
+	\midrule
+	Tipo de escala &  Absoluta\\
+	\bottomrule[0.8mm]
+\end{longtable}
 
-
-
-
-
-
+%\begin{longtable}{L{4cm}L{8cm}}
+%	\toprule[0.8mm]
+%	\textbf{Nombre de la métrica} & \textbf{}\\
+%	\midrule
+%	Código & MC-\metrica\\
+%	\midrule
+%	Característica &  \\
+%	\midrule
+%	Sub-característica & \\
+%	\midrule
+%	Propósito &  \\
+%	\midrule
+%	Método de aplicación &\\
+%	\midrule
+%	Medición, fórmula y elementos medibles
+%	& 	\\
+%	\midrule
+%	Tipo de medida &  \\
+%	\midrule
+%	Interpretación del valor &  \\
+%	\midrule
+%	Tipo de escala &  \\
+%	\bottomrule[0.8mm]
+%\end{longtable}
 
 
 

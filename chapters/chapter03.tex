@@ -11,7 +11,7 @@ En muchos cursos de programación de primer ciclo, el concepto de depurar un pro
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.4]{figuras/learncs.png}\\
+  \fbox{\includegraphics[scale=0.4]{figuras/learncs.png}}\\
   \caption[LearnCS]{Interfaz del sistema LearnCS! \protect\cite{lipman_learncs_2014}}
   \label{fig:learncs}
 \end{figure}
@@ -30,7 +30,7 @@ LearnCS! se ejecuta en un navegador web y tal como se muesta en la Figura \ref{f
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/learncs2.png}\\
+  \fbox{\includegraphics[scale=0.5]{figuras/learncs2.png}}\\
   \caption[LearnCS]{Área gráfica para programas más interactivos en LearnCS! \protect\cite{lipman_learncs_2014}}\label{fig:learncs2}
 \end{figure}
 
@@ -77,7 +77,7 @@ Para acceder a esta herramienta de colaboración, en primer lugar se debe tener 
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.8]{figuras/googledocs.jpg}\\
+  \fbox{\includegraphics[scale=0.8]{figuras/googledocs.jpg}}\\
   \caption[Google Docs]{GoogleDocs \protect\cite{googledocs}}\label{fig:googledocs}
 \end{figure}
 
@@ -154,7 +154,7 @@ Este módulo posee las siguientes funcionalidades:
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.3]{figuras/codebunk.png}\\
+  \fbox{\includegraphics[scale=0.3]{figuras/codebunk.png}}\\
   \caption[CodeBunk]{Interfaz gráfica de Codebunk \protect\cite{codebunk}}\label{fig:codebunk}
 \end{figure}
 Es una plataforma que permite codificar y compilar en diferentes lenguajes de programación de forma colaborativa y en tiempo real. Algunas de sus funcionalidades son las siguientes:\\
@@ -175,39 +175,40 @@ Las cuatro herramientas para el aprendizaje colaborativo que se han estudiado ha
 \begin{longtable}{|L{7cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 \caption{Herramientas para el aprendizaje colaborativo}
 \label{tab:herramientasAC}\\
-    \hline
+    \toprule[0.8mm]
     CARACTERÍSTICAS	& LearnCS &	Google Docs & Sistema PUCP & Code Bunk\\	
-    \hline
-    $\diamond$ Permite escribir y compilar código fuente &\cmark	&\xmark	&\xmark	&\cmark	\\
+    \midrule[0.6mm]
+    $\diamond$ Permite desarrollar código fuente &\cmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Permite desarrollar código fuente de forma colaborativa	&\xmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Posee un representación de la memoria del computador	&\cmark	&\xmark	&\xmark	&\xmark	\\
     $\diamond$ Muestra mensajes de error	&\cmark	&\xmark	&\xmark	&\cmark	\\
     %$\diamond$ Brinda coloreado de sintaxis de lenguaje C	&\cmark	&\xmark	&\xmark	&\cmark	\\
-    $\diamond$ Es un aplicativo web	&\cmark	&\cmark	&\cmark	&\cmark	\\
+%    $\diamond$ Es un aplicativo web	&\cmark	&\cmark	&\cmark	&\cmark	\\
     %$\diamond$ Soporta sólamente lenguage C	&\cmark	&\xmark	&\xmark	&\xmark	\\
-    $\diamond$ Permite crear y editar documentos de texto &\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Permite crear y editar documentos de texto, hojas de cálculo y diapositivas &\xmark	&\cmark	&\xmark	&\xmark	\\
     %$\diamond$ Subir archivos ya creados	&\xmark	&\cmark	&\xmark	&\xmark	\\
     %$\diamond$ Edición de documentos de texto	&\xmark	&\cmark	&\cmark	&\cmark	\\
-    $\diamond$ Permite crear y editar hojas de cálculo	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Permite crear y editar diapositivas	&\xmark	&\cmark	&\xmark	&\xmark	\\
-    $\diamond$ Compartir documentos con otros usuarios	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    $\diamond$ Chat de tiempo real	&\xmark	&\cmark	&\xmark	&\cmark	\\
+%    $\diamond$ Permite crear y editar hojas de cálculo	&\xmark	&\cmark	&\xmark	&\xmark	\\
+%    $\diamond$ Permite crear y editar diapositivas	&\xmark	&\cmark	&\xmark	&\xmark	\\
+    $\diamond$ Permite compartir documentos con otros usuarios	&\xmark	&\cmark	&\xmark	&\cmark	\\
+    $\diamond$ Permite la comunicación a través de un Chat	&\xmark	&\cmark	&\xmark	&\cmark	\\
     %$\diamond$ Exportar documentos 	&\xmark	&\cmark	&\xmark	&\xmark	\\
     $\diamond$ Permite diseñar una sesión de clase jigsaw	&\xmark	&\xmark	&\cmark	&\xmark	\\
     $\diamond$ Permite tomar y calificar evaluaciones	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    $\diamond$ Brinda un foro de discusión	&\xmark	&\cmark	&\cmark	&\xmark	\\
+    $\diamond$ Permite la comunicación a través de un foro de discusión	&\xmark	&\cmark	&\cmark	&\xmark	\\
     $\diamond$ Permite elaborar casos de uso	&\xmark	&\xmark	&\cmark	&\xmark	\\
-    $\diamond$ Permite desarrollar código fuente entre varios usuarios conectados al mismo tiempo	&\xmark	&\xmark	&\xmark	&\cmark	\\
+   
     %$\diamond$ Java, Python, C, C++, etc	&\xmark	&\xmark	&\xmark	&\cmark	\\
-    $\diamond$ Coloración de sintaxis de código fuente	&\cmark	&\xmark	&\xmark	&\cmark	\\
-    $\diamond$ Indentado inteligente	&\xmark	&\xmark	&\xmark	&\cmark	\\
+    $\diamond$ Posee coloración de sintaxis de código fuente	&\cmark	&\xmark	&\xmark	&\cmark	\\
+%    $\diamond$ Indentado inteligente	&\xmark	&\xmark	&\xmark	&\cmark	\\
     %$\diamond$ Compilar y ejecutar de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
     %$\diamond$ Ejecución de código fuente	&\xmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Visualización de resultados de ejecución	&\xmark	&\xmark	&\xmark	&\cmark	\\
     $\diamond$ Historial de revisiones de código	&\xmark	&\cmark	&\xmark	&\cmark	\\
     $\diamond$ Creación de equipos colaborativos	&\xmark	&\cmark	&\xmark	&\cmark	\\
-    $\diamond$ Juez virtual de programación	&\xmark	&\xmark	&\xmark	&\xmark	\\
-    $\diamond$ Banco de preguntas de programación	&\xmark	&\xmark	&\xmark	&\xmark	\\
-    \hline
+%    $\diamond$ Juez virtual de programación	&\xmark	&\xmark	&\xmark	&\xmark	\\
+    $\diamond$ Posee un banco de preguntas de programación	&\xmark	&\xmark	&\xmark	&\xmark	\\
+    \bottomrule[0.8mm]
 \end{longtable}
 %\end{landscape}
 \newpage
@@ -219,7 +220,7 @@ Jigsaw es una técnica de aprendizaje colaborativo y recientemente ha sido aplic
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.3]{figuras/jigsaw_ltpac_1.png}\\
+  \fbox{\includegraphics[scale=0.3]{figuras/jigsaw_ltpac_1.png}}\\
   \caption{Jigsaw Paso 1}{Fase de reunión de grupos de expertos \protect\cite{Buhr2014429} }
   \label{fig:jigsaw_ltpac_1}
 \end{figure}
@@ -229,7 +230,7 @@ Los objetivos del ejercicio jigsaw realizado fueron para definir LTPAC, identifi
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/jigsaw_ltpac_2.png}\\
+  \fbox{\includegraphics[scale=0.5]{figuras/jigsaw_ltpac_2.png}}\\
   \caption{Jigsaw Paso 2}{Fase de reunión de grupos Jigsaw dirigidos por un moderador \protect\cite{Buhr2014429} }
   \label{fig:jigsaw_ltpac_2}
 \end{figure}
@@ -247,7 +248,7 @@ Pair Research es una generalización de la programación en pares. Cada semana, 
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.4]{figuras/pair_research.png}\\
+  \fbox{\includegraphics[scale=0.4]{figuras/pair_research.png}}\\
   \caption{Pair Research}{Hoja de excel utilizada para la matriz de preferencias y emparejamiento \protect\cite{miller_pair_2014}}
   \label{fig:pair_research}
 \end{figure}
@@ -263,10 +264,10 @@ En el siguiente cuadro ser resumen las características principales que nos ofre
 \begin{longtable}{|L{8cm}|C{2.5cm}|C{2.5cm}|}
 \caption{Técnicas de aprendizaje colaborativo}
 \label{tab:tecnicasAC}\\
-  \hline
+  \toprule[0.8mm]
   % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
   CARACTERÍSTICAS & JIGSAW & PAIR RESEARCH \\
-  \hline
+  \midrule[0.6mm]
   $\diamond$ Se aprende del compañero & \cmark & \cmark\\
   $\diamond$ Permite las revisiones de trabajo constantes & \xmark & \cmark\\
   $\diamond$ Desarrolla la creatividad & \cmark & \cmark\\
@@ -280,7 +281,7 @@ En el siguiente cuadro ser resumen las características principales que nos ofre
   $\diamond$ Favorece la integración con nuevas personas &	\cmark & \xmark \\	
   $\diamond$ El alumno elige con quién trabajar & \xmark & \cmark\\		
   $\diamond$ Los grupos se forman según estilos de aprendizaje & \xmark & \xmark\\		
-  \hline
+  \bottomrule[0.8mm]
 \end{longtable}
 
 \newpage
@@ -329,7 +330,7 @@ Esta API posee las siguientes funcionalidades:
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/ideone.jpg}\\
+  \fbox{\includegraphics[scale=0.5]{figuras/ideone.jpg}}\\
   \caption[Ideone]{Interfaz gráfica de Ideone \protect\cite{ideone}}\label{fig:ideone}
 \end{figure}
 
@@ -339,9 +340,9 @@ Tanto la API de GoogleDrive como la API de Ideone ofrecen características impor
 \begin{longtable}{|L{10cm}|C{2cm}|C{2cm}|}
 \caption{Frameworks para aplicaciones web de tiempo real}
 \label{tab:frameworks}\\
-\hline
+\toprule[0.8mm]
 CARACTERÍSTICAS & Google Drive Realtime API	& Ideone API - Sphere Engine\\	
-\hline
+\midrule[0.6mm]
 $\diamond$ Se implementa a través de Javascript	&\cmark	&\xmark	\\
 $\diamond$ Creación y edición de listas, arrays, matrices, maps, objetos javascript personalizados		&\cmark	&\xmark	\\
 $\diamond$ Detección de cambios	&\cmark	&\xmark	\\
@@ -352,6 +353,6 @@ $\diamond$ Permite cargar código fuente	&\xmark	&\cmark	\\
 $\diamond$ Permite ejecutar código fuente	&\xmark	&\cmark	\\
 $\diamond$ Permite subir data de prueba inicial	&\xmark	&\cmark	\\
 $\diamond$ Permite descargar los resultados obtenidos en la ejecución	&\xmark	&\cmark	\\
-\hline
+\bottomrule[0.8mm]
 \end{longtable}
 

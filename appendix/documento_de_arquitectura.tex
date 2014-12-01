@@ -7,14 +7,14 @@ El presente documento de arquitectura de software tiene como finalidad describir
 \subsection{Definiciones, acrónimos y abreviaturas}
 En esta sección se provee las definiciones, acrónimos y abreviaturas de términos utilizados en el presente documento a fin de brindar al lector una mejor comprensión del contenido. 
 \clearpage
-\begin{longtable}{|c|L{8cm}|}
-    \hline
-  SJC & Sistema Jigsaw Coding \\ \hline
-  UML & Unified Modeling Language: Lenguaje Unificado de Modelamiento \\ \hline
-  CRUD & Create - Read - Update - Delete \\ \hline
-  JSON & JavaScript Object Notation: Es un formato ligero para el intercambio de datos \\ \hline
-  XML & eXtensible Markup Language: Es un lenguaje de marcas utilizado para almacenar datos en forma legible. \\ \hline
-  \emph{sbt} & Herramienta de construcción interactiva \url{http://www.scala-sbt.org} \\ \hline
+\begin{longtable}{c L{8cm}}
+  \toprule[0.7mm]
+  SJC & Sistema Jigsaw Coding \\ \midrule
+  UML & Unified Modeling Language: Lenguaje Unificado de Modelamiento \\ \midrule
+  CRUD & Create - Read - Update - Delete \\ \midrule
+  JSON & JavaScript Object Notation: Es un formato ligero para el intercambio de datos \\ \midrule
+  XML & eXtensible Markup Language: Es un lenguaje de marcas utilizado para almacenar datos en forma legible. \\ \midrule
+  \emph{sbt} & Herramienta de construcción interactiva \url{http://www.scala-sbt.org} \\ \bottomrule[0.7mm]
 \end{longtable}
 \subsection{Metas arquitectónicas y restricciones}
 
@@ -62,10 +62,10 @@ A pesar que las aplicaciones de Play están diseñadas para correr en servidores
 \begin{figure}[!h]
 	\centering
 	% Requires \usepackage{graphicx}
-	\includegraphics[scale=0.6]{figuras/sad/diagrama_de_clases.jpg}\\
+	\fbox{\includegraphics[scale=0.6]{figuras/sad/diagrama_de_clases.jpg}}\\
 	\caption{Diagrama de Clases}\label{fig:diagrama_de_clases}
 \end{figure}
-Tal como se puede observar en el Diagrama de clases de la figura \ref{fig:diagrama_de_clases}:\\
+Tal como se puede observar en el Diagrama de clases de la \autoref{fig:diagrama_de_clases}:\\
 
 El Sistema Jigsaw Coding permite el acceso a Usuario lo cuales pueden ser de dos tipos: Docente o Alumno. El docente puede crear problemas y además es el encargado de crear las sesiones jigsaw. El docente también es quien crea los examenes, los cuales están conformados por un conjunto de problemas y cada examen es resuelto por los alumnos, quienes para tal objetivo, deben resolver los problemas que componen cada examen. Por otro lado, los alumnos también resuelven problemas cada vez que se encuentran dentro de un grupo de expertos o un grupo jigsaw. Naturalmente, los examenes son evaluados por el docente y éste les asigna una nota a cada una de las respuestas que los alumnos envía al terminar su examen.
 \clearpage
@@ -74,7 +74,7 @@ La vista de desarrollo muestra el sistema desde la perspectiva del programador y
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.6]{figuras/sad/diagrama_de_paquetes.jpg}\\
+  \fbox{\includegraphics[scale=0.6]{figuras/sad/diagrama_de_paquetes.jpg}}\\
   \caption{Diagrama de Paquetes}\label{fig:diagrama_de_paquetes}
 \end{figure}
 \begin{itemize}
@@ -87,7 +87,7 @@ La vista de desarrollo muestra el sistema desde la perspectiva del programador y
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.5]{figuras/sad/diagrama_de_despliegue.jpg}\\
+  \fbox{\includegraphics[scale=0.5]{figuras/sad/diagrama_de_despliegue.jpg}}\\
   \caption{Diagrama de Despliegue}\label{fig:diagrama_de_despliegue}
 \end{figure}
 \begin{itemize}
@@ -96,26 +96,27 @@ La vista de desarrollo muestra el sistema desde la perspectiva del programador y
   \item \texttt{Servidor de Base de Datos}\\Es el lugar donde estará almacenada la información del Sistema Web JigsawCoding.
   \item \texttt{Web Service Sphere Engine}\\Es un servicio web que servirá para compilar y ejecutar el código fuente desarrollado por los usuarios del sistema.
 \end{itemize}
-%\clearpage
+\clearpage
 \section{Vista de Escenarios}
 La vista de escenarios o vista de casos de uso es la encargada de presentar la percepción que tiene el usuario sobre las distintas funcionalidades del sistema.
-\begin{landscape}
+
 
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.45]{figuras/casosdeuso/casos_de_uso.jpg}\\
+  \fbox{\includegraphics[scale=0.25]{figuras/casosdeuso/casos_de_uso.jpg}}\\
   \caption[Casos de uso]{Diagrama de casos de uso para el sistema JigsawCoding}
   \label{fig:casos_de_uso}
 \end{figure}
-\end{landscape}
+
 
 \subsection{Catálogo de actores}
-En la siguiente figura se puede ver los actores que participan en el Sistema Jigsaw Coding y en la Tabla \ref{tab:das_actores} se encuentra una breve descripción de cada uno de ellos.
-\begin{figure}
+En la siguiente figura se puede ver los actores que participan en el Sistema Jigsaw Coding y en la \autoref{tab:das_actores} se encuentra una breve descripción de cada uno de ellos.
+
+\begin{figure}[h!]
 	\centering
 	% Requires \usepackage{graphicx}
-	\includegraphics[scale=0.6]{figuras/casosdeuso/actores.jpg}\\
+	\fbox{\includegraphics[scale=0.6]{figuras/casosdeuso/actores.jpg}}\\
 	\caption[Diagrama de actores]{Diagrama de actores}
 	\label{fig:das_actores}
 \end{figure}
@@ -123,56 +124,56 @@ En la siguiente figura se puede ver los actores que participan en el Sistema Jig
 \begin{longtable}{|L{3cm}|L{7cm}|}
 	\caption{Actores}
 	\label{tab:das_actores}\\
-	\hline
+	\toprule[0.8mm]
 	ACTOR & DESCRIPCIÓN \\
-	\hline
+	\midrule[0.6mm]
 	Usuario & Persona que usará el sistema web de tiempo real para el aprendizaje colaborativo.\\
-	\hline
+	\midrule
 	Docente & Es la persona responsable de crear y dirigir las sesiones de clase que serán aplicadas a los alumnos. Además, el docente es el responsable de las evaluaciones que rendirán los alumnos una vez terminada cada sesión de clase.\\
-	\hline
+	\midrule
 	Alumno & Es la persona que será instruida en temas de algoritmos y programación a través de cada sesión diseñada por el docente.\\
-	\hline
+	\bottomrule[0.8mm]
 \end{longtable}
-
+%\clearpage
 \subsection{Casos de uso}
-En la tabla siguiente se presenta la descripción breve de los casos de uso obtenidos para el Sistema Jigsaw Coding, estos son especificados de una manera más detallada en el anexo \ref{apendice.A}\\
-\clearpage
-\begin{longtable}{|L{4cm}|L{9cm}|}
+En la tabla siguiente se presenta la descripción breve de los casos de uso obtenidos para el Sistema Jigsaw Coding, estos son especificados de una manera más detallada en el \autoref{apendice.A}.\\
+
+\begin{longtable}{L{4cm}L{9cm}}
 	\caption{Casos de uso}
 	\label{tab:das_casosdeuso}\\
-	\hline
+	\toprule[0.8mm]
 	CASO DE USO & DESCRIPCIÓN \\
-	\hline
+	\midrule[0.6mm]
 	Registrar alumno & Este caso de uso define los pasos que el usuario con perfil docente debe seguir para poder registrar un alumno en el sistema.\\
-	\hline
+	\midrule
 	Crear Problema & El caso de uso crear problema detalla la interacción entre el sistema y el usuario docente cada vez que éste necesite crear un problema o ejercicio en el sistema.\\
-	\hline
+	\midrule
 	Crear sesión jigsaw & Este caso de uso describe la secuencia de pasos que se debe seguir para poder crear una sesión de clase basada en la técnica de aprendizaje colaborativo jigsaw.\\
-	\hline
-	Asignar alumno sesión jigsaw & Las sesiones jigsaw necesitan tener alumnos y ese es el objetivo que tine este caso de uso.\\
-	\hline
+	\midrule
+	Asignar alumnos a sesión jigsaw & Las sesiones jigsaw necesitan tener alumnos y ese es el objetivo que tine este caso de uso.\\
+	\midrule
 	Generar grupos & Mediante este caso de uso, el Sistema Jigsaw Coding realiza la creación de grupos expertos y grupos jigsaw y a cada uno de ellos les asigna alumnos de forma aleatoria.\\
-	\hline
+	\midrule
 	Asignar problemas a grupos expertos & En este caso de uso se describe cómo el usuario docente puede asignar un problema a cada grupo experto generado por el sistema para una determinada sesión jigsaw.\\
-	\hline
+	\midrule
 	Crear examen & El caso de uso detalla la manera en la que el usuario docente puede crear un examen, el mismo que será usado para la fase de evaluación de la sesión jigsaw.\\
-	\hline
+	\midrule
 	Definir horario de reunión de expertos & Este caso de uso sirve para establecer la fecha y hora de inicio de la reunión de expertos así como su respectiva duración.\\
-	\hline
+	\midrule
 	Definir horario de reunión jigsaw & Este caso de uso sirve para establecer la fecha y hora de inicio de la reunión jigsaw así como su respectiva duración.\\
-	\hline
+	\midrule
 	Definir horario de examen & Este caso de uso sirve para establecer el intervalo de tiempo en el cual se puede acceder a examen así como también su respectiva duración.\\
-	\hline
+	\midrule
 	Unirse a reunión de expertos & Este caso de uso le sirve al usuario alumno para poder ingresar a la reunión de expertos y desarrollar el problema asignado junto con los demás integrantes del grupo.\\
-	\hline
+	\midrule
 	Unirse a reunión jigsaw & Este caso de uso le sirve al usuario alumno para poder ingresar a la reunión jigsaw y desarrollar los respectivos problemas junto con los demás integrantes del grupo. \\
-	\hline
+	\midrule
 	Resolver problema & El caso de uso describe la interacción entre el usuario alumno y el sistema cada vez que se requiere resolver un problema asignado por el usuario docente.\\
-	\hline
+	\midrule
 	Rendir examen & El caso de uso le permite al usuario alumno acceder al examen y visualizar cada una de las preguntas que debe resolver.\\
-	\hline
+	\midrule
 	Consultar al grupo & Este caso de uso describe la manera en la que un usuario alumno puede consultar con los demás integrantes de su grupo experto o grupo jigsaw.\\
-	\hline
+	\bottomrule[0.8mm]
 \end{longtable}
 
 \clearpage
@@ -180,39 +181,39 @@ En la tabla siguiente se presenta la descripción breve de los casos de uso obte
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
-  \includegraphics[scale=0.45]{figuras/sad/modelo_de_datos.png}\\
+  \fbox{\includegraphics[scale=0.45]{figuras/sad/modelo_de_datos.png}}\\
   \caption[Modelo de datos]{Modelo de base de datos del sistema JigsawCoding}\label{fig:modelo_de_datos}
 \end{figure}
 \subsection{PostgreSQL}
 El desarrollo del sistema JigsawCoding se hará usando como motor de base de datos a PostgreSQL en su versión 9.3. 
 \subsection{Diccionario de datos}
-A continuación, el la tabla \ref{tab:das_diccionario_datos} se muestra la descripción de las tablas que conforman el modelo de datos del sistema Jigsaw Coding mostrado en la figura \ref{fig:modelo_de_datos}.
+A continuación, el la \autoref{tab:das_diccionario_datos} se muestra la descripción de las tablas que conforman el modelo de datos del sistema Jigsaw Coding mostrado en la \autoref{fig:modelo_de_datos}.
 \begin{longtable}{|L{4cm}|L{9cm}|}
 	\caption{Diccionario de datos}
 	\label{tab:das_diccionario_datos}\\
-	\hline
+	\toprule[0.7mm]
 	TABLA & DESCRIPCIÓN \\
-	\hline
+	\midrule
 	usuario & Esta tabla almacena la información sobre los datos de los docentes y alumnos que pueden acceder al sistema Jigsaw Coding. En ella se puede encontrar el DNI, email, password, nombres, apellidos y sexo de cada usuario del sistema.\\
-	\hline
+	\midrule
 	problema & Esta tabla guarda el título y enunciado de los problemas que son creados por el docente. \\
-	\hline
+	\midrule
 	sesion\_jigsaw & Esta tabla contiene la información de la sesión jigsaw creada por el docente. En ella se guarda el tema de la sesión, la fecha de inicio de la reunión de expertos, reunión jigsaw, evaluación así como su respectiva duración en minutos. Además esta tabla guarda la cantidad de grupos expertos que deben generarse, dato que es ingresado por el docente.\\
-	\hline
+	\midrule
 	examen & Esta tabla contiene la información(titulo, fecha, duración) sobre el examen que crea el docente.\\
-	\hline
+	\midrule
 	grupo & En la tabla grupo, se encuentra la información que identifica a los grupos expertos y grupos jigsaw como: nombre, descripción, máximo de alumnos.\\
-	\hline
+	\midrule
 	grupos\_usuario & Los grupos que se generen en el sistema deben tener una cantidad de alumnos y esta relación se almacena en esta tabla.\\
-	\hline
+	\midrule
 	grupo\_problema & Cada grupo experto o grupo jigsaw tiene asociado uno o más problemas. Esta información es almacenada en esta tabla.\\
-	\hline
+	\midrule
 	problema\_examen & Esta tabla guarda la relación de 1 a muchos que existe entre el examen y los problemas.\\
-	\hline
+	\midrule
 	sesion\_jigsaw\_usuario & En la creación de sesiones jigsaw, se debe asignar alumnos a la misma y es en esta tabla donde se guarda dicha información.\\
-	\hline
+	\midrule
 	respuesta\_alumno & Cada vez que un alumno resuelve un problema de un examen, su respuesta es almacenada en esta tabla y principalmente lo que se almacena es el link generado por la api de ideone luego de ejecutar la solución del alumno. En esta tabla además se almacena el puntaje obtenido luego que el docente califica la solución.\\
-	\hline
+	\midrule
 	nota\_alumno & En esta tabla se registra la nota final que un alumno obtiene en un determinado examen.\\
-	\hline
+	\bottomrule[0.7mm]
 \end{longtable}

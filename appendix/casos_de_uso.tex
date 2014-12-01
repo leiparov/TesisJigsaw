@@ -46,26 +46,37 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 \end{figure}
 \end{landscape}
 \clearpage
-%\subsection{Casos de uso - Alumno}
-%\begin{figure}[!h]
-%  \centering
-%  % Requires \usepackage{graphicx}
-%  \includegraphics[scale=0.6]{figuras/casosdeuso/DCU_Alumno.jpg}\\
-%  \caption[Casos de uso - Alumno]{Casos de uso - Alumno}
-%  \label{fig:cus-alumno}
-%\end{figure}
-%\clearpage
+
 \section{Especificaciones de Casos de Uso}
+
+\subsection{Iniciar sesión}
+\begin{longtable}{|c|L{10cm}|}
+	\toprule[0.8mm]
+	Código &  CUS-\casodeuso\\  \midrule
+	Nombre &  INICIAR SESIÓN.\\  \midrule
+	Descripción & El caso de uso describe los pasos para acceder al Sistema Jigsaw Coding.\\  \midrule
+	Actores & Docente, Alumno. \\  \midrule
+	Precondiciones &  Ninguna.\\  \midrule
+	Postcondiciones &  Ninguna.\\  \midrule
+	Flujo básico &  \begin{enumerate}
+		\item El docente o alumno escribe su correo electrónico como usuario.
+		\item El docente o alumno escribe su Password.
+		\item El docente o alumno presiona el botón Ingresar.
+	\end{enumerate}
+	\\  \midrule
+	Flujo alternativo &  Ninguno.\\  \bottomrule[0.8mm]
+\end{longtable}
+\clearpage
 \subsection{Registrar Alumno}
 \begin{longtable}{|c|L{10cm}|}
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  REGISTRAR ALUMNO\\  \midrule
-  Descripción & El caso de uso inicia cuando el docente selecciona la opción registrar nuevo alumno. Luego completa la información del alumno y el caso de uso termina cuando se presiona la opción Guardar \\  \midrule
-  Actores & Docente \\  \midrule
+  Nombre &  REGISTRAR ALUMNO.\\  \midrule
+  Descripción & El caso de uso inicia cuando el docente selecciona la opción registrar nuevo alumno. Luego completa la información del alumno y el caso de uso termina cuando se presiona la opción Guardar. \\  \midrule
+  Actores & Docente. \\  \midrule
   Precondiciones &  El docente debe estar logueado en el sistema.\\  \midrule
-  Postcondiciones &  Ninguna\\  \midrule
+  Postcondiciones &  Ninguna.\\  \midrule
   Flujo básico &  \begin{enumerate}
                     \item El docente selecciona la opción para registrar un nuevo alumno.
                     \item El sistema muestra el formulario para completar los datos del alumno.
@@ -76,7 +87,7 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
                     \item El sistema registra al nuevo alumno en el sistema.
                   \end{enumerate}
   \\  \midrule
-  Flujo alternativo &  Ninguno\\  \bottomrule[0.8mm]
+  Flujo alternativo &  Ninguno.\\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Crear Problema}
@@ -98,19 +109,19 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código & CUS-\casodeuso \\  \midrule
-  Nombre & CREAR PROBLEMA \\  \midrule
-  Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción crear problema. Luego el usuario redacta el enunciado y demás observaciones sobre el problema y finaliza el caso de uso \\  \midrule
-  Actores & Docente \\  \midrule
-  Precondiciones & El usuario de ser un Docente y estar logueado en el sistema \\  \midrule
-  Postcondiciones & El docente verá en la lista de problemas el problema recién creado \\  \midrule
+  Nombre & CREAR PROBLEMA. \\  \midrule
+  Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción crear problema. Luego el usuario redacta el enunciado y demás observaciones sobre el problema y finaliza el caso de uso. \\  \midrule
+  Actores & Docente. \\  \midrule
+  Precondiciones & El usuario de ser un Docente y estar logueado en el sistema. \\  \midrule
+  Postcondiciones & El docente verá en la lista de problemas el problema recién creado. \\  \midrule
   Flujo básico & \begin{enumerate}
-                   \item El docente elige la opción NUEVO PROBLEMA
-                   \item El sistema solicita al docente ingresar el título y enunciado del problema
-                   \item El docente escribe el título y enunciado del problema
-                   \item El docente selecciona la opción GUARDAR
-                   \item El sistema guarda el nuevo problema
+                   \item El docente elige la opción NUEVO PROBLEMA.
+                   \item El sistema solicita al docente ingresar el título y enunciado del problema.
+                   \item El docente escribe el título y enunciado del problema.
+                   \item El docente selecciona la opción GUARDAR.
+                   \item El sistema guarda el nuevo problema.
                  \end{enumerate}    \\  \midrule
-  Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+  Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Crear sesión jigsaw}
@@ -118,11 +129,11 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  CREAR SESIÓN JIGSAW\\  \midrule
-  Descripción &  El caso de uso inicia cuando el usuario accede al sistema y elige la opción de crear una nueva sesión de clase jigsaw; luego ingresa los datos necesarios de la sesión de clase y el caso de uso termina cuando la nueva sesión es creada satisfactoriamente en el sistema\\  \midrule
-  Actores &  Docente\\  \midrule
-  Precondiciones & El usuario debe ser un Docente y estar logueado en el sistema. Los grupos expertos deben haber sido creados \\  \midrule
-  Postcondiciones & El docente verá en el listado de clases la nueva sesión creada \\  \midrule
+  Nombre &  CREAR SESIÓN JIGSAW.\\  \midrule
+  Descripción &  El caso de uso inicia cuando el usuario accede al sistema y elige la opción de crear una nueva sesión de clase jigsaw; luego ingresa los datos necesarios de la sesión de clase y el caso de uso termina cuando la nueva sesión es creada satisfactoriamente en el sistema.\\  \midrule
+  Actores &  Docente.\\  \midrule
+  Precondiciones & El usuario debe ser un Docente y estar logueado en el sistema. Los grupos expertos deben haber sido creados. \\  \midrule
+  Postcondiciones & El docente verá en el listado de clases la nueva sesión creada. \\  \midrule
   Flujo básico & \begin{enumerate}
                     \item El docente abre un formulario para crear una nueva sesión de clase jigsaw.
                     \item El docente rellena el campo tema.                    
@@ -131,7 +142,7 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
                     \item El sistema graba la información de la nueva sesión jigsaw.
                  \end{enumerate}
    \\  \midrule
-  Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+  Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Modificar sesión jigsaw}
@@ -140,19 +151,19 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
   Nombre &  MODIFICAR SESIÓN JIGSAW\\  \midrule
-  Descripción & El caso de uso inicia cuando el usuario accede al sistema y selecciona la opción modificar sesión jigsaw. El usuario realiza los cambios que requiera y luego finaliza el caso de uso \\  \midrule
-  Actores &  Docente\\  \midrule
-  Precondiciones &  El usuario debe ser un Docente y debe estar logueado en el sistema. Debe existir una sesión jigsaw en el sistema\\  \midrule
-  Postcondiciones &  Ninguna\\  \midrule
+  Descripción & El caso de uso inicia cuando el usuario accede al sistema y selecciona la opción modificar sesión jigsaw. El usuario realiza los cambios que requiera y luego finaliza el caso de uso. \\  \midrule
+  Actores &  Docente.\\  \midrule
+  Precondiciones &  El usuario debe ser un Docente y debe estar logueado en el sistema. Debe existir una sesión jigsaw en el sistema.\\  \midrule
+  Postcondiciones &  Ninguna.\\  \midrule
   Flujo básico & \begin{enumerate}
                     \item El docente selecciona una sesión jigsaw creada y luego elige la opción editar.
                     \item El docente puede cambiar el total de grupos expertos y el tema o examen de la sesión jigsaw.
                     \item El docente selecciona la opción FINALIZAR.
-                    \item El sistema guarda los cambios realizados a la sesión jigsaw
+                    \item El sistema guarda los cambios realizados a la sesión jigsaw.
 
                  \end{enumerate}
    \\  \bottomrule[0.8mm]
-  Flujo alternativo &  Ninguno\\  \midrule
+  Flujo alternativo &  Ninguno.\\  \midrule
 \end{longtable}
 \clearpage
 \subsection{Asignar alumnos a sesión jigsaw}
@@ -162,16 +173,16 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 	Código &  CUS-\casodeuso\\  \midrule
 	Nombre &  ASIGNAR ALUMNOS A SESIÓN JIGSAW\\  \midrule
 	Descripción &  El caso de uso inicia cuando el docente selecciona la opción Asignar Alumnos para un determinada sesión jigsaw, luego agrega a los alumnos y cuando presiona la opción guardar, el caso de uso termina.\\  \midrule
-	Actores &  Docente\\  \midrule
+	Actores &  Docente.\\  \midrule
 	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Deben existir alumnos registrados.\\  \midrule
-	Postcondiciones &  Ninguna\\  \midrule
+	Postcondiciones &  Ninguna.\\  \midrule
 	Flujo básico &    \begin{enumerate}
 		\item El docente selecciona la opción Asignar Alumnos en la lista de sesiones jigsaw.
 		\item El docente arrastra a los alumnos desde la lista de disponibles hacia la lista de alumnos para la sesión jigsaw.
 		\item El docente presiona la opción Guardar.
 		\item El sistema guarda la lista de participantes de la sesión jigsaw.
 	\end{enumerate}  \\ \midrule
-	Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+	Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Generar grupos}
@@ -183,14 +194,14 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 	Descripción &  El caso de uso inicia cuando el docente selecciona la opción Generar Grupos y luego el sistema forma los grupos expertos y grupos jigsaw de forma aleatoria.\\  \midrule
 	Actores &  Docente\\  \midrule
 	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Deben existir alumnos asignados a una sesión jigsaw.\\  \midrule
-	Postcondiciones &  Ninguna\\  \midrule
+	Postcondiciones &  Ninguna.\\  \midrule
 	Flujo básico &    \begin{enumerate}
 		\item El docente selecciona la opción Generar Grupos.
 		\item El sistema genera aleatoriamente los grupos expertos.
 		\item El sistema genera aleatoriamente los grupos jigsaw.
 		\item El sistema muestra al usuario los grupos creados.
 	\end{enumerate}  \\ \midrule
-	Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+	Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Asignar problemas a grupos expertos}
@@ -200,15 +211,15 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 	Código &  CUS-\casodeuso\\  \midrule
 	Nombre &  ASIGNAR PROBLEMAS A GRUPOS EXPERTOS\\  \midrule
 	Descripción &  El caso de uso empieza cuando el docente selecciona la opción asignar problemas. Luego indica qué problema debe resolver cada grupo experto y cuando presiona la opción guardar, el caso de uso finaliza.\\  \midrule
-	Actores &  Docente\\  \midrule
+	Actores &  Docente.\\  \midrule
 	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema. Los grupos expertos deben haber sido generados por el sistema.\\  \midrule
-	Postcondiciones &  Ninguna\\  \midrule
+	Postcondiciones &  Ninguna.\\  \midrule
 	Flujo básico &    \begin{enumerate}
 		\item El docente selecciona la opción Asignar Problemas.
 		\item El docente selecciona un grupo experto y selecciona su respectivo problema.
 		\item El docente presiona la opción Guardar.
 	\end{enumerate}  \\ \midrule
-	Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+	Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Crear examen}
@@ -216,10 +227,10 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  CREAR EXAMEN\\  \midrule
+  Nombre &  CREAR EXAMEN.\\  \midrule
   Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Nuevo Examen. Luego el usuario selecciona las preguntas o problemas e indica el puntaje de cada una de ellas. El caso de uso termina cuando el usuario selecciona guardar el nuevo examen. \\  \midrule
-  Actores &  Docente\\  \midrule
-  Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir problemas creados \\  \midrule
+  Actores &  Docente.\\  \midrule
+  Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir problemas creados. \\  \midrule
   Postcondiciones & El docente podrá ver una nueva evaluación en su listado de examenes. \\  \midrule
   Flujo básico & \begin{enumerate}
                     \item El docente selecciona la opción NUEVO EXAMEN.
@@ -242,7 +253,7 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 	Código &  CUS-\casodeuso\\  \midrule
 	Nombre &  ASIGNAR EXAMEN\\  \midrule
 	Descripción &  El caso de uso empieza cuando el docente selecciona la opción asignar examen. Luego indica qué examen deberán resolver los alumnos.\\  \midrule
-	Actores &  Docente\\  \midrule
+	Actores &  Docente.\\  \midrule
 	Precondiciones &  El usuario de ser un Docente y estar logueado en el sistema y deben existir examenes creados.\\  \midrule
 	Postcondiciones &  Ninguna\\  \midrule
 	Flujo básico &    \begin{enumerate}
@@ -250,7 +261,7 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 		\item El docente selecciona un examen.
 		\item El docente presiona la opción Guardar.
 	\end{enumerate}  \\ \midrule
-	Flujo alternativo & Ninguno \\ \bottomrule[0.8mm]
+	Flujo alternativo & Ninguno. \\ \bottomrule[0.8mm]
 \end{longtable}
 
 \clearpage
@@ -273,7 +284,7 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 		\item El sistema guarda el horario establecido para la reunión de expertos.
 	\end{enumerate}
 	\\  \midrule
-	Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+	Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Definir horario de reunión jigsaw}
@@ -281,9 +292,9 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 	\toprule[0.8mm]
 	% after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
 	Código &  CUS-\casodeuso\\  \midrule
-	Nombre &  DEFINIR HORARIO DE REUNIÓN JIGSAW\\  \midrule
+	Nombre &  DEFINIR HORARIO DE REUNIÓN JIGSAW.\\  \midrule
 	Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Definir Horario en la lista de sesiones jigsaw dentro del cuadro Reunión Jigsaw. Luego el usuario indica la fecha y hora de inicio acceder a la reunión jigsaw así como también la duración de la misma. El caso de uso termina cuando el usuario selecciona la opción guardar. \\  \midrule
-	Actores &  Docente\\  \midrule
+	Actores &  Docente.\\  \midrule
 	Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir sesiones jigsaw. \\  \midrule
 	Postcondiciones & El docente podrá ver la fecha, hora de inicio de la reunión jigsaw y la duración de la misma. \\  \midrule
 	Flujo básico & \begin{enumerate}
@@ -295,7 +306,7 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
 		\item El sistema guarda el horario establecido para la reunión jigsaw.
 	\end{enumerate}
 	\\  \midrule
-	Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+	Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Definir horario de examen}
@@ -303,10 +314,10 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  DEFINIR HORARIO DE EXAMEN\\  \midrule
+  Nombre &  DEFINIR HORARIO DE EXAMEN.\\  \midrule
   Descripción & El caso de uso inicia cuando el usuario accede al sistema y elige la opción Definir Horario en la lista de examenes creados. Luego el usuario indica el intervalo de tiempo para ingresar al examen así como también la duración del examen. El caso de uso termina cuando el usuario selecciona la opción guardar. \\  \midrule
   Actores &  Docente\\  \midrule
-  Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir examenes creados \\  \midrule
+  Precondiciones & El usuario debe ser un docente y debe estar logueado en el sistema. Deben existir examenes creados. \\  \midrule
   Postcondiciones & El docente podrá ver la fecha, hora de inicio del examen y la duración del mismo en su listado de examenes. \\  \midrule
   Flujo básico & \begin{enumerate}
                     \item El docente selecciona la opción Definir Horario en un examen.
@@ -318,29 +329,28 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
                     \item El sistema guarda el horario establecido para el examen.
                  \end{enumerate}
    \\  \midrule
-  Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+  Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
-\subsection{Participar en reunión de expertos}
+\subsection{Unirse a reunión de expertos}
 \begin{longtable}{|c|L{10cm}|}
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre & PARTICIPAR EN REUNIÓN DE EXPERTOS \\  \midrule
-  Descripción & El caso de uso inicia cuando el alumno selecciona la opción participar en reunión de expertos. El alumno dispondrá de un tiempo fijado por el docente para debatir y desarrollar el problema planteado de forma colaborativa con los demás miembros del grupo experto. El caso de uso finaliza cuando culmina el tiempo asignado para la reunión de expertos. \\  \midrule
-  Actores & Alumno \\  \midrule
-  Precondiciones & Debe existir una sesión jigsaw creada por el docente y el alumno debe estar logueado en el sistema y ser parte de un grupo experto \\  \midrule
-  Postcondiciones & Ninguna \\  \midrule
+  Nombre & UNIRSE A REUNIÓN DE EXPERTOS. \\  \midrule
+  Descripción & El caso de uso inicia cuando el alumno selecciona la opción unirse a reunión de expertos. El alumno dispondrá de un tiempo fijado por el docente para debatir y desarrollar el problema planteado de forma colaborativa con los demás miembros del grupo experto. El caso de uso finaliza cuando culmina el tiempo asignado para la reunión de expertos. \\  \midrule
+  Actores & Alumno. \\  \midrule
+  Precondiciones & Debe existir una sesión jigsaw creada por el docente y el alumno debe estar logueado en el sistema y ser parte de un grupo experto. \\  \midrule
+  Postcondiciones & Ninguna. \\  \midrule
   Flujo básico & \begin{enumerate}
-                    \item El alumno selecciona en una de las sesiones jigsaw disponibles la opción Reunión de Expertos.
-                    \item El sistema mostrará al alumno la información del problema asignado(Tema, Enunciado, Tiempo disponible), un editor de código fuente para el trabajo colaborativo y una lista con los miembros presentes en la reunión.
-                    \item El alumno resuelve el problema en el editor.
-                    \item El alumno usa el chat grupal para consultar a los demás miembros de su grupo.
-                    \item El sistema informará el término de la reunión con 2 minutos de anticipación.
-                    \item El sistema finalizará la reunión de expertos.
+                    \item El alumno selecciona en una de las sesiones jigsaw disponibles la opción Unirse a Reunión de Expertos.
+                    \item El sistema mostrará al alumno la información del problema asignado(Título, Enunciado, Tiempo disponible) y un editor de código fuente para el trabajo colaborativo.
+                    \item El alumno resuelve el problema.
+                    \item El alumno usa el chat grupal para consultar al grupo.
+                    \item El sistema finalizará la reunión de expertos cuando el reloj marque 0.
                  \end{enumerate}
    \\  \midrule
-  Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+  Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Resolver problema}
@@ -348,18 +358,20 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  RESOLVER PROBLEMA\\  \midrule
-  Descripción & El caso de uso inicia cuando el alumno ingresa a una reunión en la cual desarrollará el problema planteado discutiendo con los demás miembros del grupo y elaborando el código fuente de la solución \\  \midrule
-  Actores &  Alumno\\  \midrule
-  Precondiciones & El alumno debe haber ingresado a una reunión de expertos o reunión jigsaw \\  \midrule
+  Nombre &  RESOLVER PROBLEMA.\\  \midrule
+  Descripción & El caso de uso inicia cuando el alumno ingresa a una reunión en la cual desarrollará el problema planteado discutiendo con los demás miembros del grupo y elaborando el código fuente de la solución. \\  \midrule
+  Actores &  Alumno.\\  \midrule
+  Precondiciones & El alumno debe haber ingresado a una reunión de expertos o reunión jigsaw. \\  \midrule
   Postcondiciones & Ninguna \\  \midrule
   Flujo básico & \begin{enumerate}
                     \item El alumno escribe la solución al problema en el editor de código fuente.
                     \item El alumno ingresa los datos de prueba en el panel correspondiente.
-                    \item El alumno selecciona la opción RUN para compilar su código fuente y ver los resultados de su solución
+                    \item El alumno selecciona la opción RUN para compilar su código fuente. 
+                    \item El sistema compila y ejecuta el código del alumno.
+                    \item El sistema muestra los resultados de la ejecución.
                  \end{enumerate}
    \\  \midrule
-  Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+  Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
 \subsection{Consultar al grupo}
@@ -367,11 +379,11 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  CONSULTAR AL GRUPO\\  \midrule
-  Descripción & El caso de uso inicia cuando el alumno abre la ventana de chat grupal para hacer alguna consulta \\  \midrule
+  Nombre &  CONSULTAR AL GRUPO.\\  \midrule
+  Descripción & El caso de uso inicia cuando el alumno abre la ventana de chat grupal para hacer alguna consulta. \\  \midrule
   Actores &  Alumno\\  \midrule
-  Precondiciones & El alumno debe haber ingresado a una reunión de expertos o reunión jigsaw \\  \midrule
-  Postcondiciones & Ninguna \\  \midrule
+  Precondiciones & El alumno debe haber ingresado a una reunión de expertos o reunión jigsaw. \\  \midrule
+  Postcondiciones & Ninguna. \\  \midrule
   Flujo básico &  \begin{enumerate}
                     \item El alumno abre la ventana de conversación.
                     \item El alumno escribe y envía su consulta.
@@ -379,48 +391,47 @@ En la  \autoref{fig:actores} se puede ver los actores que participan en el Siste
                     \item El alumno cierra la ventana de conversación.
                   \end{enumerate}
   \\  \midrule
-  Flujo alternativo &  \\  \bottomrule[0.8mm]
+  Flujo alternativo &  Ninguno.\\  \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
-\subsection{Participar en reunión jigsaw}
+\subsection{Unirse a reunión jigsaw}
 \begin{longtable}{|c|L{10cm}|}
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  PARTICIPAR EN REUNIÓN JIGSAW\\  \midrule
-  Descripción & El caso de uso inicia cuando el alumno selecciona la opción participar en reunión jigsaw. El alumno dispondrá de un tiempo fijado por el docente para debatir y desarrollar el problema planteado de forma colaborativa con los demás miembros del grupo experto. El caso de uso finaliza cuando culmina el tiempo asignado para la reunión de expertos. \\  \midrule
-  Actores &  Alumno\\  \midrule
+  Nombre &  UNIRSE A REUNIÓN JIGSAW.\\  \midrule
+  Descripción & El caso de uso inicia cuando el alumno selecciona la opción unirse a reunión jigsaw. El alumno dispondrá de un tiempo fijado por el docente para debatir y desarrollar los problemas planteados. El caso de uso finaliza cuando culmina el tiempo asignado para la reunión de jigsaw. \\  \midrule
+  Actores &  Alumno.\\  \midrule
   Precondiciones & Debe existir una sesión jigsaw creada por el docente y el alumno debe estar logueado en el sistema y ser parte de un grupo jigsaw. \\  \midrule
-  Postcondiciones & Ninguna \\  \midrule
+  Postcondiciones & Ninguna. \\  \midrule
   Flujo básico &  \begin{enumerate}
-                    \item El alumno selecciona en una de las sesiones jigsaw disponibles la opción Reunión Jigsaw.
-                    \item El sistema mostrará al alumno la información de los problemas a desarrollar(Tema, Enunciado, Tiempo disponible), un editor de código fuente para el trabajo colaborativo y una lista con los miembros presentes en la reunión.
+                    \item El alumno selecciona en una de las sesiones jigsaw disponibles la opción Unirse a Reunión Jigsaw.
+                    \item El sistema mostrará al alumno la información de los problemas a desarrollar(Título, Enunciado, Tiempo disponible) y un editor de código fuente para el trabajo colaborativo.
                     \item El alumno resuelve el problema que le tocó en su grupo experto.
-                    \item El alumno usa el chat grupal para consultar y responder a las interrogantes de los demás miembros de su grupo.
-                    \item El sistema informará el término de la reunión con 3 minutos de anticipación.
-                    \item El sistema finalizará la reunión jigsaw.
+                    \item El alumno usa el chat grupal para consultar al grupo.
+                    \item El sistema finalizará la reunión jigsaw cuando el reloj marque 0.
                   \end{enumerate}
   \\ 
   \bottomrule[0.8mm]
 \end{longtable}
 \clearpage
-\subsection{Rendir evaluación}
+\subsection{Rendir examen}
 \begin{longtable}{|c|L{10cm}|}
   \toprule[0.8mm]
   % after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
   Código &  CUS-\casodeuso\\  \midrule
-  Nombre &  RENDIR EVALUACIÓN\\  \midrule
-  Descripción & El caso de uso inicia cuando el alumno selecciona la opción rendir evaluación y el sistema le muestra el examen creado por el docente. El alumno desarrolla las preguntas planteadas en el tiempo asignado y cuando selecciona la opción FINALIZAR, el caso de uso termina \\  \midrule
+  Nombre &  RENDIR EXAMEN.\\  \midrule
+  Descripción & El caso de uso inicia cuando el alumno selecciona la opción rendir examen y el sistema le muestra el examen creado por el docente. El alumno desarrolla las preguntas planteadas en el tiempo asignado y cuando selecciona la opción FINALIZAR, el caso de uso termina. \\  \midrule
   Actores &  Alumno\\  \midrule
-  Precondiciones & El alumno debe estar logueado en el sistema y debe tener asignado algún examen \\  \midrule
-  Postcondiciones & Ninguna \\  \midrule
+  Precondiciones & El alumno debe estar logueado en el sistema y debe tener asignado algún examen. \\  \midrule
+  Postcondiciones & Ninguna. \\  \midrule
   Flujo básico & \begin{enumerate}
-                    \item El alumno selecciona la opción RENDIR EVALUACIÓN.
-                    \item El sistema muestra la información del examen(Número de preguntas, puntaje por pregunta, tiempo total para el examen, enunciados de preguntas).
+                    \item El alumno selecciona la opción RENDIR EXAMEN.
+                    \item El sistema muestra la información del examen(Instrucciones, Preguntas, tiempo restante para resolver el examen).
                     \item El alumno responde a las preguntas.
                     \item El alumno selecciona la opción finalizar.
-                    \item El sistema guarda las respuestas y culmina la evaluación
+                    \item El sistema guarda las respuestas y culmina el examen.
                  \end{enumerate}
    \\  \midrule
-  Flujo alternativo & Ninguno \\  \bottomrule[0.8mm]
+  Flujo alternativo & Ninguno. \\  \bottomrule[0.8mm]
 \end{longtable} 

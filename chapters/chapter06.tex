@@ -1,1 +1,51 @@
 \chapter{Análisis de resultados}
+En esta sección se van a aplicar las métricas de calidad definidas en la \autoref{sec:metricas_calidad} al Sistema Jigsaw Coding desarrollado en esta tesis.
+
+\section{Métrica de calidad: Entendibilidad}
+Aplicando la métrica definida en la \autoref{tab:c4_entendibilidad} se obtuvo los siguientes resultados:
+
+\begin{longtable}{lc}
+	\caption{Resultados obtenidos al aplicar la métrica de entendibilidad al Sistema Jigsaw Coding}
+	\label{tab:resultados_metrica_entendibilidad}\\
+	\toprule[0.7mm]
+	\multicolumn{2}{c}{\emph{¿Qué tan fácil o difícil le resultó entender las funcionalidades del sistema?}}\\
+	\midrule
+	\textbf{Alternativa} & \textbf{Cantidad de votos} \\
+	\midrule
+	Muy fácil & 5 \\
+	Fácil & 1 \\
+	Ni fácil ni difícil & 0 \\
+	Difícil & 0 \\
+	Muy difícil & 0 \\
+	\midrule
+	Métrica & $x = \frac{A}{B} = \frac{5}{6} = 0.83$		\\
+	\multicolumn{2}{l}{A : Cantidad de usuarios que selecionaron la alternativa Muy fácil.}\\
+	\multicolumn{2}{l}{B : Cantidad de usuarios encuestados.}\\
+	\bottomrule[0.7mm]
+\end{longtable}
+
+En la \autoref{tab:resultados_metrica_entendibilidad} se puede observar que el resultado de la métrica es 0.83, esto quiere decir que un 83\% de los usuarios del caso de estudio consideraron que las funcionalidades del Sistema Jigsaw Coding fueron muy fáciles de entender.
+
+\section{Métrica de calidad: Portabilidad}
+Aplicando la métrica definida en la \autoref{tab:c4_portabilidad} se obtuvo los siguientes resultados:
+
+\begin{longtable}{lc}
+	\caption{Resultados obtenidos al aplicar la métrica de portabilidad al Sistema Jigsaw Coding}
+	\label{tab:resultados_metrica_portabilidad}\\
+	\toprule[0.7mm]
+	\multicolumn{2}{c}{\emph{¿En cuántos navegadores web puede usarse el sistema sin tener problemas?}}\\
+	\midrule
+	\textbf{Navegador} & \textbf{Hubo problemas} \\
+	\midrule
+	safari 5.1 &  NO \\
+	opera 25 & NO \\
+	firefox 33 & SÍ \\
+	internet explorer 11 & NO \\
+	chrome 39 & NO \\
+	\midrule
+	Métrica & $x = n = 4$		\\
+	\multicolumn{2}{l}{n : Número de navegadores web en los que el sistema funciona correctamente.}\\
+	\bottomrule[0.7mm]
+\end{longtable}
+
+En la \autoref{tab:resultados_metrica_portabilidad} se puede observar que el resultado de la métrica es 4, lo que indica que el Sistema Jigsaw Coding funciona correctamente en 4 navegadores web, los cuales funcionan en sistemas operativos Windows, Linux o IOS. Al aplicar la métrica se obtuvo que el Sistema Jigsaw Coding presenta incompatibilidad con el navegador Firefox en todas sus versiones, por lo que se recomienda usar cualquier otro navegador web.

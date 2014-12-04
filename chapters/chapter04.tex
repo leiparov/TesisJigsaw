@@ -546,39 +546,41 @@ La presente métrica se refiere a la característica de \textit{Usabilidad} , do
 	Interpretación del valor & Lo más cercano a 1 es mejor \\
 	\midrule
 	Tipo de escala & Absoluta \\
-	\bottomrule[0.8mm]
-	
+	\bottomrule[0.8mm]	
 \end{longtable}
 
-\subsection{Adecuación}
-Esta métrica se refiere a la característica de \textit{Funcionalidad} , donde se medirá el nivel de \textit{Adecuación} que tiene el Sistema Jigsaw Coding. \autoref{tab:c4_adecuacion}
-\begin{longtable}{L{4cm}L{8cm}}
-	\caption{Métrica de calidad: Adecuación}
-	\label{tab:c4_adecuacion}\\
-	\toprule[0.8mm]
-	\textbf{Nombre de la métrica} & \textbf{Adecuación del Sistema Jigsaw Coding}\\
-	\midrule
-	Código & MC-\metrica\\
-	\midrule
-	Característica &  Funcionalidad\\
-	\midrule
-	Sub-característica & Adecuación\\
-	\midrule
-	Propósito &  ¿Qué cantidad de casos de uso no se encuentran dentro de las funcionalidades del sistema jigsaw coding?\\
-	\midrule
-	Método de aplicación & Contar el total de casos de uso que no se pueden realizar a través del sistema jigsaw coding\\
-	\midrule
-	\multirow{3}{*}{ \parbox{4cm}{ Medición, fórmula y elementos medibles}   } & $$x = \frac{A}{B} $$\\
-	& A : Cantidad de casos de uso implementados en el sistema.\\
-	& B : Cantidad de casos de uso especificados en el \autoref{apendice.A}	\\
-	\midrule
-	Tipo de medida & A,B: Contador \\
-	\midrule
-	Interpretación del valor &  Lo más cercano a 1 es mejor\\
-	\midrule
-	Tipo de escala & Absoluta \\
-	\bottomrule[0.8mm]
-\end{longtable}
+
+
+
+%\subsection{Adecuación}
+%Esta métrica se refiere a la característica de \textit{Funcionalidad} , donde se medirá el nivel de \textit{Adecuación} que tiene el Sistema Jigsaw Coding. \autoref{tab:c4_adecuacion}
+%\begin{longtable}{L{4cm}L{8cm}}
+%	\caption{Métrica de calidad: Adecuación}
+%	\label{tab:c4_adecuacion}\\
+%	\toprule[0.8mm]
+%	\textbf{Nombre de la métrica} & \textbf{Adecuación del Sistema Jigsaw Coding}\\
+%	\midrule
+%	Código & MC-\metrica\\
+%	\midrule
+%	Característica &  Funcionalidad\\
+%	\midrule
+%	Sub-característica & Adecuación\\
+%	\midrule
+%	Propósito &  ¿Qué cantidad de casos de uso no se encuentran dentro de las funcionalidades del sistema jigsaw coding?\\
+%	\midrule
+%	Método de aplicación & Contar el total de casos de uso que no se pueden realizar a través del sistema jigsaw coding\\
+%	\midrule
+%	\multirow{3}{*}{ \parbox{4cm}{ Medición, fórmula y elementos medibles}   } & $$x = \frac{A}{B} $$\\
+%	& A : Cantidad de casos de uso implementados en el sistema.\\
+%	& B : Cantidad de casos de uso especificados en el \autoref{apendice.A}	\\
+%	\midrule
+%	Tipo de medida & A,B: Contador \\
+%	\midrule
+%	Interpretación del valor &  Lo más cercano a 1 es mejor\\
+%	\midrule
+%	Tipo de escala & Absoluta \\
+%	\bottomrule[0.8mm]
+%\end{longtable}
 
 \subsection{Portabilidad}
 La presente métrica se refiere a la característica de \textit{Portabilidad} , en la que se medirá el grado de \textit{Adaptabilidad} que tiene el Sistema desarrollado. \autoref{tab:c4_portabilidad}
@@ -607,6 +609,37 @@ La presente métrica se refiere a la característica de \textit{Portabilidad} , 
 	\midrule
 	Tipo de escala &  Absoluta\\
 	\bottomrule[0.8mm]
+\end{longtable}
+
+
+\subsection{Eficiencia}
+La presente métrica se refiere a la característica de \textit{Eficiencia} , donde se medirá el \textit{Tiempo de respuesta} que tiene el Sistema. \autoref{tab:c4_eficiencia}.
+\begin{longtable}{L{4cm}L{8cm}}
+	\caption{Métrica de calidad: Eficiencia}
+	\label{tab:c4_eficiencia}\\
+	\toprule[0.8mm]
+	\textbf{Nombre de la métrica} & \textbf{Eficiencia del Sistema Jigsaw Coding}\\
+	\midrule
+	Código & MC-\metrica\\
+	\midrule
+	Característica & Eficiencia \\
+	\midrule
+	Sub-característica & Tiempo de respuesta\\
+	\midrule
+	Propósito & ¿Cuál es el promedio de tiempo de respuesta del Sistema Jigsaw Coding? \\
+	\midrule
+	Método de aplicación & Medir el tiempo de respuesta de las funcionalidades más importantes del sistema: Generar grupos, Unirse a Reunión de Expertos, Unirse a Reunión Jigsaw, Rendir Examen, Resolver problema(Compilar).\\
+	\midrule
+	\multirow{2}{*}{ \parbox{4cm}{ Medición, fórmula y elementos medibles}   } 
+	& $$x = \sum_{i}^{n}{t_{i}} $$\\
+	& $t_{i}$ : Tiempo de respuesta en milisegundos de la funcionalidad $i$.\\
+	\midrule
+	Tipo de medida & $t_{i}$: milisegundos \\
+	\midrule
+	Interpretación del valor & Lo más cercano a 0 es mejor \\
+	\midrule
+	Tipo de escala & Absoluta \\
+	\bottomrule[0.8mm]	
 \end{longtable}
 
 %\begin{longtable}{L{4cm}L{8cm}}

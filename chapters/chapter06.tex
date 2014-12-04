@@ -49,3 +49,40 @@ Aplicando la métrica definida en la \autoref{tab:c4_portabilidad} se obtuvo los
 \end{longtable}
 
 En la \autoref{tab:resultados_metrica_portabilidad} se puede observar que el resultado de la métrica es 4, lo que indica que el Sistema Jigsaw Coding funciona correctamente en 4 navegadores web, los cuales funcionan en sistemas operativos Windows, Linux o IOS. Al aplicar la métrica se obtuvo que el Sistema Jigsaw Coding presenta incompatibilidad con el navegador Firefox en todas sus versiones, por lo que se recomienda usar cualquier otro navegador web.
+\clearpage
+\section{Métrica de calidad: Eficiencia}
+Aplicando la métrica definida en la \autoref{tab:c4_eficiencia} se obtuvo los siguientes resultados:
+
+\begin{longtable}{L{6cm}C{6cm}}
+	\caption{Resultados obtenidos al aplicar la métrica de eficiencia al Sistema Jigsaw Coding}
+	\label{tab:resultados_metrica_eficiencia}\\
+	\toprule[0.7mm]
+	\multicolumn{2}{c}{\emph{¿Cuál es el promedio de tiempo de respuesta del Sistema Jigsaw Coding?}}\\
+	\midrule
+	\textbf{Funcionalidad} & \textbf{Tiempo de respuesta(ms)} \\
+	\midrule
+	Generar grupos & 445\\
+	Unirse a reunión de expertos & 1080\\
+	Unirse a reunión jigsaw & 459\\
+	Rendir examen & 594\\
+	Resolver problema (Compilar) & 4016 \\
+	\midrule
+	\multirow{3}{*}{ Métrica } 
+	& $x = \frac{\sum_{i}^{n}{t_{i}}}{n}, i=1,2,3,4,5 $	\\
+	& $ x = \frac{445+1080+459+594+4016}{5}$ \\
+	& $ x = 1318.8 ms$ \\
+	\multicolumn{2}{l}{$t_{i}$ : Tiempo de respuesta en milisegundos de la funcionalidad $i$.}\\
+	
+	\bottomrule[0.7mm]
+\end{longtable}
+
+En la \autoref{tab:resultados_metrica_eficiencia} se puede observar que el resultado de la métrica es 1318.8 ms lo que es equivalente a decir que el tiempo de respuesta promedio del Sistema Jigsaw Coding es de 1.3 segundos. \\
+
+En resumen, luego de aplicar las métricas definidas en la \autoref{sec:metricas_calidad} se obtuvieron los siguientes resultados:
+
+\begin{itemize}
+	\item El Sistema Jigsaw Coding es muy fácil de entender para el 83\% de los usuarios del caso de estudio.
+	\item El Sistema Jigsaw Coding es compatible y funciona correctamente en 4 navegadores web: Chrome, Internet Explorer, Ópera y Safari.
+	\item El Sistema Jigsaw Coding posee un tiempo promedio de respuesta de 1.3 segundos para las funcionalidades más importantes.
+\end{itemize}
+

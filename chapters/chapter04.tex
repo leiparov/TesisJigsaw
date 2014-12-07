@@ -1,22 +1,16 @@
 \chapter{Aporte práctico}
 \label{cap:aporte_practico}
-En el capítulo 3 se presentaron algunas técnicas y herramientas que sirven para el aprendizaje colaborativo; No obstante, para objetivos de esta tesis, se requiere una herramienta que integre ciertas características de las que ya poseen las mencionadas en el capítulo anterior.  \autoref{tab:herramientasAC}.\\
-
-El sistema que se pretende desarrollar estará basado en el proceso para la elaboración de sesiones de clase usando la técnica de Jigsaw en la cual, tanto los grupos expertos y grupos jigsaw serán generados aleatoriamente por el sistema, garantizando así una mayor interacción entre los estudiantes, especialmente entre aquellos que se conocen por primera vez. \autoref{tab:tecnicasAC}.\\
-
-El sistema a desarrollar también tendrá la particularidad de que permitirá a los estudiantes trabajar de forma colaborativa en la elaboración de archivos de código fuente, los cuales serán producto de las respuestas que dichos estudiantes darán a los problemas que les plantee el profesor durante la sesión de clase jigsaw. Por ende, para lograr este objetivo y tener dicha funcionalidad en el sistema, se usará los frameworks y APIs descritas en el capítulo anterior.  \autoref{tab:frameworks}.\\
-
-Finalmente, para el desarrollo del sistema web, al cual de ahora en adelante llamaremos \textbf{Sistema Jigsaw Coding}, se va a considerar como proceso de desarrollo a las mejores prácticas de RUP para garantizar un producto software de calidad.
+En este capítulo se expone el desarrollo del Sistema Jigsaw Coding, el cual será realizado usando las mejores prácticas de RUP. También se describirá el uso de este sistema y se definirán las métricas  que permitirán medir la calidad del software implementado.
 
 \section{Metodología de desarrollo}
 Como ya se mencionó anteriormente, el Sistema Jigsaw Coding será elaborado usando las mejores prácticas de RUP, el mismo que a continuación se describe brevemente:\\
 
 EL Proceso Unificado Rational(RUP) es un proceso de ingeniería de software que provee un enfoque para la asignación de tareas y responsabilidades durante el desarrollo de un software. Este tiene como objetivo asegurar la producción de un producto software de alta calidad que satisfaga los requerimientos de los usuarios finales dentro de un tiempo y presupuesto establecido \cite{rup_ibm_2014}. RUP, divide el proceso de desarrollo en fases y agrupa las diversas tareas y actividades en disciplinas, permitiendo organizar eficientemente cada uno de los artefactos que serán producto del desarrollo del sistema. \autoref{fig:rup}\\
 
-\begin{figure}[!h]
+\begin{figure}
   \centering
   % Requires \usepackage{graphicx}
-  \fbox{\includegraphics[scale=0.7]{figuras/rup.jpg}}\\
+  \fbox{\includegraphics[scale=0.4]{figuras/rup.jpg}}\\
   \caption[RUP]{Proceso de desarrollo de software - RUP \protect\cite{rup_small}}\label{fig:rup}
 \end{figure}
 
@@ -27,7 +21,7 @@ Para el desarrollo del Sistema Jigsaw Coding, se establecerán iteraciones seman
 \begin{longtable}{|L{6cm}|L{7cm}|}
 \caption{Artefactos del proceso de desarrollo del Sistema Jigsaw Coding}
 \label{tab:artefactos_rup}\\
-	\toprule[0.8mm]
+	\toprule[0.6mm]
     DISCIPLINA RUP & ARTEFACTO \\
     \midrule
     \multirow{2}{*}{Requisitos} & $\bullet$ Modelo de caso de uso\\
@@ -36,7 +30,7 @@ Para el desarrollo del Sistema Jigsaw Coding, se establecerán iteraciones seman
     \midrule
     \multirow{5}{*}{Análisis y diseño} & $\bullet$ Diagrama de clases\\
     \hhline{~~} & $\bullet$ Modelo de datos\\
-    \hhline{~~} & $\bullet$ Prototipo de interfaz de usuario\\
+    \hhline{~~} & $\bullet$ Prototipos de interfaz de usuario\\
     \hhline{~~} & $\bullet$ Documento de arquitectura de software\\
     \midrule
     \multirow{2}{*}{Implementación} & $\bullet$ Código fuente\\
@@ -44,10 +38,10 @@ Para el desarrollo del Sistema Jigsaw Coding, se establecerán iteraciones seman
     \midrule
     \multirow{2}{*}{Prueba} & $\bullet$ Casos de prueba\\
     \hhline{~~} & $\bullet$ Resultados de prueba\\
-    \bottomrule[0.8mm]
+    \bottomrule[0.6mm]
 \end{longtable}
 
-\clearpage
+%\clearpage
 %Para el desarrollo del sistema web, se seguirá el siguiente cronograma, el mismo que se está orientado a seguir las actividades y tareas que plantea RUP. Se indica también las fechas en las cuales se estará aplicando el sistema al caso de estudio.
 %
 %\begin{figure}[!h]
@@ -67,25 +61,25 @@ Para el desarrollo del Sistema Jigsaw Coding, se establecerán iteraciones seman
 %
 %    \hline
 %\end{longtable}
-
+\clearpage
 \section{Desarrollo del Sistema Jigsaw Coding}
 En esta sección se presenta una descripción a alto nivel sobre los artefactos elaborados durante el proceso de desarrollo del sistema.
 
 \subsection{Modelo de casos de uso}
 El modelo de casos de uso permite mostrar de manera general las funcionalidades del sistema. Inicialmente, se indica el catálogo de actores que interactúan con el sistema y luego se presenta la descripción de lo casos de uso más resaltantes. La especificación de todos los casos de uso se encuentra en el \autoref{apendice.A}\\
 
-Los casos de uso son una forma de especificación de requisitos funcionales. Un caso de uso es la descripción de una secuencia de interacciones entre el sistema y un o más actores.\\
+Los casos de uso son una forma de especificación de requisitos funcionales. Un caso de uso es la descripción de una secuencia de interacciones entre el sistema y un o más actores.
 
 \subsubsection{Catálogo de actores}
 En el la \autoref{fig:cap4_actores} se puede ver los actores que participan en el Sistema Jigsaw Coding y en la \autoref{tab:cap4_actores} se encuentra una breve descripción de cada uno de ellos.
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	% Requires \usepackage{graphicx}
-	\fbox{\includegraphics[scale=0.6]{figuras/casosdeuso/actores.jpg}}\\
+	\fbox{\includegraphics[scale=0.8]{figuras/casosdeuso/actores.jpg}}\\
 	\caption[Diagrama de actores]{Diagrama de actores}
 	\label{fig:cap4_actores}
 \end{figure}
-\clearpage
+%\clearpage
 \begin{longtable}{L{3cm}L{7cm}}
 	\caption{Actores}
 	\label{tab:cap4_actores}\\
@@ -140,24 +134,56 @@ En la tabla siguiente se presenta la descripción breve de los casos de uso obte
 	\bottomrule[0.8mm]
 \end{longtable}
 
+El Sistema Jigsaw Coding tiene como característica principal el permitir a los usuarios de perfil alumno poder resolver problemas de programación que el docente asigne para la sesión jigsaw. Este requisito está descrito en el caso de uso \textbf{Resolver problema} que se presenta en la \autoref{fig:c4_cus_resolver_problema}. 
+
+\begin{figure}[h!]
+	\centering
+	
+	\fbox{\includegraphics[scale=0.7]{figuras/casosdeuso/resolver_problema}}
+	\caption{Caso de uso Resolver problema}
+	\label{fig:c4_cus_resolver_problema}
+\end{figure}
+
+Como se observa en la \autoref{fig:c4_cus_resolver_problema}, el caso de uso Resolver problema se encuentra como parte de los casos de uso Unirse a reunión de expertos, Unirse a reunión jigsaw y Rendir examen, y esto es porque, en cada una de las fases de la sesión jigsaw que se elabora en el sistema, se asignan problemas de algoritmos y programación que los alumnos deben desarrollar ya sea de manera grupal, o individual cuando se trata de un examen. El desarrollo de estos problemas se realiza en un editor de código fuente y luego se compila para obtener los resultados de la solución elaborada. En la tabla \autoref{tab:c4_cus_resolver_problema} se muestra la descripción del caso de uso resolver problema así como también su correspondiente flujo básico. Para más detalle ver \autoref{apendice.A}.
+\clearpage
+
+\begin{longtable}{|c|L{10cm}|}
+	\caption{Caso de uso resolver problema.}
+	\label{tab:c4_cus_resolver_problema}\\
+	\toprule[0.5mm]
+	% after \\: \midrule or \cline{col1-col2} \cline{col3-col4} ...
+	Descripción & El caso de uso inicia cuando el alumno ingresa a una reunión o a un examen en el cual debe desarrollar un problema asignado por el docente. \\  \midrule
+	Flujo básico & \begin{enumerate}
+		\item El alumno escribe la solución al problema en el editor de código fuente.
+		\item El alumno ingresa los datos de prueba en el panel correspondiente.
+		\item El alumno selecciona la opción Compilar para compilar su código fuente. 
+		\item El sistema compila y ejecuta el código del alumno.
+		\item El sistema muestra los resultados de la ejecución.
+	\end{enumerate}\\
+	\bottomrule[0.5mm]
+\end{longtable}
+
+
+
+
 \subsection{Arquitectura del Sistema}
-En esta sección se provee una vista general de la arquitectura para el Sistema Jigsaw Coding, la misma que permite tener una visión sobre la estructura del sistema, funcionalidades y demás aspectos técnicos que el sistema requiere.\\
+En esta sección se provee una vista general de la arquitectura para el Sistema Jigsaw Coding, la misma que permite tener una visión sobre la estructura del sistema, funcionalidades y demás aspectos técnicos que el sistema requiere. Para un mayor detalle de la arquitectura, revisar el \autoref{apendice.C}.\\
 
 La meta principal del Sistema Jigsaw Coding es que opere sobre una plataforma web y para esto es necesario utilizar herramientas y tecnologías que permitan desarrollar sistemas web. Además debe tenerse en cuenta ciertos frameworks que ayuden en la elaboración de la parte colaborativa del sistema.
 
 \subsubsection{PlayFramework 2.2.4}
 Play es framework open source de Java y Scala que integra componentes y APIs necesarios para el desarrollo moderno de aplicaciones web. Play sigue el patrón de arquitectura Modelo - Vista - Controlador y uno de sus objetivos es optimizar la productividad del desarrollador a través del uso de configuraciones estandarizadas, recompilación automática del código fuente y la visualización de errores directamente en el navegador.
 
-\subsubsection{Persistencia}
-La persistencia se logrará utilizando una base de datos relacional y el mapeo de entidades a tablas estará a cargo del ORM Ebean que por defecto viene incluído en el framework Play.
-
-\subsubsection{Seguridad}
-La seguridad del sistema está basada en perfiles. La aplicación contendrá los siguientes puntos:
-
-\begin{itemize}
-	\item Autenticación: Cada usuario deberá identificarse con su email y password para poder acceder al sistema.
-	\item Autorización: El sistema cuenta con dos perfiles(Docente y Alumno) y dependiendo de ello, el usuario podrá ingresar a diferentes partes del sistema.
-	\end{itemize}
+%\subsubsection{Persistencia}
+%La persistencia se logrará utilizando una base de datos relacional y el mapeo de entidades a tablas estará a cargo del ORM Ebean que por defecto viene incluído en el framework Play.
+%
+%\subsubsection{Seguridad}
+%La seguridad del sistema está basada en perfiles. La aplicación contendrá los siguientes puntos:
+%
+%\begin{itemize}
+%	\item Autenticación: Cada usuario deberá identificarse con su email y password para poder acceder al sistema.
+%	\item Autorización: El sistema cuenta con dos perfiles(Docente y Alumno) y dependiendo de ello, el usuario podrá ingresar a diferentes partes del sistema.
+%	\end{itemize}
 
 \subsubsection{Vista lógica}
 \begin{figure}[!h]
@@ -167,10 +193,10 @@ La seguridad del sistema está basada en perfiles. La aplicación contendrá los
 \caption{Diagrama de Clases}\label{fig:c4_diagrama_de_clases}
 \end{figure}
 
-El Sistema Jigsaw Coding permite el acceso a Usuario lo cuales pueden ser de dos tipos: Docente o Alumno. El docente puede crear problemas y además es el encargado de crear las sesiones jigsaw. El docente también es quien crea los examenes, los cuales están conformados por un conjunto de problemas y cada examen es resuelto por los alumnos, quienes para tal objetivo, deben resolver los problemas que componen cada examen. Por otro lado, los alumnos también resuelven problemas cada vez que se encuentran dentro de un grupo de expertos o un grupo jigsaw. Naturalmente, los examenes son evaluados por el docente y éste les asigna una nota a cada una de las respuestas que los alumnos envía al terminar su examen.
+Tal como se muetra en el diagrama de clases de la \autoref{fig:c4_diagrama_de_clases}, el Sistema Jigsaw Coding permite el acceso a Usuario lo cuales pueden ser de dos tipos: Docente o Alumno. El docente puede crear problemas y además es el encargado de crear las sesiones jigsaw. El docente también es quien crea los examenes, los cuales están conformados por un conjunto de problemas y cada examen es resuelto por los alumnos, quienes para tal objetivo, deben resolver los problemas que componen cada examen. Por otro lado, los alumnos también resuelven problemas cada vez que se encuentran dentro de un grupo de expertos o un grupo jigsaw. Naturalmente, los examenes son evaluados por el docente y éste les asigna una nota a cada una de las respuestas que los alumnos envía al terminar su examen.
 
 \subsubsection{Vista de Desarrollo}
-La vista de desarrollo muestra el sistema desde la perspectiva del programador y se ocupa de la gestión del software a implementar. Esto es, en esta vista se describe cómo estará dividido el sistema Jigsaw Coding en paquetes y las dependencias que hay entre ellos.
+La vista de desarrollo muestra el sistema desde la perspectiva del programador y se ocupa de la gestión del software a implementar. Esto es, en esta vista se describe cómo estará dividido el sistema Jigsaw Coding en paquetes y las dependencias que hay entre ellos. Ver \autoref{fig:c4_diagrama_de_paquetes}.
 \begin{figure}[!h]
 	\centering
 	% Requires \usepackage{graphicx}
@@ -183,8 +209,6 @@ La vista de desarrollo muestra el sistema desde la perspectiva del programador y
 	\item \textbf{views}\\Este paquete contiene todas las plantillas (\emph{*.scala.html}) que permitirán renderizar las páginas web del sistema.
 \end{itemize}
 
-Para un mayor detalle de la arquitectura del sistema, revisar el \autoref{apendice.C}
-
 \section{Uso del Sistema Jigsaw Coding} 
 El Sistema Jigsaw Coding es un aplicativo web que permite crear sesiones de clase basadas en la técnica de aprendizaje colaborativo de rompecabezas o también llamada técnica jigsaw. Estas sesiones de clase están orientadas a la resolución de ejercicios y problemas relacionados con temas de algorítmica y programación en lenguajes Java, C++ y Python.\\
 
@@ -193,31 +217,31 @@ El sistema posee dos perfiles de usuario: Docente y Alumno. El primero permite a
 En el perfil Alumno, el usuario puede participar de las reuniones de expertos y reunions jigsaw, en las cuales se deberá resolver los problemas asignados a cada grupo experto o jigsaw. Esta soluciones serán construidas de forma colaborativa entre todos los miembros de cada grupo. El sistema brinda al usuario un chat para poder comunicarse con los demás integrantes de su grupo experto o jigsaw. Es importante resaltar también, que durante la resolución de cada problema el usuario puede ir ejecutando el código fuente y ver los resultados de dicha ejecución. Cuando el usuario se encuentre en la fase de evaluación, éste podrá resolver su examen de forma individual y dentro del tiempo establecido por el docente.\\
 
 \subsection{Login} 
-Para acceder al Sistema Jigsaw Coding, el usuario debe estar su \textbf{email} y su \textbf{password} en el formulario que se muestra en la \autoref{fig:sjc_login}.
+Para acceder al Sistema Jigsaw Coding, el usuario debe estar su \textbf{email} y su \textbf{password} en el formulario que se muestra en la \autoref{fig:sjc_login}.\\
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\caption[SJC Login]{Sistema Jigsaw Coding - Login}
 	\label{fig:sjc_login}
-	\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/login}}	
+	\fbox{\includegraphics[scale=0.3]{figuras/usodelsistema/login}}	
 \end{figure}
 
 Si el usuario no está registrado en el sistema, debe ingresar a la opción \textbf{Regístrate} y completar los datos solicitados por el sistema. \autoref{fig:login_registrate}. Luego de este paso, el usuario tendrá acceso al sistema a través de un perfil Docente.\\
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\caption[SJC Registrate]{Sistema Jigsaw Coding - Regístrate}
 	\label{fig:login_registrate}
-	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/login_registrate}}	
+	\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/login_registrate}}	
 \end{figure}
 
 Si el acceso al sistema se dió exitosamente, entonces el usuario podrá visualizar la página de inicio con todas las opciones permitidas para el perfil docente. \autoref{fig:inicio}.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \caption[SJC Inicio]{Sistema Jigsaw Coding - Bienvenido}
 \label{fig:inicio}
-\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/inicio}}
+\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/docente/inicio}}
 \end{figure}
 %\clearpage
 
@@ -235,7 +259,7 @@ Al acceder al módulo problemas, el usuario visualizará el listado de problemas
 
 Para crear un nuevo problema se debe acceder a menú Problemas y luego presionar el botón \textbf{Nuevo problema}. \autoref{fig:problemas_nuevo}. Luego, se debe ingresar el título y enunciado del problema y presionar el botón \textbf{Guardar}.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \caption[SJC Nuevo problema]{Sistema Jigsaw Coding - Nuevo problema}
 \label{fig:problemas_nuevo}
@@ -245,7 +269,7 @@ Para crear un nuevo problema se debe acceder a menú Problemas y luego presionar
 \subsubsection{Editar problema}
 En la página principal del módulo Problemas se puede ver cada problema creado y para cada uno, existe un botón que permite editar dicho problema. Con esta opción se puede modificar el título o enunciado del problema y también se puede eliminar dicho problema del sistema. Ver figura \autoref{fig:problemas_editar}.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \caption[SJC Editar problema]{Sistema Jigsaw Coding - Editar problema}
 \label{fig:problemas_editar}
@@ -255,18 +279,18 @@ En la página principal del módulo Problemas se puede ver cada problema creado 
 \subsection{Alumnos}
 Al acceder al módulo alumnos, el usuario visualizará el listado de alumnos registrados hasta el momento y en dicho listado, se mostrará los apellidos, nombres y dni de cada alumno. Además se podrá filtrar dichos alumnos con opción Buscar. \autoref{fig:alumnos_inicio}.
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\caption[SJC Alumnos]{Sistema Jigsaw Coding - Inicio del módulo Alumnos}
 	\label{fig:alumnos_inicio}
-	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/alumnos_inicio}}
+	\fbox{\includegraphics[scale=0.6]{figuras/usodelsistema/docente/alumnos_inicio}}
 \end{figure}
 
 \subsubsection{Registrar alumno}
 
 Para registrar un nuevo alumno se debe acceder a menú Alumnos y luego presionar el botón \textbf{Nuevo Alumno}. \autoref{fig:alumnos_nuevo}. Luego, se debe completar los campos solicitados por el sistema y presionar el botón \textbf{Registrar}.
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\caption[SJC Nuevo alumno]{Sistema Jigsaw Coding - Nuevo Alumno}
 	\label{fig:alumnos_nuevo}
@@ -276,7 +300,7 @@ Para registrar un nuevo alumno se debe acceder a menú Alumnos y luego presionar
 \subsection{Examenes}
 Al acceder al módulo examenes, el usuario visualizará el listado de examenes registrados hasta el momento y en dicho listado, se mostrará el título del examen y los nombres de los problemas que forman parte del examen. Además se podrá filtrar dichos examenes con opción Buscar. \autoref{fig:examenes_inicio}.
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\caption[SJC Examenes]{Sistema Jigsaw Coding - Inicio del módulo Examenes}
 	\label{fig:examenes_inicio}
@@ -286,7 +310,7 @@ Al acceder al módulo examenes, el usuario visualizará el listado de examenes r
 
 Para registrar un nuevo examen se debe acceder a menú Examenes y luego presionar el botón \textbf{Nuevo Examen} con lo cual el usuario podrá ver la interfaz para asignar los problemas al examen. \autoref{fig:examenes_nuevo}. \\
 
-\begin{figure}[h!]
+\begin{figure}
 	\centering
 	\caption[SJC Nuevo examen]{Sistema Jigsaw Coding - Nuevo Examen}
 	\label{fig:examenes_nuevo}
@@ -307,7 +331,7 @@ La asignación de problemas al examen se realiza siguiendo los pasos descritos a
 \subsection{Sesiones Jigsaw}
 Al acceder al módulo sesiones jigsaw, el usuario podrá ver el listado de sesiones jigsaw creadas hasta el momento y en dicho listado se encontrará la respectiva información sobre la reunión de expertos, reunión jigsaw y evaluación. \autoref{fig:sesionesjigsaw_inicio}.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \caption{Sistema Jigsaw Coding - Inicio del módulo sesiones jigsaw}
 \label{fig:sesionesjigsaw_inicio}
@@ -319,84 +343,84 @@ A continuación se describen los pasos para crear una sesión jigsaw.
 \begin{enumerate}
 	\item Presione el botón \textbf{Nueva Sesión Jigsaw}.
 	\item Indique el total de grupos expertos y el tema de la sesión jigsaw. \autoref{fig:sesionesjigsaw_nuevo_01}
-	\begin{figure}[h!]
+	\begin{figure}
 	\centering
 	\caption[SJC Sesiones jigsaw]{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 	\label{fig:sesionesjigsaw_nuevo_01}
 	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_01}}
 	\end{figure}
 	\item En el listado de sesiones jigsaw aparecerá una nueva sesión.\autoref{fig:sesionesjigsaw_nuevo_02}
-	\begin{figure}[h!]
+	\begin{figure}
 	\centering
 	\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 	\label{fig:sesionesjigsaw_nuevo_02}
 	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_02}}
 	\end{figure}
 	\item Presione el botón agregar alumnos para definir qué alumnos formarán parte de la sesión jigsaw. Mueva los alumnos desde el panel de Alumnos Disponibles hacia el panel de la Sesión Jigsaw y presione el botón \textbf{Guardar}.  \autoref{fig:sesionesjigsaw_nuevo_03}
-	\begin{figure}[h!]
+	\begin{figure}
 	\centering
 	\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 	\label{fig:sesionesjigsaw_nuevo_03}
 	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_03}}
 	\end{figure}
-	\item Luego de agregar a los alumnos, se habilitará el botón Generar Grupos el cual deberá presionar para que el sistema genere de forma aleatoria los Grupos expertos y los grupos jigsaw. \autoref{fig:sesionesjigsaw_nuevo_04}
-	\begin{figure}[h!]
+	\item Luego de agregar a los alumnos, se habilitará el botón \textbf{Generar Grupos} el cual deberá presionar para que el sistema genere de forma aleatoria los Grupos expertos y los grupos jigsaw. \autoref{fig:sesionesjigsaw_nuevo_04}
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_04}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_04}}
 	\end{figure}
 	\item Si la generación de grupos se realizó exitosamente, el sistema le mostrará los grupos sus respectivos integrantes. \autoref{fig:sesionesjigsaw_nuevo_05}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_05}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_05}}
 	\end{figure}
 	\item Presione Aceptar para regresar al panel principal de las sesiones jigsaw. \autoref{fig:sesionesjigsaw_nuevo_06}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_06}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_06}}
 	\end{figure}
 	\item Luego de haber generado los grupos, presione el botón Asignar Problemas para indicar qué problema debe resolver cada grupo experto. \autoref{fig:sesionesjigsaw_nuevo_07}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_07}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_07}}
 	\end{figure}
 	\item Presione el botón Guardar luego de haber asignado a todos los grupos expertos su respectivo problema. El sistema lo redirigirá hacia el panel principal de sesiones jigsaw. \autoref{fig:sesionesjigsaw_nuevo_08}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Nueva sesión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_08}
 		\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_08}}
 	\end{figure}
 	\item Para la fase de evaluación, presione el botón Asignar Examen para seleccionar el examen que será incluído en la sesión jigsaw. \autoref{fig:sesionesjigsaw_nuevo_09}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Asignar examen a sesión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_09}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_09}}
 	\end{figure}
 	\item Presione el botón Definir Horario para establecer la fecha y hora de inicio para la reunión de expertos, así como también la duración de la misma. \autoref{fig:sesionesjigsaw_nuevo_11}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Definir horario de reunión de expertos}
 		\label{fig:sesionesjigsaw_nuevo_11}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_11}}
 	\end{figure}
 	\item Presione el botón Definir Horario para establecer la fecha y hora de inicio para la reunión jigsaw, así como también la duración de la misma. \autoref{fig:sesionesjigsaw_nuevo_13}
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Definir horario de reunión jigsaw}
 		\label{fig:sesionesjigsaw_nuevo_13}
 		\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/sesionesjigsaw_nuevo_13}}
 	\end{figure}
 	\item Presione el botón Definir Horario para establecere la fecha y hora de inicio para la evaluación, así como también la duración de la misma. \autoref{fig:sesionesjigsaw_nuevo_15}
-	\begin{figure}[h!]
+	\begin{figure}[h]
 		\centering
 		\caption{Sistema Jigsaw Coding - Definir horario de examen}
 		\label{fig:sesionesjigsaw_nuevo_15}
@@ -408,9 +432,9 @@ A continuación se describen los pasos para crear una sesión jigsaw.
 Para que un usuario con perfil Alumno pueda unirse a una reunión de expertos, debe seguir los siguientes pasos:
 
 \begin{enumerate}
-	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.\autoref{fig:c4_alumno_principal}
+	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso. \autoref{fig:c4_alumno_principal}
 	
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Perfil alumno}
 		\label{fig:c4_alumno_principal}
@@ -419,7 +443,7 @@ Para que un usuario con perfil Alumno pueda unirse a una reunión de expertos, d
 	
 	\item Presione el botón \textbf{Unirse a reunión de Expertos}. A continuación el sistema le mostrará el panel de la reunión de expertos. 
 	
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Unirse a reunión de expertos}
 		\label{fig:c4_reunion_expertos}
@@ -447,7 +471,7 @@ Para que un usuario con perfil Alumno pueda unirse a una reunión jigsaw, debe s
 	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.\autoref{fig:c4_alumno_principal}
 	\item Presione el botón \textbf{Unirse a reunión Jigsaw}. A continuación el sistema le mostrará el panel de la reunión jigsaw. 
 	
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Unirse a reunión jigsaw}
 		\label{fig:c4_reunion_jigsaw}
@@ -476,7 +500,7 @@ Para que un usuario con perfil Alumno pueda rendir un examen, debe seguir los si
 	\item Inicie sesión en el Sistema Jigsaw Coding. Si el logueo se realiza exitosamente, entonces, en la pantalla principal del perfil alumno se motrará el listado de sesiones jigsaw a las cuales el alumno puede tener acceso.\autoref{fig:c4_alumno_principal}
 	\item Presione el botón \textbf{Rendir Examen}. A continuación el sistema le mostrará el panel del examen.
 	
-	\begin{figure}[h!]
+	\begin{figure}
 		\centering
 		\caption{Sistema Jigsaw Coding - Rendir examen}
 		\label{fig:c4_rendir_examen}
@@ -498,7 +522,7 @@ Para que un usuario con perfil Alumno pueda rendir un examen, debe seguir los si
 	
 	\item Luego de rendir el examen, el alumno debe esperar a que el docente califique sus respuestas y le asigne una nota, la cual podrá ser vista en el menú \textbf{Examenes}. \autoref{fig:c4_nota_de_examen}
 	
-	\begin{figure}[h!]
+	\begin{figure}[h]
 		\centering
 		\caption{Sistema Jigsaw Coding - Ver nota de examen}
 		\label{fig:c4_nota_de_examen}

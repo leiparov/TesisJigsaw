@@ -1,12 +1,163 @@
 \chapter{Análisis de resultados}
 \label{cap:analisis_de_resultados}
-En esta sección se van a aplicar las métricas de calidad definidas en la \autoref{sec:metricas_calidad} al Sistema Jigsaw Coding desarrollado en esta tesis.
+En esta sección se presentará las soluciones que se dieron a los problemas definidos en la \autoref{sec:problemas} y que fueron aplicados durante la sesión jigsaw. Además, se aplicarán las métricas de calidad (definidas en la \autoref{sec:metricas_calidad}) al Sistema Jigsaw Coding desarrollado en esta tesis y se mostrarán los resultados obtenidos.\\
 
+\section{Soluciones a los problemas de la sesión jigsaw}
+Durante la fase de expertos se plantearon los problemas \emph{Múltiplos de 7, Par o impar, Números descendentes} y a continuación se presentan las soluciones de los alumnos.
+
+\begin{center}
+	GE\_DÁT\_ECM $\longrightarrow$ Múltiplos de 7.
+\end{center}
+
+Elaborar un programa que imprima los primeros 10 números múltiplos de 7 usando la estructura repetitiva \texttt{for}.
+
+\lstset{language=C, breaklines=true, basicstyle=\footnotesize}
+\begin{lstlisting}
+# include <iostream>
+using namespace std;
+int main (){
+	int i;
+	cout<<"Los 10 primeros mutiplos de 7 son:"<<endl;
+	for(i=1;i<=10;i++){
+		cout<<i*7<<endl;
+	}
+}
+\end{lstlisting}
+\clearpage
+\begin{center}
+	GE\_KMM\_DEG $\longrightarrow$ Par o impar.
+\end{center}
+
+Elaborar un programa que lea un entero y determine si es un número par o impar.
+
+\lstset{language=Java, breaklines=true, basicstyle=\footnotesize}
+\begin{lstlisting}
+import java.util.Scanner;
+
+class Ejercicio01 {
+	public static void main (String args[] ){
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Introduzca un numero entero: ");
+		int n = sc.nextInt();
+
+		if(n%2==0) System.out.print("El numero es par");
+		else System.out.print("El numero es impar");
+	}
+}
+\end{lstlisting}
+
+\begin{center}
+	GE\_SMM\_MRB $\longrightarrow$ Números descendentes.
+\end{center}
+
+Elaborar un programa que imprima de forma descendente los primeros 20 numeros pares usando una estructura repetitiva \texttt{while}.
+
+\lstset{language=C, breaklines=true, basicstyle=\footnotesize}
+\begin{lstlisting}
+#include <iostream>
+using namespace std;
+int main (){
+	int var = 40;
+	while(var > 1){
+		var = var - 2;
+		cout<<var<<endl;
+	}
+	return 0;
+}
+\end{lstlisting}
+\vspace{0.5cm}
+
+Cuando la fase de expertos finalizó, cada alumno fue reagrupado para dar inicio a la reunión jigsaw y en ella cada grupo resolvió los 3 problemas: \emph{Múltiplos de 7, Par o impar, Números descendentes}. Estas soluciones se encuentran en la \autoref{tab:c6_soluciones_fase_jigsaw}
+\clearpage
+%\newgeometry{left=2cm,bottom=4cm, right=0.2cm}
+\begin{landscape}
+
+\begin{longtable}{cL{8cm}L{9cm}}
+	\caption{Soluciones de fase jigsaw}
+	\label{tab:c6_soluciones_fase_jigsaw}\\
+	\toprule
+	PROBLEMA & Solución del grupo GJ\_SMM\_KMM\_DÁT & Solución del grupo GJ\_MRB\_DEG\_ECM\\
+	\midrule
+	Múltiplos de 7 & 
+	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+	#include <iostream>
+	using namespace std;
+	int main (){
+		int a = 7;
+		for(int i=1; i<=10; i++){
+			cout<<a<<endl;
+			a = a + 7;
+		}
+		return 0;
+	}		
+	\end{lstlisting}&
+	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+	#include<iostream>
+	using namespace std;
+	int main()	{
+		int i;	
+		for(i=1;i<11;i++){
+			cout<<i*7<<endl;
+		}
+	}		
+	\end{lstlisting}\\
+	%\midrule
+	Par o impar &
+	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+	#include <iostream>
+	using namespace std;
+	int main (){
+		int var; cin>>var;
+		if(var%2==0) cout<<"Es par";
+		else cout<<"es impar";
+		return 0;
+	}	
+	\end{lstlisting}&
+	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+	#include <iostream>
+	using namespace std;
+	int main () {
+		int a; cin>>a;
+		if (a%2 == 0) cout<<"Es par"<<endl;
+		else cout<<"Es impar"<<endl;
+		return 0;
+	}	
+	\end{lstlisting}\\
+	%\midrule
+	Números descendentes & 
+	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+	#include <iostream>
+	using namespace std;
+	int main (){
+		int var = 40;
+		while(var>1){
+			var = var - 2;
+			cout<<var<<endl;
+		}
+		return 0;
+	}
+	\end{lstlisting}&
+	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+	#include<iostream>
+	using namespace std;
+	int main()	{
+		int i=20;
+		while(i>=1)	{
+			cout<<2*i<<endl;
+			i--;
+		}
+	}
+	\end{lstlisting}\\
+	%\bottomrule
+\end{longtable}
+\end{landscape}
+%\restoregeometry
 \section{Métrica de calidad: Entendibilidad}
 Aplicando la métrica definida en la \autoref{tab:c4_entendibilidad} se obtuvo los siguientes resultados:
 
 \begin{longtable}{lc}
-	\caption{Resultados obtenidos al aplicar la métrica de entendibilidad al Sistema Jigsaw Coding}
+	\caption{Resultados de la métrica de entendibilidad.}
 	\label{tab:resultados_metrica_entendibilidad}\\
 	\toprule[0.7mm]
 	\multicolumn{2}{c}{\emph{¿Qué tan fácil o difícil le resultó entender las funcionalidades del sistema?}}\\
@@ -25,13 +176,13 @@ Aplicando la métrica definida en la \autoref{tab:c4_entendibilidad} se obtuvo l
 	\bottomrule[0.7mm]
 \end{longtable}
 
-En la \autoref{tab:resultados_metrica_entendibilidad} se puede observar que el resultado de la métrica es 0.66, esto quiere decir que un 66\% de los usuarios del caso de estudio consideraron que las funcionalidades del Sistema Jigsaw Coding fueron muy fáciles de entender.
+En la \autoref{tab:resultados_metrica_entendibilidad} se observa que el resultado de la métrica es 0.66, esto quiere decir que un 66\% de los usuarios del caso de estudio consideraron que las funcionalidades del Sistema Jigsaw Coding fueron muy fáciles de entender.
 
 \section{Métrica de calidad: Portabilidad}
 Aplicando la métrica definida en la \autoref{tab:c4_portabilidad} se obtuvo los siguientes resultados:
 
 \begin{longtable}{lc}
-	\caption{Resultados obtenidos al aplicar la métrica de portabilidad al Sistema Jigsaw Coding}
+	\caption{Resultados de métrica de portabilidad.}
 	\label{tab:resultados_metrica_portabilidad}\\
 	\toprule[0.7mm]
 	\multicolumn{2}{c}{\emph{¿En cuántos navegadores web puede usarse el sistema sin tener problemas?}}\\
@@ -49,13 +200,13 @@ Aplicando la métrica definida en la \autoref{tab:c4_portabilidad} se obtuvo los
 	\bottomrule[0.7mm]
 \end{longtable}
 
-En la \autoref{tab:resultados_metrica_portabilidad} se puede observar que el resultado de la métrica es 4, lo que indica que el Sistema Jigsaw Coding funciona correctamente en 4 navegadores web, los cuales funcionan en sistemas operativos Windows, Linux o IOS. Al aplicar la métrica se obtuvo que el Sistema Jigsaw Coding presenta incompatibilidad con el navegador Firefox en todas sus versiones, por lo que se recomienda usar cualquier otro navegador web.
-\clearpage
+En la \autoref{tab:resultados_metrica_portabilidad} se observa que el resultado de la métrica es 4, lo que indica que el Sistema funciona correctamente en 4 navegadores web, los cuales pueden usarse en sistemas operativos Windows, Linux o Apple.
+%\clearpage
 \section{Métrica de calidad: Eficiencia}
 Aplicando la métrica definida en la \autoref{tab:c4_eficiencia} se obtuvo los siguientes resultados:
 
 \begin{longtable}{L{6cm}C{6cm}}
-	\caption{Resultados obtenidos al aplicar la métrica de eficiencia al Sistema Jigsaw Coding}
+	\caption{Resultados de la métrica de eficiencia.}
 	\label{tab:resultados_metrica_eficiencia}\\
 	\toprule[0.7mm]
 	\multicolumn{2}{c}{\emph{¿Cuál es el promedio de tiempo de respuesta del Sistema Jigsaw Coding?}}\\
@@ -82,8 +233,8 @@ En la \autoref{tab:resultados_metrica_eficiencia} se puede observar que el resul
 En resumen, luego de aplicar las métricas definidas en la \autoref{sec:metricas_calidad} se obtuvieron los siguientes resultados:
 
 \begin{itemize}
-	\item El Sistema Jigsaw Coding es muy fácil de entender para el 66\% de los usuarios del caso de estudio.
-	\item El Sistema Jigsaw Coding es compatible y funciona correctamente en 4 navegadores web: Chrome, Internet Explorer, Ópera y Safari.
-	\item El Sistema Jigsaw Coding posee un tiempo promedio de respuesta de 1.3 segundos para las funcionalidades más importantes.
+	\item El Sistema es muy fácil de entender para el 66\% de los usuarios del caso de estudio.
+	\item El Sistema es compatible y funciona correctamente en 4 navegadores web: Chrome, Internet Explorer, Ópera y Safari.
+	\item El Sistema posee un tiempo promedio de respuesta de 1.3 segundos para las funcionalidades más importantes.
 \end{itemize}
 

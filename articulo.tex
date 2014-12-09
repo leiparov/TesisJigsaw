@@ -20,10 +20,11 @@
 
 \documentclass[twoside]{article}
 
-\usepackage{lipsum} % Package to generate dummy text throughout this template
+%\usepackage{lipsum} % Package to generate dummy text throughout this template
 
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \usepackage[spanish, es-tabla]{babel} % espanol
+
 
 \usepackage[sc]{mathpazo} % Use the Palatino font
 \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
@@ -35,7 +36,8 @@
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
 \usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
+%\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
 
 \usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
 \usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
@@ -55,8 +57,10 @@
 \fancyhead{} % Blank out the default header
 \fancyfoot{} % Blank out the default footer
 %\fancyhead[C]{Sistema Jigsaw Coding $\bullet$ \today $\bullet$ Vol. XXI, No. 1} %
-\fancyhead[C]{Sistema Jigsaw Coding $\bullet$ \today $\bullet$ Tesis} % Custom header text
+\fancyhead[C]{Sistema Jigsaw Coding $\bullet$ \today $\bullet$ UNMSM} % Custom header text
 \fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage[apaciteclassic,nodoi]{apacite}
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -99,6 +103,11 @@ Los estudios muestran que en muchas universidades del mundo, aún existen proble
 
 \section{Introducción}
 
+A pesar de que la programación es el corazón de las ciencias de la computación, y por ende, la mayoría de las carreras de computación tienen cursos de programación, los resultados son desalentadores pues existen muchos estudios multi institucionales que indican que hay serias deficiencias en el aprendizaje de alumnos que han pasado uno o más cursos de programación \cite{mccracken_multi-national_2001,lister_multi-national_2004,Tenenberg_studentsdesigning_2005}. Algunas instituciones han logrado mejorar los cursos de programación adoptando el Python como primer lenguaje de programación. Así lo indica \citeA{nikula_python_2007}.\\
+
+Según \citeA{knobelsdorf_teaching_2014}, los altos ratios de fracasos en los cursos de introducción a la teoría de las ciencias de la computación son un problema comun en las universidades de Alemania, Europa, y NorteAmérica, pues los alumnos tiene dificultades con lo contenidos que por naturaleza son abstractos y teóricos. \cite{knobelsdorf_teaching_2014} plantean en su investigación ciertas modificaciones a la pedagogía de un curso dictado en la Universidad de Postdam, Alemania, las mismas que fueron motivadas por un enfoque de aprendizaje cognitivo.\\
+
+Existen diversas técnicas para desarrollar el aprendizaje colaborativo en un aula de clase y una de ellas, muy conocida, es la técnica de Jigsaw o técnica de Rompecabezas. Esta técnica fue creada en (1978) por Aronson et al. y actualmente es una de las más importantes para fomentar la cooperación y discusión entre miembros de una comunidad de aprendizaje y es usada frecuentemente en ambientes face-to-face y en situaciones de aprendizaje en línea \cite{blocher_increasing_2005}.\\
 
 %------------------------------------------------
 

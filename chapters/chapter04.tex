@@ -30,7 +30,7 @@ Para el desarrollo del Sistema Jigsaw Coding, se establecerán iteraciones seman
     \midrule
     \multirow{5}{*}{Análisis y diseño} & $\bullet$ Diagrama de clases\\
     \hhline{~~} & $\bullet$ Modelo de datos\\
-    \hhline{~~} & $\bullet$ Prototipos de interfaz de usuario\\
+    %\hhline{~~} & $\bullet$ Prototipos de interfaz de usuario\\
     \hhline{~~} & $\bullet$ Documento de arquitectura de software\\
     \midrule
     \multirow{2}{*}{Implementación} & $\bullet$ Código fuente\\
@@ -79,7 +79,7 @@ En el la \autoref{fig:cap4_actores} se puede ver los actores que participan en e
 	\caption[Diagrama de actores]{Diagrama de actores}
 	\label{fig:cap4_actores}
 \end{figure}
-%\clearpage
+\clearpage
 \begin{longtable}{L{3cm}L{7cm}}
 	\caption{Actores}
 	\label{tab:cap4_actores}\\
@@ -136,16 +136,15 @@ En la tabla siguiente se presenta la descripción breve de los casos de uso obte
 
 El Sistema Jigsaw Coding tiene como característica principal el permitir a los usuarios de perfil alumno poder resolver problemas de programación que el docente asigne para la sesión jigsaw. Este requisito está descrito en el caso de uso \textbf{Resolver problema} que se presenta en la \autoref{fig:c4_cus_resolver_problema}. 
 
-\begin{figure}[h!]
-	\centering
-	
-	\fbox{\includegraphics[scale=0.7]{figuras/casosdeuso/resolver_problema}}
+\begin{figure}
+	\centering	
+	\fbox{\includegraphics[scale=0.4]{figuras/casosdeuso/resolver_problema}}
 	\caption{Caso de uso Resolver problema}
 	\label{fig:c4_cus_resolver_problema}
 \end{figure}
 
 Como se observa en la \autoref{fig:c4_cus_resolver_problema}, el caso de uso Resolver problema se encuentra como parte de los casos de uso Unirse a reunión de expertos, Unirse a reunión jigsaw y Rendir examen, y esto es porque, en cada una de las fases de la sesión jigsaw que se elabora en el sistema, se asignan problemas de algoritmos y programación que los alumnos deben desarrollar ya sea de manera grupal, o individual cuando se trata de un examen. El desarrollo de estos problemas se realiza en un editor de código fuente y luego se compila para obtener los resultados de la solución elaborada. En la tabla \autoref{tab:c4_cus_resolver_problema} se muestra la descripción del caso de uso resolver problema así como también su correspondiente flujo básico. Para más detalle ver \autoref{apendice.A}.
-\clearpage
+%\clearpage
 
 \begin{longtable}{|c|L{10cm}|}
 	\caption{Caso de uso resolver problema.}
@@ -163,14 +162,11 @@ Como se observa en la \autoref{fig:c4_cus_resolver_problema}, el caso de uso Res
 	\bottomrule[0.5mm]
 \end{longtable}
 
-
-
-
 \subsection{Arquitectura del Sistema}
 En esta sección se provee una vista general de la arquitectura para el Sistema Jigsaw Coding, la misma que permite tener una visión sobre la estructura del sistema, funcionalidades y demás aspectos técnicos que el sistema requiere. Para un mayor detalle de la arquitectura, revisar el \autoref{apendice.C}.\\
 
 La meta principal del Sistema Jigsaw Coding es que opere sobre una plataforma web y para esto es necesario utilizar herramientas y tecnologías que permitan desarrollar sistemas web. Además debe tenerse en cuenta ciertos frameworks que ayuden en la elaboración de la parte colaborativa del sistema.
-
+\clearpage
 \subsubsection{PlayFramework 2.2.4}
 Play es framework open source de Java y Scala que integra componentes y APIs necesarios para el desarrollo moderno de aplicaciones web. Play sigue el patrón de arquitectura Modelo - Vista - Controlador y uno de sus objetivos es optimizar la productividad del desarrollador a través del uso de configuraciones estandarizadas, recompilación automática del código fuente y la visualización de errores directamente en el navegador.
 
@@ -186,7 +182,7 @@ Play es framework open source de Java y Scala que integra componentes y APIs nec
 %	\end{itemize}
 
 \subsubsection{Vista lógica}
-\begin{figure}[!h]
+\begin{figure}
 \centering
 % Requires \usepackage{graphicx}
 \fbox{\includegraphics[scale=0.5]{figuras/sad/diagrama_de_clases.jpg}}\\
@@ -248,11 +244,11 @@ Si el acceso al sistema se dió exitosamente, entonces el usuario podrá visuali
 \subsection{Problemas}
 Al acceder al módulo problemas, el usuario visualizará el listado de problemas que ha creado hasta el momento y en dicho listado, se mostrará el título y enunciado de cada problema. Además se podrá filtrar los problemas según el título o enunciado. \autoref{fig:problemas_inicio}.
 
-\begin{figure}[h!]
+\begin{figure}
 \centering
 \caption[SJC Problemas]{Sistema Jigsaw Coding - Inicio del módulo Problemas}
 \label{fig:problemas_inicio}
-\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/problemas_inicio}}
+\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/docente/problemas_inicio}}
 \end{figure}
 
 \subsubsection{Crear problema}
@@ -277,13 +273,13 @@ En la página principal del módulo Problemas se puede ver cada problema creado 
 \end{figure}
 
 \subsection{Alumnos}
-Al acceder al módulo alumnos, el usuario visualizará el listado de alumnos registrados hasta el momento y en dicho listado, se mostrará los apellidos, nombres y dni de cada alumno. Además se podrá filtrar dichos alumnos con opción Buscar. \autoref{fig:alumnos_inicio}.
+Tal como se puede apreciar en la \autoref{fig:alumnos_inicio}, al acceder al módulo alumnos, el usuario visualizará el listado de alumnos registrados hasta el momento y en dicho listado, se mostrará los apellidos, nombres y dni de cada alumno. Además se podrá filtrar dichos alumnos con la opción Buscar.
 
 \begin{figure}
 	\centering
 	\caption[SJC Alumnos]{Sistema Jigsaw Coding - Inicio del módulo Alumnos}
 	\label{fig:alumnos_inicio}
-	\fbox{\includegraphics[scale=0.6]{figuras/usodelsistema/docente/alumnos_inicio}}
+	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/alumnos_inicio}}
 \end{figure}
 
 \subsubsection{Registrar alumno}
@@ -294,7 +290,7 @@ Para registrar un nuevo alumno se debe acceder a menú Alumnos y luego presionar
 	\centering
 	\caption[SJC Nuevo alumno]{Sistema Jigsaw Coding - Nuevo Alumno}
 	\label{fig:alumnos_nuevo}
-	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/alumnos_nuevo}}
+	\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/docente/alumnos_nuevo}}
 \end{figure}
 
 \subsection{Examenes}
@@ -304,7 +300,7 @@ Al acceder al módulo examenes, el usuario visualizará el listado de examenes r
 	\centering
 	\caption[SJC Examenes]{Sistema Jigsaw Coding - Inicio del módulo Examenes}
 	\label{fig:examenes_inicio}
-	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/examenes_inicio}}
+	\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/docente/examenes_inicio}}
 \end{figure}
 \subsubsection{Crear examen}
 
@@ -314,7 +310,7 @@ Para registrar un nuevo examen se debe acceder a menú Examenes y luego presiona
 	\centering
 	\caption[SJC Nuevo examen]{Sistema Jigsaw Coding - Nuevo Examen}
 	\label{fig:examenes_nuevo}
-	\fbox{\includegraphics[scale=0.5]{figuras/usodelsistema/docente/examenes_nuevo}}
+	\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/docente/examenes_nuevo}}
 \end{figure}
 
 La asignación de problemas al examen se realiza siguiendo los pasos descritos a continuación:
@@ -522,18 +518,18 @@ Para que un usuario con perfil Alumno pueda rendir un examen, debe seguir los si
 	
 	\item Luego de rendir el examen, el alumno debe esperar a que el docente califique sus respuestas y le asigne una nota, la cual podrá ser vista en el menú \textbf{Examenes}. \autoref{fig:c4_nota_de_examen}
 	
-	\begin{figure}[h]
+	\begin{figure}[!h]
 		\centering
 		\caption{Sistema Jigsaw Coding - Ver nota de examen}
 		\label{fig:c4_nota_de_examen}
-		\fbox{\includegraphics[scale=0.4]{figuras/usodelsistema/alumno/nota_de_examen}}
+		\fbox{\includegraphics[scale=0.3]{figuras/usodelsistema/alumno/nota_de_examen}}
 	\end{figure}
 	
 \end{enumerate}
 \clearpage
 \section{Definición de métricas de calidad para el Sistema Jigsaw Coding}
 \label{sec:metricas_calidad}
-A continuación se presentan las métricas de calidad que se van a medir en Sistema Jigsaw Coding. Estas métricas están basadas en la norma ISO-9126, la cual establece un estándar internacional para la evaluación de la calidad de los productos software \cite{iso9126-3}.
+A continuación se presentan las métricas de calidad que se medirán en Sistema Jigsaw Coding, las cuales están basadas en la norma ISO-9126 que establece un estándar internacional para la evaluación de la calidad de los productos software. \cite{iso9126-3}.
 
 \subsection{Entendibilidad}
 La presente métrica se refiere a la característica de \textit{Usabilidad} , donde se medirá el grado de \textit{Entendibilidad} que tiene el Sistema para los usuarios. \autoref{tab:c4_entendibilidad}
@@ -541,7 +537,7 @@ La presente métrica se refiere a la característica de \textit{Usabilidad} , do
 	\caption{Métrica de calidad: Entendibilidad}
 	\label{tab:c4_entendibilidad}\\
 	\toprule[0.8mm]
-	\textbf{Nombre de la métrica} & \textbf{Entendibilidad del Sistema Jigsaw Coding}\\
+	\textbf{Nombre} & \textbf{Entendibilidad del Sistema}\\
 	\midrule
 	Código & MC-\metrica\\
 	\midrule
@@ -551,8 +547,7 @@ La presente métrica se refiere a la característica de \textit{Usabilidad} , do
 	\midrule
 	Propósito & ¿Qué porcentaje de los usuarios consideran que las funcionalidades del sistema son fáciles o muy fáciles de entender? \\
 	\midrule
-	Método de aplicación & Realizar una encuesta:
-	¿Qué tan fácil o difícil le resultó entender las funcionalidades del sistema?
+	Método de aplicación & ¿Qué tan fácil o difícil le resultó entender las funcionalidades del sistema?
 	\begin{itemize}
 		\item Muy fácil
 		\item Fácil
@@ -635,7 +630,7 @@ La presente métrica se refiere a la característica de \textit{Portabilidad} , 
 	\bottomrule[0.8mm]
 \end{longtable}
 
-
+\clearpage
 \subsection{Eficiencia}
 La presente métrica se refiere a la característica de \textit{Eficiencia} , donde se medirá el \textit{Tiempo de respuesta} que tiene el Sistema. \autoref{tab:c4_eficiencia}.
 \begin{longtable}{L{4cm}L{8cm}}

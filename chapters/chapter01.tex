@@ -33,14 +33,36 @@ La técnica de Jigsaw ha sido usada en los procesos educacionales en países de 
 
 
 \section{Definición del Problema}
- Hoy en día, muchos estudiantes tienen dificultades para llevar con éxito los cursos de algoritmos y programación, problema que se evidencia en el porcentaje de alumnos que desaprueban los exámenes, que desaprueban el curso o que simplemente se retiran a mitad de ciclo.
+ Hoy en día, muchos estudiantes tienen dificultades para llevar con éxito los cursos relacionados con algoritmos y programación, problema que se evidencia en el porcentaje de alumnos desaprobados en materias de esta naturaleza: Algorítmica I, 42\%; Algorítmica II, 46\%; Algorítmica III, 19\%; Estructura de Datos, 40\%.
 
 \section{Justificación}
 \subsection{Justificación práctica}
 La alta tasa de fracaso de los estudiantes de programación ha sido durante muchos años un tema polémico para las instituciones de aprendizaje con reportes de ratios de fracasos alrededor de $26\%$ a $40\%$. \cite{sheard_our_1998,truong_web_2003,lang_seven_2007,han_enhancement_2010}.\\
 
-La últimas investigaciones sobre el problema reflejan que éste aún persiste. Los altos porcentajes de fracasos en cursos introductorios de programación son un problema común en universidades en Alemania, Europa, y Norte Ámérica, ya que los alumnos tiene problemas para entender los contenidos de tales cursos debido a su abstracción y naturaleza teórica \cite{knobelsdorf_teaching_2014}. Además, este problema también aún es vigente en universidades del Perú y sin ir muy lejos, también está presente en la Facultad de Ingeniería de Sistemas e Informática de la Universidad Nacional Mayor de San Marcos.
+La últimas investigaciones sobre el problema reflejan que éste aún persiste. Los altos porcentajes de fracasos en cursos introductorios de programación son un problema común en universidades en Alemania, Europa, y Norte Ámérica, ya que los alumnos tiene problemas para entender los contenidos de tales cursos debido a su abstracción y naturaleza teórica \cite{knobelsdorf_teaching_2014}. Además, este problema también existe en universidades del Perú y sin ir muy lejos, está presente en la Facultad de Ingeniería de Sistemas e Informática de la Universidad Nacional Mayor de San Marcos tal como se muestra en el siguiente cuadro estadístico:
+\begin{threeparttable}
+		
+		
+\begin{longtable}{C{2.75cm}|c|c|c|c|c|c|c|c|c|c}
 
+	\caption{Porcentaje de Aprobados y Desaprobados en cursos de Algoritmos y Programación.}
+	\label{tab:estadisticasFISI}\\
+	\toprule[0.8mm]
+	\multirow{2}*{Curso} &\multicolumn{2}{c|}{2013-2}&\multicolumn{2}{c|}{2014-1}&\multicolumn{2}{c|}{2014-2}&\multicolumn{2}{c|}{2015-1}&\multicolumn{2}{c}{Total}\\
+	& A & D & A & D& A & D& A & D& A & D\\
+	\midrule[0.6mm]
+	Algorítmica I&65\%&35\%&81\%&19\%&49\%&51\%&61\%&39\%&58\%&42\% \\
+	Algorítmica II&57\%&43\%&49\%&51\%&36\%&64\%&60\%&40\%&54\%&46\% \\
+	Algorítmica III&90\%&10\%&83\%&17\%&77\%&23\%&70\%&30\%&81\%&19\% \\
+	Est. de Datos&71\%&29\%&64\%&36\%&20\%&80\%&25\%&75\%&60\%&40\% \\
+	\bottomrule[0.8mm]
+	
+	\end{longtable}
+	
+	\begin{tablenotes}
+		\item[a] \emph{Fuente:} SUM - UNMSM.
+	\end{tablenotes}
+\end{threeparttable}
 
 \subsection{Justificación teórica}
 \citeA{martinez_cooperative_2011} presentaron el diseño, implementación y evaluación de una estrategia de enseñanza basada en aprendizaje colaborativo para introducir el tema de álgebra relacional en un curso de base de datos. La estrategia fue evaluada desde las perspectiva del alumno y del profesor, y se encontró que entre el $78\%$ y el $92\%$ de los estudiantes consideraron que el trabajo en grupo enriqueció su aprendizaje, dando soporte al uso del aprendizaje colaborativo; y recientemente, \citeA{cliburn_team-based_2014} desarrolló el curso de Estructura de Datos a través del aprendizaje basado en equipos y el aprendizaje tradicional con el fin de comparar resultados en las evaluaciones de los estudiantes, y, aunque no encontró diferencias significativas entre ambas secciones de alumnos, aún continúa usando el aprendizaje en equipos debido a la alta satisfacción que los alumnos muestran en comparación con el método de enseñanza tradicional.\\
@@ -51,17 +73,16 @@ La últimas investigaciones sobre el problema reflejan que éste aún persiste. 
 Desarrollar un sistema web para promover el aprendizaje colaborativo de los estudiantes a través de la técnica de Jigsaw y enfocándolo específicamente a la enseñanza de cursos de algoritmos y programación.
 \subsection{Específicos}
 \begin{itemize}
-  \item Investigar sobre las diferentes técnicas y herramientas informáticas para el aprendizaje colaborativo.
-  \item Definir 3 métricas de calidad para el desarrollo del sistema.
-  \item Aplicar el sistema web a la enseñanza de algoritmos y programación en la Facultad de Ingeniería de Sistemas e Informática en la UNMSM.
+	\item Definir y elaborar los contenidos de los temas a usar  en sistema.
+  \item Definir 3 métricas de calidad para el evaluar el sistema web.
 \end{itemize}
 
 \section{Alcances}
 La presente tesis tendrá los siguientes alcances:
 \begin{itemize}
-  \item Se investigará sobre las diferentes técnicas y herramientas informáticas usadas para el aprendizaje colaborativo.
-  \item Se evaluará el sistema a desarrollar en base a las métricas definidas.
-  \item Se implementará el sistema en la FISI.
+  \item Se evaluará el resultado de la técnica jigsaw en base a las notas obtenidas por los alumnos durante la fase de evaluación.
+  \item Se evaluará el sistema a desarrollar en base a las métricas de calidad definidas.
+  \item Se aplicará el sistema con un grupo de 20 alumnos de la FISI.
 \end{itemize}
 
 \section{Estructura de la Tesis}

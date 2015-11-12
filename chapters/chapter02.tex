@@ -123,12 +123,12 @@ AJAX está compuesto por los siguiente:
   \item JavaScript, para unir todas las tecnologías antes mencionadas.
 \end{itemize}
 %Ver figura \ref{fig:ajax}
-\begin{figure}[h]
-  \centering
-  % Requires \usepackage{graphicx}
-  \fbox{\includegraphics[scale=0.8]{figuras/ajax_01}}\\
-  \caption{Tecnologías agrupadas bajo el concepto de AJAX}\label{fig:ajax}
-\end{figure}
+%\begin{figure}[h]
+%  \centering
+%  % Requires \usepackage{graphicx}
+%  \fbox{\includegraphics[scale=0.8]{figuras/ajax_01}}\\
+%  \caption{Tecnologías agrupadas bajo el concepto de AJAX}\label{fig:ajax}
+%\end{figure}
 
 JavaScript es un lenguaje que la mayoría de navegadores soporta y que permite manipular datos entre la vista y el servidor. A continuación se indica cómo es que AJAX funciona:\cite{ajax_dummies_2006}
 
@@ -159,8 +159,10 @@ Después del posicionamiento de AJAX, no pasó mucho tiempo para tratar de logra
 \begin{figure}[!h]
   \centering
   % Requires \usepackage{graphicx}
+  \caption{Polling}{A través del Polling se envía peticiones HTTP para comprobar si existe nueva información.}
   \fbox{\includegraphics[scale=0.6]{figuras/ajax_polling}}\\
-  \caption{Polling}{A través del Polling se envía peticiones HTTP para comprobar si existe nueva información.}\label{fig:polling}
+  \label{fig:polling}
+  \source {\citeNP {lengstorf_realtime_2013}}
 \end{figure}
 
 \subsection{HTTP Long-Polling}
@@ -168,8 +170,10 @@ El siguiente paso en la evolución del tiempo real es el HTTP \emph{long-polling
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
+  \caption{Long Polling}{Gracias al HTTP Long-polling, se mantiene abierta una peticion HTTP por un periodo de tiempo para comprobar si existe nueva información.}
+  \label{fig:http_long_polling}  
   \fbox{\includegraphics[scale=0.6]{figuras/ajax_long_polling}}\\
-  \caption{Long Polling}{Gracias al HTTP Long-polling, se mantiene abierta una peticion HTTP por un periodo de tiempo para comprobar si existe nueva información.}\label{fig:http_long_polling}
+    \source {\citeNP {lengstorf_realtime_2013}}
 \end{figure}
 %%\cite{lengstorf2013realtime}
 
@@ -179,8 +183,11 @@ Web sockets (Ver figura \ref{fig:websockets}) es una tecnología que proporciona
 \begin{figure}[h]
   \centering
   % Requires \usepackage{graphicx}
-  \fbox{\includegraphics[scale=0.6]{figuras/websockets}}\\
-  \caption{Websockets}{Una nueva tecnología para la comunicación bidireccional.}\label{fig:websockets}
+
+  \caption{Websockets}{Una nueva tecnología para la comunicación bidireccional.}
+    \fbox{\includegraphics[scale=0.6]{figuras/websockets}}\\
+    \source {\citeNP {lengstorf_realtime_2013}}
+  \label{fig:websockets}
 \end{figure}
 
 \subsubsection{¿Por qué usar Websockets?}

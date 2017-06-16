@@ -3,156 +3,211 @@
 En esta sección se presentará algunas de las soluciones que se dieron a los problemas definidos en la \autoref{sec:problemas} y que fueron aplicados durante la sesión jigsaw. Además, se aplicarán las métricas de calidad (definidas en la \autoref{sec:metricas_calidad}) al Sistema Jigsaw Coding desarrollado en esta tesis y se mostrarán los resultados obtenidos en lo que respecta a las evaluaciones tomadas a los alumnos.\\
 
 \section{Soluciones a los problemas de la sesión jigsaw}
-Durante la fase de expertos se plantearon los problemas \emph{Múltiplos de 7, Par o impar, Nú meros descendentes} y a continuación se presentan las soluciones de los alumnos.
+Durante la fase de expertos se plantearon los problemas \emph{Segundos, Es triángulo, Fibonacci, Burbuja ascendente} y a continuación se presentan algunas de las soluciones presentadas por los alumnos.
 
 \begin{center}
-	GE\_DÁT\_ECM $\longrightarrow$ Múltiplos de 7.
+	GE\_RGR\_RGC\_DHC\_BNR$\longrightarrow$ Segundos
 \end{center}
 
-Elaborar un programa que imprima los primeros 10 números múltiplos de 7 usando la estructura repetitiva \texttt{for}.
+Elabore un programa que convierta un número de n segundos en horas minutos y segundos. Ejemplo: 100 segundos es 0 h 1 min 40 seg.
 
-\lstset{language=C, breaklines=true, basicstyle=\footnotesize}
+\lstset{language=C++, breaklines=true, basicstyle=\footnotesize}
 \begin{lstlisting}
-# include <iostream>
-using namespace std;
-int main (){
-	int i;
-	cout<<"Los 10 primeros mutiplos de 7 son:"<<endl;
-	for(i=1;i<=10;i++){
-		cout<<i*7<<endl;
-	}
-}
+// your code goes here
+#include <iostream>  
+using namespace std;  
+int main(){  
+int num,hor,minu,seg;  
+cout<<"ingrese los segundos"<<endl;  
+cin>>num;  
+hor=(int)(num / 3600);  
+minu=(int)((num - hor * 3600) / 60);  
+seg=num - (hor * 3600 + minu * 60);  
+cout<<hor<<"h "<<minu<<"m "<<seg<<"s";  
+return 0;  
+}  
 \end{lstlisting}
 \clearpage
 \begin{center}
-	GE\_KMM\_DEG $\longrightarrow$ Par o impar.
+	GE\_ACR\_RCA\_RCL$\longrightarrow$ Es Triángulo.
 \end{center}
 
-Elaborar un programa que lea un entero y determine si es un número par o impar.
+Determinar si un triángulo es: equilátero, isósceles o escaleno, conociendo sus tres lados (a,b,c).
 
 \lstset{language=Java, breaklines=true, basicstyle=\footnotesize}
 \begin{lstlisting}
+import java.io.*;
 import java.util.Scanner;
-
-class Ejercicio01 {
-	public static void main (String args[] ){
-		Scanner sc = new Scanner(System.in);
-
-		System.out.print("Introduzca un numero entero: ");
-		int n = sc.nextInt();
-
-		if(n%2==0) System.out.print("El numero es par");
-		else System.out.print("El numero es impar");
+public class Main{
+	public static void main(String[] args){
+		Scanner lector = new Scanner(System.in);
+		double l1,l2,l3;
+		l1 = lector.nextDouble();
+		l2 = lector.nextDouble();
+		l3 = lector.nextDouble();
+		if (l1==l2 && l2==l3)
+		System.out.println("\nEl Triangulo es Equilatero\n");
+		else {
+			if (l1==l2 || l1==l3 || l2==l3)
+			System.out.println("\nEl Triangulo es Isoceles");
+			else{
+				if (l1!=l2 || l1!=l3 || l3!=l2)
+				System.out.println("\nEl Triangulo es Escaleno");
+			}
+		}
 	}
 }
 \end{lstlisting}
 
 \begin{center}
-	GE\_SMM\_MRB $\longrightarrow$ Números descendentes.
+	GE\_JCM\_CCU\_PCA\_ACA$\longrightarrow$ Fibonacci.
 \end{center}
 
-Elaborar un programa que imprima de forma descendente los primeros 20 numeros pares usando una estructura repetitiva \texttt{while}.
+La serie de Fibonacci comienza con un 0, luego un 1 y a partir de ahí cada número es la suma de los dos anteriores. Elabore un programa recursivo para mostrar los 10 primeros números de la serie de Fibonacci.
 
 \lstset{language=C, breaklines=true, basicstyle=\footnotesize}
 \begin{lstlisting}
 #include <iostream>
 using namespace std;
-int main (){
-	int var = 40;
-	while(var > 1){
-		var = var - 2;
-		cout<<var<<endl;
+int fibo(int n){
+	if(n==0 || n==1){
+	return n;
+	}else{
+		return fibo(n-1)+fibo(n-2);
+	}  
+}
+
+int main(){
+	int n;
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cout<<fibo(i)<<endl;
 	}
-	return 0;
+}
+\end{lstlisting}
+\clearpage
+
+\begin{center}
+	GE\_CRB\_RRR\_JTP$\longrightarrow$ Burbuja ascendente.
+\end{center}
+
+Usando el algoritmo Bubble Sort ordenar en forma ascendente el siguiente array de enteros: 50,26,7,9,15,27.
+
+\lstset{language=Java, breaklines=true, basicstyle=\footnotesize}
+\begin{lstlisting}
+import java.util.Scanner;
+class OrdenamientoBurbuja {
+	public static void main(String []args) {
+	int n, c, d, swap;    
+	n = 6; 
+	int array[] = {50,26,7,9,15,27};
+	c=array.length;
+	for (c = 0; c < 5; c++) {
+		for (d = 0; d < n - c - 1; d++) {
+			if (array[d] > array[d+1]) 
+			{
+			swap       = array[d];
+			array[d]   = array[d+1];
+			array[d+1] = swap;
+			}
+		}
+	}
+	
+	System.out.println("Array ordenado");
+	
+	for (c = 0; c < n; c++) 
+		System.out.print(array[c]  + " ");
+	}
 }
 \end{lstlisting}
 \vspace{0.5cm}
 
-Cuando la fase de expertos finalizó, cada alumno fue reagrupado para dar inicio a la reunión jigsaw y en ella cada grupo resolvió los 3 problemas: \emph{Múltiplos de 7, Par o impar, Números descendentes}. Estas soluciones se encuentran en la \autoref{tab:c6_soluciones_fase_jigsaw}
-\clearpage
-%\newgeometry{left=2cm,bottom=4cm, right=0.2cm}
-\begin{landscape}
 
-\begin{longtable}{cL{8cm}L{9cm}}
-	\caption{Soluciones de fase jigsaw}
-	\label{tab:c6_soluciones_fase_jigsaw}\\
-	\toprule
-	PROBLEMA & Solución del grupo GJ\_SMM\_KMM\_DÁT & Solución del grupo GJ\_MRB\_DEG\_ECM\\
-	\midrule
-	Múltiplos de 7 & 
-	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
-	#include <iostream>
-	using namespace std;
-	int main (){
-		int a = 7;
-		for(int i=1; i<=10; i++){
-			cout<<a<<endl;
-			a = a + 7;
-		}
-		return 0;
-	}		
-	\end{lstlisting}&
-	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
-	#include<iostream>
-	using namespace std;
-	int main()	{
-		int i;	
-		for(i=1;i<11;i++){
-			cout<<i*7<<endl;
-		}
-	}		
-	\end{lstlisting}\\
-	%\midrule
-	Par o impar &
-	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
-	#include <iostream>
-	using namespace std;
-	int main (){
-		int var; cin>>var;
-		if(var%2==0) cout<<"Es par";
-		else cout<<"es impar";
-		return 0;
-	}	
-	\end{lstlisting}&
-	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
-	#include <iostream>
-	using namespace std;
-	int main () {
-		int a; cin>>a;
-		if (a%2 == 0) cout<<"Es par"<<endl;
-		else cout<<"Es impar"<<endl;
-		return 0;
-	}	
-	\end{lstlisting}\\
-	%\midrule
-	Números descendentes & 
-	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
-	#include <iostream>
-	using namespace std;
-	int main (){
-		int var = 40;
-		while(var>1){
-			var = var - 2;
-			cout<<var<<endl;
-		}
-		return 0;
-	}
-	\end{lstlisting}&
-	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
-	#include<iostream>
-	using namespace std;
-	int main()	{
-		int i=20;
-		while(i>=1)	{
-			cout<<2*i<<endl;
-			i--;
-		}
-	}
-	\end{lstlisting}\\
-	%\bottomrule
-\end{longtable}
-\end{landscape}
-%\restoregeometry
+%Cuando la fase de expertos finalizó, cada alumno fue reagrupado para dar inicio a la reunión jigsaw y en ella cada grupo resolvió los 3 problemas: \emph{Múltiplos de 7, Par o impar, Números descendentes}. Estas soluciones se encuentran en la \autoref{tab:c6_soluciones_fase_jigsaw}
+%\clearpage
+%%\newgeometry{left=2cm,bottom=4cm, right=0.2cm}
+%\begin{landscape}
+%
+%\begin{longtable}{cL{8cm}L{9cm}}
+%	\caption{Soluciones de fase jigsaw}
+%	\label{tab:c6_soluciones_fase_jigsaw}\\
+%	\toprule
+%	PROBLEMA & Solución del grupo GJ\_SMM\_KMM\_DÁT & Solución del grupo GJ\_MRB\_DEG\_ECM\\
+%	\midrule
+%	Múltiplos de 7 & 
+%	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+%	#include <iostream>
+%	using namespace std;
+%	int main (){
+%		int a = 7;
+%		for(int i=1; i<=10; i++){
+%			cout<<a<<endl;
+%			a = a + 7;
+%		}
+%		return 0;
+%	}		
+%	\end{lstlisting}&
+%	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+%	#include<iostream>
+%	using namespace std;
+%	int main()	{
+%		int i;	
+%		for(i=1;i<11;i++){
+%			cout<<i*7<<endl;
+%		}
+%	}		
+%	\end{lstlisting}\\
+%	%\midrule
+%	Par o impar &
+%	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+%	#include <iostream>
+%	using namespace std;
+%	int main (){
+%		int var; cin>>var;
+%		if(var%2==0) cout<<"Es par";
+%		else cout<<"es impar";
+%		return 0;
+%	}	
+%	\end{lstlisting}&
+%	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+%	#include <iostream>
+%	using namespace std;
+%	int main () {
+%		int a; cin>>a;
+%		if (a%2 == 0) cout<<"Es par"<<endl;
+%		else cout<<"Es impar"<<endl;
+%		return 0;
+%	}	
+%	\end{lstlisting}\\
+%	%\midrule
+%	Números descendentes & 
+%	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+%	#include <iostream>
+%	using namespace std;
+%	int main (){
+%		int var = 40;
+%		while(var>1){
+%			var = var - 2;
+%			cout<<var<<endl;
+%		}
+%		return 0;
+%	}
+%	\end{lstlisting}&
+%	\begin{lstlisting}[language = C++, basicstyle=\footnotesize] 
+%	#include<iostream>
+%	using namespace std;
+%	int main()	{
+%		int i=20;
+%		while(i>=1)	{
+%			cout<<2*i<<endl;
+%			i--;
+%		}
+%	}
+%	\end{lstlisting}\\
+%	%\bottomrule
+%\end{longtable}
+%\end{landscape}
+%%\restoregeometry
 \section{Métrica de calidad: Entendibilidad}
 Aplicando la métrica definida en la \autoref{tab:c4_entendibilidad} se obtuvo los siguientes resultados:
 
@@ -164,19 +219,19 @@ Aplicando la métrica definida en la \autoref{tab:c4_entendibilidad} se obtuvo l
 	\midrule
 	\textbf{Alternativa} & \textbf{Cantidad de votos} \\
 	\midrule
-	Muy fácil & 1 \\
-	Fácil & 3 \\
+	Muy fácil & 27 \\
+	Fácil & 5 \\
 	Ni fácil ni difícil & 2 \\
 	Difícil & 0 \\
 	Muy difícil & 0 \\
 	\midrule
-	Métrica & $x = \frac{A}{B} = \frac{4}{6} = 0.66$		\\
+	Métrica & $x = \frac{A}{B} = \frac{32}{34} = 0.94$		\\
 	\multicolumn{2}{l}{A : Cantidad de usuarios que selecionaron la alternativa Fácil o Muy fácil.}\\
 	\multicolumn{2}{l}{B : Cantidad de usuarios encuestados.}\\
 	\bottomrule[0.7mm]
 \end{longtable}
 
-En la \autoref{tab:resultados_metrica_entendibilidad} se observa que el resultado de la métrica es 0.66, esto quiere decir que un 66\% de los usuarios del caso de estudio consideraron que las funcionalidades del Sistema Jigsaw Coding fueron muy fáciles de entender.
+En la \autoref{tab:resultados_metrica_entendibilidad} se observa que el resultado de la métrica es 0.94, esto quiere decir que un 94\% de los usuarios del caso de estudio consideraron que las funcionalidades del Sistema Jigsaw Coding fueron muy fáciles de entender.
 
 \section{Métrica de calidad: Portabilidad}
 Aplicando la métrica definida en la \autoref{tab:c4_portabilidad} se obtuvo los siguientes resultados:
@@ -201,7 +256,7 @@ Aplicando la métrica definida en la \autoref{tab:c4_portabilidad} se obtuvo los
 \end{longtable}
 
 En la \autoref{tab:resultados_metrica_portabilidad} se observa que el resultado de la métrica es 4, lo que indica que el Sistema funciona correctamente en 4 navegadores web, los cuales pueden usarse en sistemas operativos Windows, Linux o Apple.
-\clearpage
+
 \section{Métrica de calidad: Eficiencia}
 Aplicando la métrica definida en la \autoref{tab:c4_eficiencia} se obtuvo los siguientes resultados:
 
@@ -233,8 +288,39 @@ En la \autoref{tab:resultados_metrica_eficiencia} se puede observar que el resul
 En resumen, luego de aplicar las métricas definidas en la \autoref{sec:metricas_calidad} se obtuvieron los siguientes resultados:
 
 \begin{itemize}
-	\item El Sistema es muy fácil de entender para el 66\% de los usuarios del caso de estudio.
+	\item El Sistema es muy fácil de entender para el 94\% de los usuarios del caso de estudio.
 	\item El Sistema es compatible y funciona correctamente en 4 navegadores web: Chrome, Internet Explorer, Ópera y Safari.
 	\item El Sistema posee un tiempo promedio de respuesta de 1.3 segundos para las funcionalidades más importantes.
 \end{itemize}
+
+\section{Resultados de las evaluaciones}
+
+El examen constaba de tres problemas similares a los que se presentaron durante las fases de grupo expertos y grupo jigsaw. Los problemas con sus respectivos puntajes fueron los siguientes:
+
+\begin{enumerate}
+	\item \textbf{Ordenar a,b,c}. Implementar una programa que dados tres números a, b y c, los devuelva ordenados de menor a mayor. ( 6 puntos)
+	\item \textbf{Factorial}. Elaborar un programa que calcule el factorial de un número n usando recursividad. ($n <= 5$ ). (6 puntos)
+	\item \textbf{Burbuja descendente}. Usando el algoritmo Bubble Sort ordenar en forma descendente el siguiente array de enteros: 50,26,7,9,15,27. (8 Puntos)
+\end{enumerate}
+
+Luego de calificar las evaluaciones se obtuvo los resultados que se muestran en la tabla siguiente:\\
+
+
+\begin{longtable}{|c|c|c|c|c|c|c|}
+	\caption{Resultados de los examenes.}
+	\label{tab:resultados_examenes}\\
+	\toprule[0.7mm]
+	& \multicolumn{2}{c|}{\textbf{SISTEMAS}} & \multicolumn{2}{c|}{\textbf{SOFTWARE}} & \multicolumn{2}{c|}{\textbf{TOTAL}}   \\ 
+	\midrule
+	& Alumnos & Promedio & Alumnos & Promedio & Alumnos & Promedio \\ 
+	\midrule
+	\emph{Grupo Estudio} & 13 & 17,3 & 7 & 18,1 & 20 & 17,6 \\ 
+	\midrule
+	\emph{Grupo Control }& 8 & 14,1 & 6 & 14,5 & 14 & 14,3 \\ 
+	\bottomrule[0.7mm]
+\end{longtable} 
+
+Como se puede apreciar, en todos los casos, los estudiantes que formaron parte del Grupo Estudio y que por ello realizaron las tres fases de la técnica Jigsaw, obtuvieron una mejor calificación en la evaluación que aquellos alumnos miembros del Grupo Control. En este último solamente se aplicó el examen sin pasar por las fases de grupo expertos y grupo jigsaw.\\
+
+El mejor rendimiento de los Grupos de Estudio se debe principalmente a que permitión a los alumnos practicar previamente problemas tipo y además, tuvieron la oportunidad de resolverlos de manera conjunta con otros estudiantes, reforzando así sus conocimientos.
 
